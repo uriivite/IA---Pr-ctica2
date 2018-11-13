@@ -1,4 +1,4 @@
-; Mon Nov 12 13:35:24 CET 2018
+; Tue Nov 13 16:01:53 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -7,122 +7,161 @@
 (defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
 	(is-a USER)
 	(role abstract)
-	(multislot instruccions
-;+		(comment "Detalls concrets de l'exercici en el cas que aquest ho requereixi.")
-		(type STRING)
+	(multislot exercicis
+;+		(comment "Llista d'exercicis")
+		(type INSTANCE)
+;+		(allowed-classes Exercici)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot nom_exercici
+	(single-slot Nom
 		(type STRING)
-;+		(cardinality 1 1)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot edat
-;+		(comment "Edat de la persona.")
+	(single-slot repeticions
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot instrucci%C3%B3
-;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
-		(type STRING)
+	(single-slot rutina
+;+		(comment "Una sèrie d'exercicis que seran recomenats a la persona en funció de les seves característiques.")
+		(type INSTANCE)
+;+		(allowed-classes Rutina)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nom
+;+		(comment "Nom que identificarà la instància de l'objecte.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sedentari%3F
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot sedentari
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Instruccions
+;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot par
+;+		(comment "Identificador de l'exercici.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Exercicis+prohibits
+		(type INSTANCE)
+;+		(allowed-classes Exercici)
+		(create-accessor read-write))
+	(single-slot Nom+exercici
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot escalfament
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot objectius
+;+		(comment "Llista de metes que es proposa una persona.")
+		(type SYMBOL)
+		(allowed-values obj1 obj2 objn)
+		(create-accessor read-write))
+	(single-slot KB_365877_Class13
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Duracio
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot ontologia_v1_Class10017
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot repeticions+min
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot part+del+cos
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot edat
+;+		(comment "Edat de la persona.")
+		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot objectiu
 		(type SYMBOL)
 		(allowed-values obj1 obj2 objn)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot nom_ex
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot nom
-;+		(comment "Nom que identificarà la instància de l'objecte.")
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot rutina
-;+		(comment "Una sèrie d'exercicis que seran recomenats a la persona en funció de les seves característiques.")
-		(type INSTANCE)
-;+		(allowed-classes Rutina)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(multislot instrucions
-;+		(comment "Detalls.")
-		(type STRING)
-		(create-accessor read-write))
-	(multislot exercicis
-;+		(comment "Llista d'exercicis")
-		(type INSTANCE)
-;+		(allowed-classes Exercici)
-		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write)))
-
-(defclass Persona "Classe que guardarà informació sobre algú a qui el sistema li ha de fer una recomanació."
-	(is-a USER)
-	(role concrete)
-	(single-slot edat
-;+		(comment "Edat de la persona.")
+	(single-slot Duracio+maxima
 		(type INTEGER)
 ;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot nom
-;+		(comment "Nom que identificarà la instància de l'objecte.")
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot rutina
-;+		(comment "Una sèrie d'exercicis que seran recomenats a la persona en funció de les seves característiques.")
-		(type INSTANCE)
-;+		(allowed-classes Rutina)
-;+		(cardinality 0 1)
 		(create-accessor read-write)))
-
-(defclass Independent "Persona gran fisicament independent."
-	(is-a Persona)
-	(role concrete)
-	(single-slot sedentari
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-;+		(cardinality 1 1)
-		(create-accessor read-write)))
-
-(defclass Fragil "Persona amb una stuacio especial de fragilitat."
-	(is-a Persona)
-	(role concrete))
-
-(defclass Dependent "Persona gran fisicament dependent, es a dir, que requereix de cuidadors."
-	(is-a Persona)
-	(role concrete))
-
-(defclass Lleu+o+moderat "Es consideren d'aquest grup les persones grans amb dificultats per fer qualsevol activitat bàsica del dia a dia, com caminar, fer alguna feina domestica..."
-	(is-a Dependent)
-	(role concrete))
-
-(defclass Molt+dependent "No pot realitzar activitats de la vida diaria basiques sense ajuda, com ara vestir-se."
-	(is-a Dependent)
-	(role concrete))
 
 (defclass Exercici "Identifica un exercici concret amb alguna instrucció/especificació."
 	(is-a USER)
 	(role concrete)
-	(single-slot nom_ex
+	(single-slot repeticions
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Nom+exercici
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot instrucions
-;+		(comment "Detalls.")
+	(single-slot escalfament
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Duracio
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Instruccions
+;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
 		(type STRING)
+		(create-accessor read-write))
+	(single-slot part+del+cos
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Musculatura
 	(is-a Exercici)
 	(role concrete))
 
+(defclass Aixecar+bracos
+	(is-a Musculatura)
+	(role concrete))
+
+(defclass Flexio+espatlles
+	(is-a Musculatura)
+	(role concrete))
+
+(defclass Exercicis+biceps
+	(is-a Musculatura)
+	(role concrete))
+
+(defclass Extensio+triceps
+	(is-a Musculatura)
+	(role concrete))
+
+(defclass Aixecar-se+de+cadira
+	(is-a Musculatura)
+	(role concrete))
+
 (defclass Resistencia
+	(is-a Exercici)
+	(role concrete))
+
+(defclass Flexibilitat
 	(is-a Exercici)
 	(role concrete))
 
@@ -130,8 +169,20 @@
 	(is-a Exercici)
 	(role concrete))
 
-(defclass Flexibilitat
-	(is-a Exercici)
+(defclass Flexio+plantar
+	(is-a Equilibri)
+	(role concrete))
+
+(defclass Flexio+del+genoll
+	(is-a Equilibri)
+	(role concrete))
+
+(defclass Flexio+i+extensio+maluc
+	(is-a Equilibri)
+	(role concrete))
+
+(defclass Aixecament+lateral+de+la+cama
+	(is-a Equilibri)
 	(role concrete))
 
 (defclass Rutina "Classe genèrica que contindrà una sèrie d'exercicis que s'utilitzaran per fer una recomanació."
@@ -142,4 +193,12 @@
 		(type INSTANCE)
 ;+		(allowed-classes Exercici)
 		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Malaltia
+	(is-a USER)
+	(role concrete)
+	(single-slot Nom
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))

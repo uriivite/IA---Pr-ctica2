@@ -1,4 +1,182 @@
-; Mon Nov 12 13:35:24 CET 2018
+; Tue Nov 13 16:01:53 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
+
+([ontologia_v1_Class1] of  Malaltia
+
+	(Nom "Problemes respiratoris"))
+
+([ontologia_v1_Class10028] of  Flexio+plantar
+
+	(Duracio 3)
+	(escalfament FALSE)
+	(Nom+exercici "Flexio plantar low")
+	(part+del+cos "Peu")
+	(repeticions 8))
+
+([ontologia_v1_Class10030] of  Flexio+del+genoll
+
+	(Duracio 2)
+	(Nom+exercici "Flexio del genoll low")
+	(part+del+cos "Genoll")
+	(repeticions 8))
+
+([ontologia_v1_Class10031] of  Flexio+i+extensio+maluc
+
+	(Duracio 2)
+	(Nom+exercici "Flexio i extensio maluc low")
+	(part+del+cos "Maluc")
+	(repeticions 8))
+
+([ontologia_v1_Class10032] of  Flexio+plantar
+
+	(Duracio 3)
+	(Nom+exercici "Flexio plantar high")
+	(part+del+cos "Peu")
+	(repeticions 15))
+
+([ontologia_v1_Class10033] of  Flexio+del+genoll
+
+	(Duracio 2)
+	(Nom+exercici "Flexio del genoll high")
+	(part+del+cos "Genoll")
+	(repeticions 15))
+
+([ontologia_v1_Class10037] of  Flexio+i+extensio+maluc
+
+	(Duracio 2)
+	(Nom+exercici "Flexio i extensio maluc high")
+	(part+del+cos "Maluc")
+	(repeticions 15))
+
+([ontologia_v1_Class10038] of  Aixecament+lateral+de+la+cama
+
+	(Duracio 3)
+	(Nom+exercici "Aixecament lateral de la cama low")
+	(part+del+cos "Cama")
+	(repeticions 8))
+
+([ontologia_v1_Class10039] of  Aixecament+lateral+de+la+cama
+
+	(Duracio 3)
+	(Nom+exercici "Aixecament lateral de la cama high")
+	(part+del+cos "Cama")
+	(repeticions 15))
+
+([ontologia_v1_Class10046] of  Aixecar+bracos
+
+	(Duracio 2)
+	(Nom+exercici "Aixecar bracos high")
+	(part+del+cos "Bracos")
+	(repeticions 8))
+
+([ontologia_v1_Class10047] of  Aixecar+bracos
+
+	(Duracio 2)
+	(Nom+exercici "Aixecar bracos low")
+	(part+del+cos "Bracos")
+	(repeticions 15))
+
+([ontologia_v1_Class10048] of  Flexio+espatlles
+
+	(Duracio 2)
+	(Nom+exercici "Flexio espatlles low")
+	(part+del+cos "Espatlles")
+	(repeticions 8))
+
+([ontologia_v1_Class10049] of  Flexio+espatlles
+
+	(Duracio 2)
+	(Nom+exercici "Flexio espatlles high")
+	(part+del+cos "Espatlles")
+	(repeticions 15))
+
+([ontologia_v1_Class10050] of  Exercicis+biceps
+
+	(Duracio 2)
+	(Nom+exercici "Exercicis biceps low")
+	(part+del+cos "Biceps")
+	(repeticions 8))
+
+([ontologia_v1_Class10051] of  Exercicis+biceps
+
+	(Duracio 2)
+	(Nom+exercici "Exercici biceps high")
+	(part+del+cos "Biceps")
+	(repeticions 15))
+
+([ontologia_v1_Class10052] of  Extensio+triceps
+
+	(Duracio 2)
+	(Nom+exercici "Extensio triceps low")
+	(part+del+cos "Triceps")
+	(repeticions 8))
+
+([ontologia_v1_Class10053] of  Extensio+triceps
+
+	(Duracio 2)
+	(Nom+exercici "Extensio triceps high")
+	(part+del+cos "Triceps")
+	(repeticions 15))
+
+([ontologia_v1_Class10054] of  Aixecar-se+de+cadira
+
+	(Duracio 3)
+	(Nom+exercici "Aixecar-se de cadira low")
+	(part+del+cos "Abdomen")
+	(repeticions 8))
+
+([ontologia_v1_Class10055] of  Aixecar-se+de+cadira
+
+	(Duracio 3)
+	(Nom+exercici "Aixecar-se de cadira high")
+	(part+del+cos "Abdomen")
+	(repeticions 15))
+
+([ontologia_v1_Class14] of  Flexibilitat
+
+	(Duracio 10)
+	(escalfament TRUE)
+	(Nom+exercici "Estiraments dels tendons de la cuixa")
+	(part+del+cos "Cuixa"))
+
+([ontologia_v1_Class17] of  Malaltia
+
+	(Nom "Problemes cardiovasculars"))
+
+([ontologia_v1_Class18] of  Malaltia
+
+	(Nom "Diabetis"))
+
+([ontologia_v1_Class2] of  Malaltia
+
+	(Nom "Obesitat"))
+
+([ontologia_v1_Class3] of  Malaltia
+
+	(Nom "Osteoporosis"))
+
+([ontologia_v1_Class4] of  Malaltia
+
+	(Nom "Colesterol"))
+
+([ontologia_v1_Class5] of  Malaltia
+
+	(Nom "Artrosis"))
+
+([ontologia_v1_Class6] of  Malaltia
+
+	(Nom "Insuficiència renal crònica"))
+
+([ontologia_v1_Class7] of  Malaltia
+
+	(Nom "Depressió"))
+
+([ontologia_v1_Class8] of  Malaltia
+
+	(Nom "Fragilitat"))
+
+([ontologia_v1_Class9] of  Malaltia
+
+	(Nom "Incontinència urinària"))
