@@ -1,4 +1,4 @@
-; Tue Nov 13 16:01:53 CET 2018
+; Sat Nov 17 18:33:53 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,6 +6,69 @@
 ([ontologia_v1_Class1] of  Malaltia
 
 	(Nom "Problemes respiratoris"))
+
+([ontologia_v1_Class10008] of  Estirament+dels+tendons+cuixa
+
+	(Duracio 10)
+	(escalfament TRUE)
+	(Nom+exercici "Estirament tendons maluc low")
+	(part+del+cos "Maluc")
+	(repeticions 3))
+
+([ontologia_v1_Class10009] of  Estirament+dels+tendons+cuixa
+
+	(Duracio 30)
+	(escalfament TRUE)
+	(Nom+exercici "Estirament tendons maluc high")
+	(part+del+cos "Maluc")
+	(repeticions 5))
+
+([ontologia_v1_Class10010] of  Estirament+del+panxell
+
+	(Duracio 10)
+	(escalfament TRUE)
+	(Nom+exercici "Estirament panxell low")
+	(part+del+cos "Panxell")
+	(repeticions 3))
+
+([ontologia_v1_Class10011] of  Estirament+del+panxell
+
+	(Duracio 30)
+	(escalfament TRUE)
+	(Nom+exercici "Estirament panxell high")
+	(part+del+cos "Panxell")
+	(repeticions 5))
+
+([ontologia_v1_Class10012] of  Estirament+dels+turmells
+
+	(Duracio 3)
+	(escalfament TRUE)
+	(Nom+exercici "Estirament turmells low")
+	(part+del+cos "Turmells")
+	(repeticions 3))
+
+([ontologia_v1_Class10013] of  Estirament+dels+turmells
+
+	(Duracio 3)
+	(escalfament TRUE)
+	(Nom+exercici "Estirament turmells high")
+	(part+del+cos "Turmells")
+	(repeticions 5))
+
+([ontologia_v1_Class10015] of  Estirament+dels+triceps
+
+	(Duracio 3)
+	(Nom+exercici "Estirament triceps")
+	(part+del+cos "Triceps")
+	(repeticions 5))
+
+([ontologia_v1_Class10016] of  Estiraments+del+canell
+
+	(Duracio 3)
+	(escalfament TRUE)
+	(Nom+exercici "Estirament canell low")
+	(part+del+cos "Canell")
+	(repeticions 3))
 
 ([ontologia_v1_Class10028] of  Flexio+plantar
 
@@ -152,6 +215,62 @@
 ([ontologia_v1_Class2] of  Malaltia
 
 	(Nom "Obesitat"))
+
+([ontologia_v1_Class20017] of  Estiraments+del+canell
+
+	(Duracio 3)
+	(escalfament TRUE)
+	(Nom+exercici "Estirament canell high")
+	(part+del+cos "Canell")
+	(repeticions 5))
+
+([ontologia_v1_Class20018] of  Rotacio+espatlles
+
+	(Duracio 3)
+	(escalfament TRUE)
+	(Nom+exercici "Rotacio espatlles high")
+	(part+del+cos "Espatlles")
+	(repeticions 5))
+
+([ontologia_v1_Class20019] of  Rotacio+espatlles
+
+	(Duracio 3)
+	(escalfament TRUE)
+	(Nom+exercici "Rotacio espatlles low")
+	(part+del+cos "Espatlles")
+	(repeticions 3))
+
+([ontologia_v1_Class20020] of  Estirament+quadriceps
+
+	(Duracio 30)
+	(escalfament TRUE)
+	(Nom+exercici "Estirament quadriceps high")
+	(part+del+cos "Quadriceps")
+	(repeticions 5))
+
+([ontologia_v1_Class20021] of  Estirament+quadriceps
+
+	(Duracio 10)
+	(escalfament TRUE)
+	(Nom+exercici "Estirament quadriceps low")
+	(part+del+cos "Quadriceps")
+	(repeticions 3))
+
+([ontologia_v1_Class20022] of  Rotaci%C3%B3+del+maluc
+
+	(Duracio 30)
+	(escalfament TRUE)
+	(Nom+exercici "Rotacio maluc high")
+	(part+del+cos "Maluc")
+	(repeticions 5))
+
+([ontologia_v1_Class20023] of  Rotaci%C3%B3+del+maluc
+
+	(Duracio 10)
+	(escalfament TRUE)
+	(Nom+exercici "Rotacio maluc low")
+	(part+del+cos "Maluc")
+	(repeticions 3))
 
 ([ontologia_v1_Class3] of  Malaltia
 

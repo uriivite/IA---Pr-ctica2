@@ -1,4 +1,4 @@
-; Tue Nov 13 16:01:53 CET 2018
+; Sat Nov 17 18:33:53 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -21,16 +21,16 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot nom
+;+		(comment "Nom que identificarà la instància de l'objecte.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot rutina
 ;+		(comment "Una sèrie d'exercicis que seran recomenats a la persona en funció de les seves característiques.")
 		(type INSTANCE)
 ;+		(allowed-classes Rutina)
 ;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot nom
-;+		(comment "Nom que identificarà la instància de l'objecte.")
-		(type STRING)
-;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot sedentari%3F
 		(type SYMBOL)
@@ -55,14 +55,14 @@
 		(type INSTANCE)
 ;+		(allowed-classes Exercici)
 		(create-accessor read-write))
-	(single-slot Nom+exercici
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot escalfament
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Nom+exercici
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot objectius
 ;+		(comment "Llista de metes que es proposa una persona.")
@@ -111,18 +111,18 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot Nom+exercici
-		(type STRING)
-;+		(cardinality 1 1)
+	(single-slot Duracio
+		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot escalfament
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot Duracio
-		(type INTEGER)
-;+		(cardinality 0 1)
+	(single-slot Nom+exercici
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot Instruccions
 ;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
@@ -161,8 +161,56 @@
 	(is-a Exercici)
 	(role concrete))
 
+(defclass Caminar
+	(is-a Resistencia)
+	(role concrete))
+
+(defclass Dansa
+	(is-a Resistencia)
+	(role concrete))
+
+(defclass Pujar+escales
+	(is-a Resistencia)
+	(role concrete))
+
+(defclass Pedalejar
+	(is-a Resistencia)
+	(role concrete))
+
 (defclass Flexibilitat
 	(is-a Exercici)
+	(role concrete))
+
+(defclass Estirament+dels+tendons+cuixa
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Estirament+del+panxell "(Pantorilla)"
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Estirament+dels+turmells
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Estirament+dels+triceps
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Estiraments+del+canell
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Rotacio+espatlles
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Estirament+quadriceps
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Rotaci%C3%B3+del+maluc
+	(is-a Flexibilitat)
 	(role concrete))
 
 (defclass Equilibri
