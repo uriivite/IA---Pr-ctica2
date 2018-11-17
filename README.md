@@ -1,4 +1,4 @@
-# IA---Pr-ctica2
+# IA---Pràctica2
 
 Afegit les instàncies que faltaven + 
 He afegit les instàncies que faltaven de flexibilitat, però no tinc clar com fer els exercicis de resistència
