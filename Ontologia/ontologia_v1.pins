@@ -1,11 +1,39 @@
-; Sat Nov 17 18:33:53 CET 2018
+; Sun Nov 18 20:56:11 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
 ([ontologia_v1_Class1] of  Malaltia
 
-	(Nom "Problemes respiratoris"))
+	(Cronica TRUE)
+	(Nom "Problemes respiratoris cronics"))
+
+([ontologia_v1_Class10001] of  Caminar
+
+	(Duracio 30)
+	(escalfament TRUE)
+	(Nom+exercici "caminar low"))
+
+([ontologia_v1_Class10002] of  Caminar
+
+	(Duracio 45)
+	(Instruccions "Afegeix alguna pujada a la teva ruta habitual")
+	(Nom+exercici "caminar high"))
+
+([ontologia_v1_Class10005] of  Malaltia
+
+	(Cronica FALSE)
+	(Nom "Obesitat"))
+
+([ontologia_v1_Class10006] of  Malaltia
+
+	(Cronica FALSE)
+	(Nom "Problemes respiratoris(fumadors)"))
+
+([ontologia_v1_Class10007] of  Malaltia
+
+	(Cronica FALSE)
+	(Nom "Problemes cardiovasculars"))
 
 ([ontologia_v1_Class10008] of  Estirament+dels+tendons+cuixa
 
@@ -206,15 +234,23 @@
 
 ([ontologia_v1_Class17] of  Malaltia
 
-	(Nom "Problemes cardiovasculars"))
+	(Cronica TRUE)
+	(Nom "Problemes cardiovasculars cronics"))
 
 ([ontologia_v1_Class18] of  Malaltia
 
+	(Cronica TRUE)
 	(Nom "Diabetis"))
 
 ([ontologia_v1_Class2] of  Malaltia
 
-	(Nom "Obesitat"))
+	(Cronica TRUE)
+	(Nom "Obesitat cronica"))
+
+([ontologia_v1_Class20008] of  Malaltia
+
+	(Cronica TRUE)
+	(Nom "Colesterol cronic"))
 
 ([ontologia_v1_Class20017] of  Estiraments+del+canell
 
@@ -274,28 +310,35 @@
 
 ([ontologia_v1_Class3] of  Malaltia
 
+	(Cronica FALSE)
 	(Nom "Osteoporosis"))
 
 ([ontologia_v1_Class4] of  Malaltia
 
+	(Cronica FALSE)
 	(Nom "Colesterol"))
 
 ([ontologia_v1_Class5] of  Malaltia
 
+	(Cronica FALSE)
 	(Nom "Artrosis"))
 
 ([ontologia_v1_Class6] of  Malaltia
 
+	(Cronica TRUE)
 	(Nom "Insuficiència renal crònica"))
 
 ([ontologia_v1_Class7] of  Malaltia
 
+	(Cronica FALSE)
 	(Nom "Depressió"))
 
 ([ontologia_v1_Class8] of  Malaltia
 
+	(Cronica FALSE)
 	(Nom "Fragilitat"))
 
 ([ontologia_v1_Class9] of  Malaltia
 
+	(Cronica FALSE)
 	(Nom "Incontinència urinària"))
