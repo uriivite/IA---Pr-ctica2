@@ -1,4 +1,4 @@
-; Sun Nov 18 20:56:11 CET 2018
+; Sun Nov 18 22:22:09 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -39,6 +39,12 @@
 
 	(Duracio 10)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Sientese sobre una superficie sin respaldo.\""
+		"2 - \"Estire una pierna sobre la superficie con lo dedos mirando hacia arriba.\""
+		"3 - \"Comience a inclinarse hacia adelante flexionando las caderas, hasta que sienta un tiron por el estiramiento en la pierna.\""
+		"4 - \"Aguante en esta posicion.\""
+		"5 - \"Realice este ejercicio con la otra pierna.\"")
 	(Nom+exercici "Estirament tendons maluc low")
 	(part+del+cos "Maluc")
 	(repeticions 3))
@@ -47,6 +53,12 @@
 
 	(Duracio 30)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Sientese sobre una superficie sin respaldo.\""
+		"2 - \"Estire una pierna sobre la superficie con lo dedos mirando hacia arriba.\""
+		"3 - \"Comience a inclinarse hacia adelante flexionando las caderas, hasta que sienta un tiron por el estiramiento en la pierna.\""
+		"4 - \"Aguante en esta posicion.\""
+		"5 - \"Realice este ejercicio con la otra pierna.\"")
 	(Nom+exercici "Estirament tendons maluc high")
 	(part+del+cos "Maluc")
 	(repeticions 5))
@@ -55,6 +67,13 @@
 
 	(Duracio 10)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Coloquese de pie, con los brazos extendidos y con las palmas de las manos apoyadas en la pared.\""
+		"2 - \"Ponga una pierna flexionada la otra unos pasos por detras,recta, con el pie extendido apoyado en el suelo.\""
+		"3 - \"Permanezca en esta posicion tras notar un tiron durante 10-30 segundos.\""
+		"4 - \"Doble la rodilla de la pierna que esta detras, manteniendo el pie sobre el suelo.\""
+		"5 - \"Permanezca en esta posicion otros 10-30 segundos.\""
+		"6 - \"Realice este ejercicio cambiando las posiciones de cada pierna.\"")
 	(Nom+exercici "Estirament panxell low")
 	(part+del+cos "Panxell")
 	(repeticions 3))
@@ -63,6 +82,13 @@
 
 	(Duracio 30)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Coloquese de pie, con los brazos extendidos y con las palmas de las manos apoyadas en la pared.\""
+		"2 - \"Ponga una pierna flexionada la otra unos pasos por detras,recta, con el pie extendido apoyado en el suelo.\""
+		"3 - \"Permanezca en esta posicion tras notar un tiron durante 10-30 segundos.\""
+		"4 - \"Doble la rodilla de la pierna que esta detras, manteniendo el pie sobre el suelo.\""
+		"5 - \"Permanezca en esta posicion otros 10-30 segundos.\""
+		"6 - \"Realice este ejercicio cambiando las posiciones de cada pierna.\"")
 	(Nom+exercici "Estirament panxell high")
 	(part+del+cos "Panxell")
 	(repeticions 5))
@@ -71,6 +97,11 @@
 
 	(Duracio 3)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Sientese en una silla y reclinese hacia atras.\""
+		"2 - \"Extienda las piernas hacia el frente lo maximo que pueda.\""
+		"3 - \"Doble los dedos de los pies mirando hacia usted.\""
+		"4 - \"Doble los tobillos de forma que los pies se alejen de usted.\"")
 	(Nom+exercici "Estirament turmells low")
 	(part+del+cos "Turmells")
 	(repeticions 3))
@@ -79,6 +110,11 @@
 
 	(Duracio 3)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Sientese en una silla y reclinese hacia atras.\""
+		"2 - \"Extienda las piernas hacia el frente lo maximo que pueda.\""
+		"3 - \"Doble los dedos de los pies mirando hacia usted.\" "
+		"4 - \"Doble los tobillos de forma que los pies se alejen de usted.\"")
 	(Nom+exercici "Estirament turmells high")
 	(part+del+cos "Turmells")
 	(repeticions 5))
@@ -86,6 +122,12 @@
 ([ontologia_v1_Class10015] of  Estirament+dels+triceps
 
 	(Duracio 3)
+	(Instruccions
+		"1 - \"Sostenga una toalla con una mano, levante ese brazo y doble el codo, de forma que la toalla se deslice hacia atras.\""
+		"2 - \"Agarre el otro extremo de la toalla con su otra mano.\""
+		"3 - \"Vaya ascendiendo progresivamente esta mano en la toalla, lo que tambien hara que el otro brazo tienda hacia abajo.\""
+		"4 - \"Continuen con estos movimientos hasta que las manos lleguen a estar proximas.\""
+		"5 - \"Intercambie las posiciones de los brazos y repita el ejercicio.\"")
 	(Nom+exercici "Estirament triceps")
 	(part+del+cos "Triceps")
 	(repeticions 5))
@@ -94,6 +136,9 @@
 
 	(Duracio 3)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Coloque las manos juntas como si estuviera rezando.\""
+		"2 - \"Vaya elevando lentamente los codos hacia ambos lados, hasta que los brazos queden paralelos al suelo, presionando las manos una con la otra.\"")
 	(Nom+exercici "Estirament canell low")
 	(part+del+cos "Canell")
 	(repeticions 3))
@@ -102,6 +147,14 @@
 
 	(Duracio 3)
 	(escalfament FALSE)
+	(Instruccions
+		"1 - \"Pongase de pie, detrás de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
+		"2 - \"Apoyese en la silla para mantener el equilibrio y posteriormente sueltese y permanezca sin agarrarse.\""
+		"3 - \"Levante lentamente la pierna lo mas alto posible de puntillas hasta llegar a 12 o 20 cm del suelo.\""
+		"4 - \"Permanezca en esta posición durante unos tres segundos.\""
+		"5 - \"Vaya descendiendo lentamente la pierna, hasta llegar sus talones a apoyar nuevamente en el suelo.\""
+		"6 - \"Haga el ejercicio apoyandose primero en una pierna, y luego con la otra de forma rotatoria.\""
+		"7 - \"La espalda y ambas rodillas deben mantenerse rectas durante todo el ejercicio.\"")
 	(Nom+exercici "Flexio plantar low")
 	(part+del+cos "Peu")
 	(repeticions 8))
@@ -109,6 +162,13 @@
 ([ontologia_v1_Class10030] of  Flexio+del+genoll
 
 	(Duracio 2)
+	(Instruccions
+		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, después ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
+		"2 - \"Doble lentamente la rodilla hacia atras y elevela lo mas alto posible hasta aproximarla al muslo.\" "
+		"3 - \"Aguante en esta posicion.\" "
+		"4 - \"Comience a bajar lentamente la pierna hasta su posicion inicial.\" "
+		"5 - \"Repita lo mismo con la otra pierna.\" "
+		"6 - \"A medida que progrese puede ir anadiendo modificaciones (pesas de tobillo, etc.).\" ")
 	(Nom+exercici "Flexio del genoll low")
 	(part+del+cos "Genoll")
 	(repeticions 8))
@@ -116,6 +176,14 @@
 ([ontologia_v1_Class10031] of  Flexio+i+extensio+maluc
 
 	(Duracio 2)
+	(Instruccions
+		"1 - \"Pongase de pie, recto, sujetese inicialmente al respaldo de una silla o mesa.\" "
+		"2 - \"Eleve lentamente la rodilla hacia el pecho, sin doblar la otra.\""
+		"3 - \"Permanezca en esta posicion, recto.\""
+		"4 - \"Baje lentamente la rodilla hasta llegar el pie en el suelo.\""
+		"5 - \"Vaya doblando su cintura, e inclinese hacia la silla.\""
+		"6 - \"Eleve la pierna hacia atras, estirada, lentamente.\""
+		"7 - \"Vuelva lentamente hacia su posicion inicial.\"")
 	(Nom+exercici "Flexio i extensio maluc low")
 	(part+del+cos "Maluc")
 	(repeticions 8))
@@ -123,6 +191,14 @@
 ([ontologia_v1_Class10032] of  Flexio+plantar
 
 	(Duracio 3)
+	(Instruccions
+		"1 - \"Pongase de pie, detrás de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
+		"2 - \"Apoyese en la silla para mantener el equilibrio y posteriormente sueltese y permanezca sin agarrarse.\""
+		"3 - \"Levante lentamente la pierna lo mas alto posible de puntillas hasta llegar a 12 o 20 cm del suelo.\""
+		"4 - \"Permanezca en esta posición durante unos tres segundos.\""
+		"5 - \"Vaya descendiendo lentamente la pierna, hasta llegar sus talones a apoyar nuevamente en el suelo.\""
+		"6 - \"Haga el ejercicio apoyandose primero en una pierna, y luego con la otra de forma rotatoria.\""
+		"7 - \"La espalda y ambas rodillas deben mantenerse rectas durante todo el ejercicio.\"")
 	(Nom+exercici "Flexio plantar high")
 	(part+del+cos "Peu")
 	(repeticions 15))
@@ -130,6 +206,13 @@
 ([ontologia_v1_Class10033] of  Flexio+del+genoll
 
 	(Duracio 2)
+	(Instruccions
+		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, después ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
+		"2 - \"Doble lentamente la rodilla hacia atras y elevela lo mas alto posible hasta aproximarla al muslo.\" "
+		"3 - \"Aguante en esta posicion.\" "
+		"4 - \"Comience a bajar lentamente la pierna hasta su posicion inicial.\" "
+		"5 - \"Repita lo mismo con la otra pierna.\""
+		"6 - \"A medida que progrese puede ir anadiendo modificaciones (pesas de tobillo, etc.).\" ")
 	(Nom+exercici "Flexio del genoll high")
 	(part+del+cos "Genoll")
 	(repeticions 15))
@@ -137,6 +220,14 @@
 ([ontologia_v1_Class10037] of  Flexio+i+extensio+maluc
 
 	(Duracio 2)
+	(Instruccions
+		"1 - \"Pongase de pie, recto, sujetese inicialmente al respaldo de una silla o mesa.\" "
+		"2 - \"Eleve lentamente la rodilla hacia el pecho, sin doblar la otra.\" "
+		"3 - \"Permanezca en esta posicion, recto.\" "
+		"4 - \"Baje lentamente la rodilla hasta llegar el pie en el suelo.\" "
+		"5 - \"Vaya doblando su cintura, e inclinese hacia la silla.\" "
+		"6 - \"Eleve la pierna hacia atras, estirada, lentamente.\""
+		"7 - \"Vuelva lentamente hacia su posicion inicial.\"")
 	(Nom+exercici "Flexio i extensio maluc high")
 	(part+del+cos "Maluc")
 	(repeticions 15))
@@ -144,6 +235,12 @@
 ([ontologia_v1_Class10038] of  Aixecament+lateral+de+la+cama
 
 	(Duracio 3)
+	(Instruccions
+		"1 - \"Pongase de pie, detras de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
+		"2 - \"Levante lentamente la pierna hacia el lateral hasta donde pueda.\""
+		"3 - \"Aguante en esta postura.\""
+		"4 - \"Baje lentamente la pierna hasta su posicion inicial.\""
+		"5 - \"Repitelo con la otra pierna.\"")
 	(Nom+exercici "Aixecament lateral de la cama low")
 	(part+del+cos "Cama")
 	(repeticions 8))
@@ -151,6 +248,12 @@
 ([ontologia_v1_Class10039] of  Aixecament+lateral+de+la+cama
 
 	(Duracio 3)
+	(Instruccions
+		"1 - \"Pongase de pie, detras de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
+		"2 - \"Levante lentamente la pierna hacia el lateral hasta donde pueda.\""
+		"3 - \"Aguante en esta postura.\""
+		"4 - \"Baje lentamente la pierna hasta su posicion inicial.\""
+		"5 - \"Repitelo con la otra pierna.\"")
 	(Nom+exercici "Aixecament lateral de la cama high")
 	(part+del+cos "Cama")
 	(repeticions 15))
@@ -158,6 +261,12 @@
 ([ontologia_v1_Class10046] of  Aixecar+bracos
 
 	(Duracio 2)
+	(Instruccions
+		"1 - \"Sientese en una silla con la esplda derecha y apoyada y sostenga las pesas con las palmas de la mano y mirando hacia el suelo.\""
+		"2 - \"Mantenga los brazos drechos en ambos lados.\""
+		"3 - \"Levante poco a poco los brazos hasta llegar a la altura de los hombros.\""
+		"4 - \"Mantenga esta posicion.\""
+		"5 - \"Baje lentamente los brazos.\"")
 	(Nom+exercici "Aixecar bracos high")
 	(part+del+cos "Bracos")
 	(repeticions 8))
@@ -165,6 +274,12 @@
 ([ontologia_v1_Class10047] of  Aixecar+bracos
 
 	(Duracio 2)
+	(Instruccions
+		"1 - \"Sientese en una silla con la esplda derecha y apoyada y sostenga las pesas con las palmas de la mano y mirando hacia el suelo.\""
+		"2 - \"Mantenga los brazos drechos en ambos lados.\""
+		"3 - \"Levante poco a poco los brazos hasta llegar a la altura de los hombros.\""
+		"4 - \"Mantenga esta posicion.\""
+		"5 - \"Baje lentamente los brazos.\"")
 	(Nom+exercici "Aixecar bracos low")
 	(part+del+cos "Bracos")
 	(repeticions 15))
@@ -172,6 +287,10 @@
 ([ontologia_v1_Class10048] of  Flexio+espatlles
 
 	(Duracio 2)
+	(Instruccions
+		"1 - \"Sientese en una silla con la esplda derecha y apoyada y sostenga las pesas con las palmas de la mano y mirando hacia el suelo.\""
+		"2 - \"Suba los brazos al frente, gire las palmas de las manos hacia arriba, y termine de subir los brazos hasta la altura de los hombros.\""
+		"3 - \"Mantenga esa posicion durante un breve momento y baje lentamente.\"")
 	(Nom+exercici "Flexio espatlles low")
 	(part+del+cos "Espatlles")
 	(repeticions 8))
@@ -179,6 +298,10 @@
 ([ontologia_v1_Class10049] of  Flexio+espatlles
 
 	(Duracio 2)
+	(Instruccions
+		"1 - \"Sientese en una silla con la esplda derecha y apoyada y sostenga las pesas con las palmas de la mano y mirando hacia el suelo.\""
+		"2 - \"Suba los brazos al frente, gire las palmas de las manos hacia arriba, y termine de subir los brazos hasta la altura de los hombros.\""
+		"3 - \"Mantenga esa posicion durante un breve momento y baje lentamente.\"")
 	(Nom+exercici "Flexio espatlles high")
 	(part+del+cos "Espatlles")
 	(repeticions 15))
@@ -186,6 +309,11 @@
 ([ontologia_v1_Class10050] of  Exercicis+biceps
 
 	(Duracio 2)
+	(Instruccions
+		"1 - \"Sientese en una silla con la esplda derecha y apoyada y sostenga las pesas con las palmas de la mano y mirando hacia adentro.\""
+		"2 - \"Suba lentamente un brazo doblando el codo y con la palma que sostiene la pesa mirando hacia arriba.\""
+		"3 - \"Baje lentamente.\""
+		"4 - \"Alterne los dos brazos.\"")
 	(Nom+exercici "Exercicis biceps low")
 	(part+del+cos "Biceps")
 	(repeticions 8))
@@ -193,6 +321,11 @@
 ([ontologia_v1_Class10051] of  Exercicis+biceps
 
 	(Duracio 2)
+	(Instruccions
+		"1 - \"Sientese en una silla con la esplda derecha y apoyada y sostenga las pesas con las palmas de la mano y mirando hacia adentro.\""
+		"2 - \"Suba lentamente un brazo doblando el codo y con la palma que sostiene la pesa mirando hacia arriba.\""
+		"3 - \"Baje lentamente.\""
+		"4 - \"Alterne los dos brazos.\"")
 	(Nom+exercici "Exercici biceps high")
 	(part+del+cos "Biceps")
 	(repeticions 15))
@@ -200,6 +333,13 @@
 ([ontologia_v1_Class10052] of  Extensio+triceps
 
 	(Duracio 2)
+	(Instruccions
+		"1 - \"Sientese en una silla con la esplda derecha y apoyada y sostenga una pesa en una mano y con la palma hacia adentro, levante ese brazo hacia el techo.\""
+		"2 - \"Ayudese soportando ese brazo con la otra mano.\""
+		"3 - \"Doble el brazo levantado hasta la altura del codo, llevando el peso de la mano hacia el mismo hombro.\""
+		"4 - \"Enderece lentamente el brazo hacia el techo.\""
+		"5 - \"Mantenga la posicion.\""
+		"6 - \"Doble lentamente el brazo hacia el hombro otra vez.\"")
 	(Nom+exercici "Extensio triceps low")
 	(part+del+cos "Triceps")
 	(repeticions 8))
@@ -207,6 +347,13 @@
 ([ontologia_v1_Class10053] of  Extensio+triceps
 
 	(Duracio 2)
+	(Instruccions
+		"1 - \"Sientese en una silla con la esplda derecha y apoyada y sostenga una pesa en una mano y con la palma hacia adentro, levante ese brazo hacia el techo.\""
+		"2 - \"Ayudese soportando ese brazo con la otra mano.\""
+		"3 - \"Doble el brazo levantado hasta la altura del codo, llevando el peso de la mano hacia el mismo hombro.\""
+		"4 - \"Enderece lentamente el brazo hacia el techo.\""
+		"5 - \"Mantenga la posicion.\""
+		"6 - \"Doble lentamente el brazo hacia el hombro otra vez.\"")
 	(Nom+exercici "Extensio triceps high")
 	(part+del+cos "Triceps")
 	(repeticions 15))
@@ -224,13 +371,6 @@
 	(Nom+exercici "Aixecar-se de cadira high")
 	(part+del+cos "Abdomen")
 	(repeticions 15))
-
-([ontologia_v1_Class14] of  Flexibilitat
-
-	(Duracio 10)
-	(escalfament TRUE)
-	(Nom+exercici "Estiraments dels tendons de la cuixa")
-	(part+del+cos "Cuixa"))
 
 ([ontologia_v1_Class17] of  Malaltia
 
@@ -256,6 +396,9 @@
 
 	(Duracio 3)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Coloque las manos juntas como si estuviera rezando.\""
+		"2 - \"Vaya elevando lentamente los codos hacia ambos lados, hasta que los brazos queden paralelos al suelo, presionando las manos una con la otra.\"")
 	(Nom+exercici "Estirament canell high")
 	(part+del+cos "Canell")
 	(repeticions 5))
@@ -264,6 +407,12 @@
 
 	(Duracio 3)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Tumbese en el suelo y mantenga los hombros pegados al suelo.\""
+		"2 - \"Estire los brazos a los lados, sobre el suelo.\""
+		"3 - \"Doble los codos y que las manos miren hacia el techo formando un angulo recto hacia arriba.\""
+		"4 - \"Gire los brazos lentamente hacia atras desde el codo.\""
+		"5 - \"Pare cuando sienta un tiron y permanezca en esta posicion.\"")
 	(Nom+exercici "Rotacio espatlles high")
 	(part+del+cos "Espatlles")
 	(repeticions 5))
@@ -272,6 +421,12 @@
 
 	(Duracio 3)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Tumbese en el suelo y mantenga los hombros pegados al suelo.\""
+		"2 - \"Estire los brazos a los lados, sobre el suelo.\""
+		"3 - \"Doble los codos y que las manos miren hacia el techo formando un angulo recto hacia arriba.\""
+		"4 - \"Gire los brazos lentamente hacia atras desde el codo.\""
+		"5 - \"Pare cuando sienta un tiron y permanezca en esta posicion.\"")
 	(Nom+exercici "Rotacio espatlles low")
 	(part+del+cos "Espatlles")
 	(repeticions 3))
@@ -280,6 +435,12 @@
 
 	(Duracio 30)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Tumbese hacia un lado.\""
+		"2 - \"Doble la rodilla del lado contrario al que se ha tumbado.\""
+		"3 - \"Cojase el tobillo de esa pierna con la mano del mismo lado.\""
+		"4 - \"Vaya tirando suavemente de esa pierna hacia atras hasta que note un tiron en el muslo y permanezca en esta postura 10-30 segundos.\""
+		"5 - \"Cambie de posicion y repitelo con la otra pierna.\"")
 	(Nom+exercici "Estirament quadriceps high")
 	(part+del+cos "Quadriceps")
 	(repeticions 5))
@@ -288,6 +449,12 @@
 
 	(Duracio 10)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Tumbese hacia un lado.\""
+		"2 - \"Doble la rodilla del lado contrario al que se ha tumbado.\""
+		"3 - \"Cojase el tobillo de esa pierna con la mano del mismo lado.\""
+		"4 - \"Vaya tirando suavemente de esa pierna hacia atras hasta que note un tiron en el muslo y permanezca en esta postura 10-30 segundos.\""
+		"5 - \"Cambie de posicion y repitelo con la otra pierna.\"")
 	(Nom+exercici "Estirament quadriceps low")
 	(part+del+cos "Quadriceps")
 	(repeticions 3))
@@ -296,6 +463,12 @@
 
 	(Duracio 30)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Tumbese de espaldas en el suelo, con las rodillas flexionadas y los pies extendidos.\""
+		"2 - \"Baje las rodillas lentamente, sin forzarlas, a un lado tanto como pueda.\""
+		"3 - \"Permanezca en esta postura.\""
+		"4 - \"Regrese a su posicion inicial.\""
+		"5 - \"Haga el mismo ejercicio hacia el otro lado.\"")
 	(Nom+exercici "Rotacio maluc high")
 	(part+del+cos "Maluc")
 	(repeticions 5))
@@ -304,6 +477,12 @@
 
 	(Duracio 10)
 	(escalfament TRUE)
+	(Instruccions
+		"1 - \"Tumbese de espaldas en el suelo, con las rodillas flexionadas y los pies extendidos.\""
+		"2 - \"Baje las rodillas lentamente, sin forzarlas, a un lado tanto como pueda.\""
+		"3 - \"Permanezca en esta postura.\""
+		"4 - \"Regrese a su posicion inicial.\""
+		"5 - \"Haga el mismo ejercicio hacia el otro lado.\"")
 	(Nom+exercici "Rotacio maluc low")
 	(part+del+cos "Maluc")
 	(repeticions 3))
