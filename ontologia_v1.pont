@@ -1,0 +1,201 @@
+; Sun Nov 18 22:22:09 CET 2018
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot repeticions
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Duracio
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Nom
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot escalfament
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Cronica
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot Instruccions
+;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot Nom+exercici
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot part+del+cos
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot exercicis
+;+		(comment "Llista d'exercicis")
+		(type INSTANCE)
+;+		(allowed-classes Exercici)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Exercici "Identifica un exercici concret amb alguna instrucció/especificació."
+	(is-a USER)
+	(role concrete)
+	(single-slot Duracio
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot repeticions
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Nom+exercici
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot escalfament
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot part+del+cos
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Instruccions
+;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass Musculatura
+	(is-a Exercici)
+	(role concrete))
+
+(defclass Aixecar+bracos
+	(is-a Musculatura)
+	(role concrete))
+
+(defclass Flexio+espatlles
+	(is-a Musculatura)
+	(role concrete))
+
+(defclass Exercicis+biceps
+	(is-a Musculatura)
+	(role concrete))
+
+(defclass Extensio+triceps
+	(is-a Musculatura)
+	(role concrete))
+
+(defclass Aixecar-se+de+cadira
+	(is-a Musculatura)
+	(role concrete))
+
+(defclass Resistencia
+	(is-a Exercici)
+	(role concrete))
+
+(defclass Caminar
+	(is-a Resistencia)
+	(role concrete))
+
+(defclass Dansa
+	(is-a Resistencia)
+	(role concrete))
+
+(defclass Pujar+escales
+	(is-a Resistencia)
+	(role concrete))
+
+(defclass Pedalejar
+	(is-a Resistencia)
+	(role concrete))
+
+(defclass Flexibilitat
+	(is-a Exercici)
+	(role concrete))
+
+(defclass Estirament+dels+tendons+cuixa
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Estirament+del+panxell "(Pantorilla)"
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Estirament+dels+turmells
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Estirament+dels+triceps
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Estiraments+del+canell
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Rotacio+espatlles
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Estirament+quadriceps
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Rotaci%C3%B3+del+maluc
+	(is-a Flexibilitat)
+	(role concrete))
+
+(defclass Equilibri
+	(is-a Exercici)
+	(role concrete))
+
+(defclass Flexio+plantar
+	(is-a Equilibri)
+	(role concrete))
+
+(defclass Flexio+del+genoll
+	(is-a Equilibri)
+	(role concrete))
+
+(defclass Flexio+i+extensio+maluc
+	(is-a Equilibri)
+	(role concrete))
+
+(defclass Aixecament+lateral+de+la+cama
+	(is-a Equilibri)
+	(role concrete))
+
+(defclass Rutina "Classe genèrica que contindrà una sèrie d'exercicis que s'utilitzaran per fer una recomanació."
+	(is-a USER)
+	(role concrete)
+	(multislot exercicis
+;+		(comment "Llista d'exercicis")
+		(type INSTANCE)
+;+		(allowed-classes Exercici)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Malaltia
+	(is-a USER)
+	(role concrete)
+	(single-slot Nom
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Cronica
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
