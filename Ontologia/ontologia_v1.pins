@@ -1,7 +1,12 @@
-; Sun Nov 18 22:22:09 CET 2018
+; Tue Nov 20 14:59:07 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
+
+([ontologia_v1_Class0] of  Dansa
+
+	(Duracio 20)
+	(Nom+exercici "Dansa low"))
 
 ([ontologia_v1_Class1] of  Malaltia
 
@@ -387,6 +392,31 @@
 	(Cronica TRUE)
 	(Nom "Obesitat cronica"))
 
+([ontologia_v1_Class20001] of  Dansa
+
+	(Duracio 30)
+	(Nom+exercici "Dansa high"))
+
+([ontologia_v1_Class20002] of  Pedalejar
+
+	(Duracio 20)
+	(Nom+exercici "Pedalejar low"))
+
+([ontologia_v1_Class20003] of  Pedalejar
+
+	(Duracio 30)
+	(Nom+exercici "Pedalejar high"))
+
+([ontologia_v1_Class20004] of  Pujar+escales
+
+	(Duracio 20)
+	(Nom+exercici "Pujar Escales low"))
+
+([ontologia_v1_Class20005] of  Pujar+escales
+
+	(Duracio 30)
+	(Nom+exercici "Pujar Escales high"))
+
 ([ontologia_v1_Class20008] of  Malaltia
 
 	(Cronica TRUE)
@@ -491,6 +521,23 @@
 
 	(Cronica FALSE)
 	(Nom "Osteoporosis"))
+
+([ontologia_v1_Class30013] of  Persona+dependent
+
+	(exercicis [ontologia_v1_Class10010])
+	(indicada
+		[ontologia_v1_Class4]
+		[ontologia_v1_Class8]))
+
+([ontologia_v1_Class30014] of  Malaltia
+)
+
+([ontologia_v1_Class30015] of  Persona+dependent
+
+	(exercicis [ontologia_v1_Class20017])
+	(indicada
+		[ontologia_v1_Class4]
+		[ontologia_v1_Class8]))
 
 ([ontologia_v1_Class4] of  Malaltia
 
