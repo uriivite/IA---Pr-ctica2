@@ -1,4 +1,4 @@
-; Tue Nov 20 14:59:07 CET 2018
+; Tue Nov 20 15:57:17 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -11,14 +11,14 @@
 		(type INSTANCE)
 ;+		(allowed-classes Malaltia)
 		(create-accessor read-write))
+	(multislot escalfament
+		(type INSTANCE)
+;+		(allowed-classes Flexibilitat)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
 	(single-slot Nom+exercici
 		(type STRING)
 ;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot escalfament
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot exercicis
 ;+		(comment "Llista d'exercicis")
@@ -43,6 +43,11 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot es+escalfament
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot part+del+cos
 		(type STRING)
 ;+		(cardinality 0 1)
@@ -63,11 +68,6 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot escalfament
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot Nom+exercici
 		(type STRING)
 ;+		(cardinality 1 1)
@@ -79,6 +79,11 @@
 	(multislot Instruccions
 ;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
 		(type STRING)
+		(create-accessor read-write))
+	(single-slot es+escalfament
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot part+del+cos
 		(type STRING)
@@ -191,6 +196,11 @@
 	(multislot contraindicada
 		(type INSTANCE)
 ;+		(allowed-classes Malaltia)
+		(create-accessor read-write))
+	(multislot escalfament
+		(type INSTANCE)
+;+		(allowed-classes Flexibilitat)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(multislot exercicis
 ;+		(comment "Llista d'exercicis")
