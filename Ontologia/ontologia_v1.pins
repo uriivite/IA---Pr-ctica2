@@ -1,4 +1,4 @@
-; Tue Nov 20 15:57:17 CET 2018
+; Thu Nov 22 19:05:52 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -387,6 +387,20 @@
 	(Cronica TRUE)
 	(Nom "Obesitat cronica"))
 
+([ontologia_v1_Class20000] of  Rutina
+
+	(contraindicada [ontologia_v1_Class5])
+	(escalfament
+		[ontologia_v1_Class20019]
+		[ontologia_v1_Class20023])
+	(exercicis
+		[ontologia_v1_Class10031]
+		[ontologia_v1_Class10030]
+		[ontologia_v1_Class10048])
+	(indicada
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class3]))
+
 ([ontologia_v1_Class20001] of  Dansa
 
 	(Duracio 30)
@@ -517,86 +531,143 @@
 	(Cronica FALSE)
 	(Nom "Osteoporosis"))
 
-([ontologia_v1_Class30016] of  Persona+dependent
+([ontologia_v1_Class30001] of  Rutina
 
-	(contraindicada
-		[ontologia_v1_Class3]
-		[ontologia_v1_Class5]
-		[ontologia_v1_Class8])
+	(contraindicada [ontologia_v1_Class5])
+	(escalfament
+		[ontologia_v1_Class20019]
+		[ontologia_v1_Class20023])
 	(exercicis
-		[ontologia_v1_Class10002]
-		[ontologia_v1_Class20003]
-		[ontologia_v1_Class20020])
+		[ontologia_v1_Class10048]
+		[ontologia_v1_Class10033]
+		[ontologia_v1_Class10037])
 	(indicada
-		[ontologia_v1_Class10005]
-		[ontologia_v1_Class18]
-		[ontologia_v1_Class2]
-		[ontologia_v1_Class10007]
-		[ontologia_v1_Class17]))
-
-([ontologia_v1_Class30018] of  Persona+dependent
-
-	(contraindicada
-		[ontologia_v1_Class5]
 		[ontologia_v1_Class8]
-		[ontologia_v1_Class3])
-	(exercicis
-		[ontologia_v1_Class10001]
-		[ontologia_v1_Class20002]
-		[ontologia_v1_Class20021])
-	(indicada
-		[ontologia_v1_Class10005]
-		[ontologia_v1_Class18]
-		[ontologia_v1_Class2]
-		[ontologia_v1_Class10007]
-		[ontologia_v1_Class17]))
+		[ontologia_v1_Class3]))
 
-([ontologia_v1_Class30021] of  Persona+dependent
+([ontologia_v1_Class30003] of  Rutina
+
+	(contraindicada [ontologia_v1_Class5])
+	(escalfament
+		[ontologia_v1_Class20023]
+		[ontologia_v1_Class20018])
+	(exercicis
+		[ontologia_v1_Class10037]
+		[ontologia_v1_Class10039]
+		[ontologia_v1_Class10030])
+	(indicada
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class3]))
+
+([ontologia_v1_Class30004] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30003])
+	(%3AANNOTATION-TEXT "Fragilitat nivell 3")
+	(%3ACREATION-TIMESTAMP "2018.11.22 18:28:46.454 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class30005] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30001])
+	(%3AANNOTATION-TEXT "Fragilitat Nivell 2")
+	(%3ACREATION-TIMESTAMP "2018.11.22 18:29:25.622 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class30006] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class20000])
+	(%3AANNOTATION-TEXT "Fragilitat nivell 1")
+	(%3ACREATION-TIMESTAMP "2018.11.22 18:29:38.544 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class30007] of  Rutina
+
+	(contraindicada [ontologia_v1_Class5])
+	(escalfament
+		[ontologia_v1_Class20018]
+		[ontologia_v1_Class20021]
+		[ontologia_v1_Class20022])
+	(exercicis
+		[ontologia_v1_Class10037]
+		[ontologia_v1_Class10039]
+		[ontologia_v1_Class10032])
+	(indicada
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class3]))
+
+([ontologia_v1_Class30008] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30007])
+	(%3AANNOTATION-TEXT "Fragilitat nivell 4")
+	(%3ACREATION-TIMESTAMP "2018.11.22 18:30:41.602 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class30011] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30041])
+	(%3AANNOTATION-TEXT "Circulacio sanguinea nivell 3")
+	(%3ACREATION-TIMESTAMP "2018.11.22 18:43:41.145 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class30012] of  Rutina
 
 	(contraindicada
 		[ontologia_v1_Class3]
-		[ontologia_v1_Class5]
-		[ontologia_v1_Class8])
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class5])
+	(escalfament
+		[ontologia_v1_Class20019]
+		[ontologia_v1_Class10015])
 	(exercicis
-		[ontologia_v1_Class20020]
-		[ontologia_v1_Class10001]
+		[ontologia_v1_Class10047]
+		[ontologia_v1_Class10050]
+		[ontologia_v1_Class10052]
+		[ontologia_v1_Class10048]
 		[ontologia_v1_Class20002])
 	(indicada
+		[ontologia_v1_Class4]
+		[ontologia_v1_Class20008]
 		[ontologia_v1_Class10005]
-		[ontologia_v1_Class18]
 		[ontologia_v1_Class2]
 		[ontologia_v1_Class10007]
-		[ontologia_v1_Class17]))
+		[ontologia_v1_Class17]
+		[ontologia_v1_Class6]
+		[ontologia_v1_Class9]
+		[ontologia_v1_Class7]))
 
-([ontologia_v1_Class30028] of  Persona+dependent
+([ontologia_v1_Class30013] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30012])
+	(%3AANNOTATION-TEXT "Circulacio sanguinea nivell 1")
+	(%3ACREATION-TIMESTAMP "2018.11.22 18:45:32.965 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class30014] of  Rutina
 
 	(contraindicada
 		[ontologia_v1_Class3]
-		[ontologia_v1_Class5]
-		[ontologia_v1_Class8])
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class5])
+	(escalfament
+		[ontologia_v1_Class20019]
+		[ontologia_v1_Class10015]
+		[ontologia_v1_Class10010])
 	(exercicis
-		[ontologia_v1_Class20002]
-		[ontologia_v1_Class20021]
-		[ontologia_v1_Class10002])
+		[ontologia_v1_Class10047]
+		[ontologia_v1_Class10050]
+		[ontologia_v1_Class10048]
+		[ontologia_v1_Class10053]
+		[ontologia_v1_Class20003])
 	(indicada
+		[ontologia_v1_Class4]
+		[ontologia_v1_Class20008]
 		[ontologia_v1_Class10005]
-		[ontologia_v1_Class18]
 		[ontologia_v1_Class2]
 		[ontologia_v1_Class10007]
-		[ontologia_v1_Class17]))
-
-([ontologia_v1_Class30029] of  Persona+dependent
-
-	(exercicis
-		[ontologia_v1_Class20002]
-		[ontologia_v1_Class20021]
-		[ontologia_v1_Class10002])
-	(indicada
-		[ontologia_v1_Class10005]
-		[ontologia_v1_Class18]
-		[ontologia_v1_Class2]
-		[ontologia_v1_Class10007]
-		[ontologia_v1_Class17]))
+		[ontologia_v1_Class17]
+		[ontologia_v1_Class6]
+		[ontologia_v1_Class9]
+		[ontologia_v1_Class7]))
 
 ([ontologia_v1_Class30033] of  Rutina
 
@@ -686,11 +757,6 @@
 		[ontologia_v1_Class6]
 		[ontologia_v1_Class9]))
 
-([ontologia_v1_Class30040] of  Rutina
-
-	(escalfament [ontologia_v1_Class20021])
-	(exercicis [ontologia_v1_Class10002]))
-
 ([ontologia_v1_Class30041] of  Rutina
 
 	(contraindicada
@@ -698,14 +764,15 @@
 		[ontologia_v1_Class8]
 		[ontologia_v1_Class5])
 	(escalfament
-		[ontologia_v1_Class20019]
-		[ontologia_v1_Class10015])
+		[ontologia_v1_Class10015]
+		[ontologia_v1_Class10010]
+		[ontologia_v1_Class20018])
 	(exercicis
-		[ontologia_v1_Class10047]
-		[ontologia_v1_Class10054]
 		[ontologia_v1_Class10050]
-		[ontologia_v1_Class10052]
-		[ontologia_v1_Class10048])
+		[ontologia_v1_Class10053]
+		[ontologia_v1_Class10001]
+		[ontologia_v1_Class20002]
+		[ontologia_v1_Class10054])
 	(indicada
 		[ontologia_v1_Class4]
 		[ontologia_v1_Class20008]
@@ -745,6 +812,135 @@
 
 	(Cronica FALSE)
 	(Nom "Colesterol"))
+
+([ontologia_v1_Class40016] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30014])
+	(%3AANNOTATION-TEXT "Circulacio sanguinea nivell 2")
+	(%3ACREATION-TIMESTAMP "2018.11.22 18:47:46.283 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class40017] of  Rutina
+
+	(contraindicada
+		[ontologia_v1_Class3]
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class5])
+	(escalfament
+		[ontologia_v1_Class10015]
+		[ontologia_v1_Class10010]
+		[ontologia_v1_Class20018])
+	(exercicis
+		[ontologia_v1_Class10046]
+		[ontologia_v1_Class10053]
+		[ontologia_v1_Class10055]
+		[ontologia_v1_Class20002]
+		[ontologia_v1_Class10002])
+	(indicada
+		[ontologia_v1_Class4]
+		[ontologia_v1_Class20008]
+		[ontologia_v1_Class10005]
+		[ontologia_v1_Class2]
+		[ontologia_v1_Class10007]
+		[ontologia_v1_Class17]
+		[ontologia_v1_Class6]
+		[ontologia_v1_Class9]
+		[ontologia_v1_Class7]))
+
+([ontologia_v1_Class40018] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40017])
+	(%3AANNOTATION-TEXT "Circualcio sanguinea nivell 4")
+	(%3ACREATION-TIMESTAMP "2018.11.22 18:48:03.923 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class40019] of  Rutina
+
+	(escalfament
+		[ontologia_v1_Class10010]
+		[ontologia_v1_Class10008]
+		[ontologia_v1_Class10012])
+	(exercicis
+		[ontologia_v1_Class20002]
+		[ontologia_v1_Class10048]
+		[ontologia_v1_Class20019])
+	(indicada
+		[ontologia_v1_Class5]
+		[ontologia_v1_Class18]))
+
+([ontologia_v1_Class40020] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40019])
+	(%3AANNOTATION-TEXT "Artrosis nivell 1")
+	(%3ACREATION-TIMESTAMP "2018.11.22 18:52:46.622 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class40021] of  Rutina
+
+	(escalfament
+		[ontologia_v1_Class10010]
+		[ontologia_v1_Class10008]
+		[ontologia_v1_Class10013])
+	(exercicis
+		[ontologia_v1_Class20002]
+		[ontologia_v1_Class20019]
+		[ontologia_v1_Class10054]
+		[ontologia_v1_Class10049])
+	(indicada
+		[ontologia_v1_Class5]
+		[ontologia_v1_Class18]))
+
+([ontologia_v1_Class40022] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40021])
+	(%3AANNOTATION-TEXT "Artrosis nivell 2")
+	(%3ACREATION-TIMESTAMP "2018.11.22 18:53:33.670 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class40023] of  Rutina
+
+	(escalfament
+		[ontologia_v1_Class10013]
+		[ontologia_v1_Class20021]
+		[ontologia_v1_Class10009])
+	(exercicis
+		[ontologia_v1_Class10054]
+		[ontologia_v1_Class10049]
+		[ontologia_v1_Class20003]
+		[ontologia_v1_Class10030])
+	(indicada
+		[ontologia_v1_Class5]
+		[ontologia_v1_Class18]))
+
+([ontologia_v1_Class40024] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40023])
+	(%3AANNOTATION-TEXT "Artrosis nivell 3")
+	(%3ACREATION-TIMESTAMP "2018.11.22 18:54:26.694 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class40025] of  Rutina
+
+	(escalfament
+		[ontologia_v1_Class10013]
+		[ontologia_v1_Class10009]
+		[ontologia_v1_Class20020]
+		[ontologia_v1_Class20018])
+	(exercicis
+		[ontologia_v1_Class10049]
+		[ontologia_v1_Class20003]
+		[ontologia_v1_Class10055]
+		[ontologia_v1_Class10033])
+	(indicada
+		[ontologia_v1_Class5]
+		[ontologia_v1_Class18]))
+
+([ontologia_v1_Class40026] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40025])
+	(%3AANNOTATION-TEXT "Artrosis nivell 4")
+	(%3ACREATION-TIMESTAMP "2018.11.22 18:56:04.058 CET")
+	(%3ACREATOR "oriol"))
 
 ([ontologia_v1_Class5] of  Malaltia
 
