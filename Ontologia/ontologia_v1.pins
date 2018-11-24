@@ -1,4 +1,4 @@
-; Thu Nov 22 19:05:52 CET 2018
+; Sat Nov 24 21:06:18 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -22,6 +22,7 @@
 ([ontologia_v1_Class10002] of  Caminar
 
 	(Duracio 45)
+	(es+escalfament TRUE)
 	(Instruccions "Afegeix alguna pujada a la teva ruta habitual")
 	(Nom+exercici "caminar high"))
 
@@ -812,6 +813,97 @@
 
 	(Cronica FALSE)
 	(Nom "Colesterol"))
+
+([ontologia_v1_Class40001] of  Malaltia
+
+	(Cronica FALSE)
+	(Nom "Hipertensio"))
+
+([ontologia_v1_Class40003] of  Rutina
+
+	(contraindicada
+		[ontologia_v1_Class5]
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class1]
+		[ontologia_v1_Class17])
+	(escalfament
+		[ontologia_v1_Class10015]
+		[ontologia_v1_Class20020]
+		[ontologia_v1_Class20022]
+		[ontologia_v1_Class10009])
+	(exercicis
+		[ontologia_v1_Class10001]
+		[ontologia_v1_Class10050])
+	(indicada
+		[ontologia_v1_Class40001]
+		[ontologia_v1_Class10005]))
+
+([ontologia_v1_Class40004] of  Rutina
+
+	(contraindicada
+		[ontologia_v1_Class5]
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class1]
+		[ontologia_v1_Class17]
+		[ontologia_v1_Class10005])
+	(escalfament
+		[ontologia_v1_Class10015]
+		[ontologia_v1_Class20020]
+		[ontologia_v1_Class20022]
+		[ontologia_v1_Class10009])
+	(exercicis
+		[ontologia_v1_Class20003]
+		[ontologia_v1_Class10050])
+	(indicada [ontologia_v1_Class40001]))
+
+([ontologia_v1_Class40007] of  Rutina
+
+	(contraindicada
+		[ontologia_v1_Class5]
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class1]
+		[ontologia_v1_Class17])
+	(escalfament
+		[ontologia_v1_Class10015]
+		[ontologia_v1_Class20020]
+		[ontologia_v1_Class20022]
+		[ontologia_v1_Class10009])
+	(exercicis
+		[ontologia_v1_Class20002]
+		[ontologia_v1_Class10050])
+	(indicada
+		[ontologia_v1_Class40001]
+		[ontologia_v1_Class10005]))
+
+([ontologia_v1_Class40008] of  Rutina
+
+	(contraindicada
+		[ontologia_v1_Class5]
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class1]
+		[ontologia_v1_Class17]
+		[ontologia_v1_Class10005])
+	(escalfament
+		[ontologia_v1_Class10015]
+		[ontologia_v1_Class20020]
+		[ontologia_v1_Class20022]
+		[ontologia_v1_Class10009])
+	(exercicis
+		[ontologia_v1_Class10002]
+		[ontologia_v1_Class10050])
+	(indicada [ontologia_v1_Class40001]))
+
+([ontologia_v1_Class40009] of  Rutina
+
+	(escalfament
+		[ontologia_v1_Class10009]
+		[ontologia_v1_Class20020]
+		[ontologia_v1_Class20022])
+	(exercicis
+		[ontologia_v1_Class20003]
+		[ontologia_v1_Class10046]
+		[ontologia_v1_Class10049])
+	(indicada [ontologia_v1_Class1]))
 
 ([ontologia_v1_Class40016] of  %3AINSTANCE-ANNOTATION
 
