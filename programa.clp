@@ -31,13 +31,13 @@
   (printout t "------ rutines per a la gent gran -----" crlf)
   (printout t "------------------------------" crlf)
   (printout t crlf)
-  (focus preguntas-determinar-usuario )
+  (focus preguntes-inicials )
 )
 
 ;;; ----- Modul Preguntes inicials
 ;;; Fa una serie de preguntes per determinar la dependencia de l'usuari
-;;; i el seu estat de salut(edat,sedenterisme,malalties...)
-(defmodule preguntas-determinar-usuario "Modul de preguntes inicials"
+;;; i el seu estat de salut(edat,sedenterisme)
+(defmodule preguntes-inicials "Modul de preguntes inicials"
   (import MAIN ?ALL)
   (export ?ALL))
   
@@ -77,17 +77,16 @@
   )
 )
 
-;;; Saltamos al modulo de preguntas comunes
-(defrule a-preguntas-comunes
+;;; Saltamos al modulo de preguntes de malalties
+(defrule a-preguntas-malalties
  (declare (salience -1))
  =>
- (focus preguntas-comunes)
+ (focus preguntas-malalties)
 )
 
-;;; ----- Modul Preguntes inicials
-;;; Fa una serie de preguntes per determinar la dependencia de l'usuari
-;;; i el seu estat de salut(edat,sedenterisme,malalties...)
-(defmodule preguntas-determinar-usuario "Modul de preguntes inicials"
+;;; ----- Modul Preguntes malalties
+;;; Fa una serie de preguntes per determinar les malalties de l'usuari
+(defmodule preguntas-malalteis "Modul de preguntes de malalties"
 
 
 ;;;Determinem si l'usuari te obesitat
@@ -100,6 +99,25 @@
 	else
 	  (assert (obes No))
   )
+)
+
+;;;Determinem si l'usuari ha tingut problemes cardiovasculars
+(defrule cardiovasculars
+  (if  (si-o-no-p "Te o ha tingut problemes cardiovasculars? (s/n) ")
+    then 
+     (assert (cardiovasculars))
+     (if (si-o-no-p "Tenen a veure amb el colesterol? (s/n) ")
+     then
+       (assert (colesterol))
+       (if (si-o-no "Te colesterol cronic?(s/n)")
+         then
+         (assert(colesterol cronic))
+       )
+     else
+       
+       
+     )
+   )
 )
 
 
