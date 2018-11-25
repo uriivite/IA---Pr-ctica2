@@ -1,4 +1,4 @@
-; Sat Nov 24 21:06:18 CET 2018
+; Sun Nov 25 14:27:50 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -12,6 +12,20 @@
 
 	(Cronica TRUE)
 	(Nom "Problemes respiratoris"))
+
+([ontologia_v1_Class10000] of  Rutina
+
+	(contraindicada
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class3])
+	(escalfament
+		[ontologia_v1_Class20021]
+		[ontologia_v1_Class10008]
+		[ontologia_v1_Class10015])
+	(exercicis
+		[ontologia_v1_Class20002]
+		[ontologia_v1_Class10047])
+	(indicada [ontologia_v1_Class7]))
 
 ([ontologia_v1_Class10001] of  Caminar
 
@@ -1038,6 +1052,88 @@
 
 	(Cronica FALSE)
 	(Nom "Artrosis"))
+
+([ontologia_v1_Class50004] of  Padel
+
+	(Duracio 30)
+	(Nom+exercici "Padel low"))
+
+([ontologia_v1_Class50005] of  Padel
+
+	(Duracio 60)
+	(Nom+exercici "Padel high"))
+
+([ontologia_v1_Class50007] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class10000])
+	(%3AANNOTATION-TEXT "depressio nivell 1")
+	(%3ACREATION-TIMESTAMP "2018.11.25 13:49:38.652 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class50008] of  Rutina
+
+	(contraindicada
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class3])
+	(escalfament
+		[ontologia_v1_Class20021]
+		[ontologia_v1_Class10015]
+		[ontologia_v1_Class10009])
+	(exercicis
+		[ontologia_v1_Class10047]
+		[ontologia_v1_Class20003])
+	(indicada [ontologia_v1_Class7]))
+
+([ontologia_v1_Class50009] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class50008])
+	(%3AANNOTATION-TEXT "Depressio nivell 2")
+	(%3ACREATION-TIMESTAMP "2018.11.25 13:50:40.494 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class50010] of  Rutina
+
+	(contraindicada
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class3])
+	(escalfament
+		[ontologia_v1_Class20021]
+		[ontologia_v1_Class10015]
+		[ontologia_v1_Class10009])
+	(exercicis
+		[ontologia_v1_Class50004]
+		[ontologia_v1_Class10046]
+		[ontologia_v1_Class10030])
+	(indicada [ontologia_v1_Class7]))
+
+([ontologia_v1_Class50011] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class50010])
+	(%3AANNOTATION-TEXT "Depressio nivell 3")
+	(%3ACREATION-TIMESTAMP "2018.11.25 13:51:17.931 CET")
+	(%3ACREATOR "oriol"))
+
+([ontologia_v1_Class50012] of  Rutina
+
+	(contraindicada
+		[ontologia_v1_Class8]
+		[ontologia_v1_Class3])
+	(escalfament
+		[ontologia_v1_Class10015]
+		[ontologia_v1_Class10009]
+		[ontologia_v1_Class20020])
+	(exercicis
+		[ontologia_v1_Class10046]
+		[ontologia_v1_Class50005]
+		[ontologia_v1_Class10033])
+	(indicada [ontologia_v1_Class7]))
+
+([ontologia_v1_Class50013] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class50012])
+	(%3AANNOTATION-TEXT "Depressio nivell 4")
+	(%3ACREATION-TIMESTAMP "2018.11.25 13:52:31.774 CET")
+	(%3ACREATOR "oriol"))
 
 ([ontologia_v1_Class6] of  Malaltia
 

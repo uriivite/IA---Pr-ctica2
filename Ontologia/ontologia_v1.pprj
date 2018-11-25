@@ -1,4 +1,4 @@
-; Sat Nov 24 21:06:18 CET 2018
+; Sun Nov 25 14:27:50 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -21,32 +21,33 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ontologia_v1_ProjectKB_Class20185]
-		[ontologia_v1_ProjectKB_Class20186]
-		[ontologia_v1_ProjectKB_Class20187]
-		[ontologia_v1_ProjectKB_Class20188]
-		[ontologia_v1_ProjectKB_Class20189]
-		[ontologia_v1_ProjectKB_Class20190]
-		[ontologia_v1_ProjectKB_Class20191]
-		[ontologia_v1_ProjectKB_Class20192]
-		[ontologia_v1_ProjectKB_Class20193]
-		[ontologia_v1_ProjectKB_Class20194]
-		[ontologia_v1_ProjectKB_Class20195]
-		[ontologia_v1_ProjectKB_Class20196]
-		[ontologia_v1_ProjectKB_Class20197]
-		[ontologia_v1_ProjectKB_Class20198]
-		[ontologia_v1_ProjectKB_Class20199]
-		[ontologia_v1_ProjectKB_Class20200]
-		[ontologia_v1_ProjectKB_Class20201]
-		[ontologia_v1_ProjectKB_Class20202]
-		[ontologia_v1_ProjectKB_Class20203]
-		[ontologia_v1_ProjectKB_Class20204]
-		[ontologia_v1_ProjectKB_Class20205]
-		[ontologia_v1_ProjectKB_Class20206]
-		[ontologia_v1_ProjectKB_Class20207]
-		[ontologia_v1_ProjectKB_Class20208]
-		[ontologia_v1_ProjectKB_Class20209]
-		[ontologia_v1_ProjectKB_Class20210]))
+		[ontologia_v1_ProjectKB_Class10093]
+		[ontologia_v1_ProjectKB_Class10094]
+		[ontologia_v1_ProjectKB_Class10095]
+		[ontologia_v1_ProjectKB_Class10096]
+		[ontologia_v1_ProjectKB_Class10097]
+		[ontologia_v1_ProjectKB_Class10098]
+		[ontologia_v1_ProjectKB_Class10099]
+		[ontologia_v1_ProjectKB_Class10100]
+		[ontologia_v1_ProjectKB_Class10101]
+		[ontologia_v1_ProjectKB_Class10102]
+		[ontologia_v1_ProjectKB_Class10103]
+		[ontologia_v1_ProjectKB_Class10104]
+		[ontologia_v1_ProjectKB_Class10105]
+		[ontologia_v1_ProjectKB_Class10106]
+		[ontologia_v1_ProjectKB_Class10107]
+		[ontologia_v1_ProjectKB_Class10108]
+		[ontologia_v1_ProjectKB_Class10109]
+		[ontologia_v1_ProjectKB_Class10110]
+		[ontologia_v1_ProjectKB_Class10111]
+		[ontologia_v1_ProjectKB_Class10112]
+		[ontologia_v1_ProjectKB_Class10113]
+		[ontologia_v1_ProjectKB_Class10114]
+		[ontologia_v1_ProjectKB_Class10115]
+		[ontologia_v1_ProjectKB_Class10116]
+		[ontologia_v1_ProjectKB_Class10117]
+		[ontologia_v1_ProjectKB_Class10118]
+		[ontologia_v1_ProjectKB_Class10119]))
 
 ([CLSES_TAB] of  Widget
 
@@ -88,9 +89,6 @@
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_061548_Class14] of  Map
-)
-
 ([KB_154370_Class0] of  String
 
 	(name "factory_class_name")
@@ -98,8 +96,8 @@
 
 ([KB_154370_Class1] of  Map
 
-	(entries [ontologia_v1_ProjectKB_Class20224])
-	(referenced_maps [ontologia_v1_ProjectKB_Class20211]))
+	(entries [ontologia_v1_ProjectKB_Class10137])
+	(referenced_maps [ontologia_v1_ProjectKB_Class10120]))
 
 ([KB_154370_Class100] of  String
 
@@ -193,6 +191,9 @@
 	(name "classes_file_name")
 	(string_value "ontologia_v1.pont"))
 
+([KB_555371_Class18] of  Map
+)
+
 ([LAYOUT_PROPERTIES] of  Property_List
 
 	(name "layout properties")
@@ -205,7 +206,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class10082])
-	(widget_class_name "edu.stanford.smi.protegex.fctab.FacetConstraintsTab"))
+	(widget_class_name "script.ProtegeScriptTab"))
 
 ([ontologia_v1_ProjectKB_Class10082] of  Property_List
 )
@@ -214,7 +215,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class10084])
-	(widget_class_name "edu.stanford.smi.protegex.xml.tab.XMLTab"))
+	(widget_class_name "edu.stanford.smi.protegex.chatPlugin.ChatTab"))
 
 ([ontologia_v1_ProjectKB_Class10084] of  Property_List
 )
@@ -223,7 +224,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class10086])
-	(widget_class_name "edu.stanford.smi.protegex.datamaster.DataMasterTab"))
+	(widget_class_name "edu.stanford.smi.protegex.fctab.FacetConstraintsTab"))
 
 ([ontologia_v1_ProjectKB_Class10086] of  Property_List
 )
@@ -232,284 +233,321 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class10088])
-	(widget_class_name "ezpal.EZPalTab"))
+	(widget_class_name "edu.stanford.smi.protegex.xml.tab.XMLTab"))
 
 ([ontologia_v1_ProjectKB_Class10088] of  Property_List
 )
+
+([ontologia_v1_ProjectKB_Class10089] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [ontologia_v1_ProjectKB_Class10090])
+	(widget_class_name "edu.stanford.smi.protegex.datamaster.DataMasterTab"))
+
+([ontologia_v1_ProjectKB_Class10090] of  Property_List
+)
+
+([ontologia_v1_ProjectKB_Class10091] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [ontologia_v1_ProjectKB_Class10092])
+	(widget_class_name "ezpal.EZPalTab"))
+
+([ontologia_v1_ProjectKB_Class10092] of  Property_List
+)
+
+([ontologia_v1_ProjectKB_Class10093] of  String
+
+	(name "Dansa")
+	(string_value "Nom+exercici"))
+
+([ontologia_v1_ProjectKB_Class10094] of  String
+
+	(name "Aixecar-se de cadira")
+	(string_value "Nom+exercici"))
+
+([ontologia_v1_ProjectKB_Class10095] of  String
+
+	(name "Pedalejar")
+	(string_value "Nom+exercici"))
+
+([ontologia_v1_ProjectKB_Class10096] of  String
+
+	(name "Estirament dels tendons cuixa")
+	(string_value "Nom+exercici"))
+
+([ontologia_v1_ProjectKB_Class10097] of  String
+
+	(name "Padel")
+	(string_value "Nom+exercici"))
+
+([ontologia_v1_ProjectKB_Class10098] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([ontologia_v1_ProjectKB_Class10099] of  String
+
+	(name "Flexio plantar")
+	(string_value "Nom+exercici"))
 
 ([ontologia_v1_ProjectKB_Class101] of  String
 
 	(name "SearchTab_Query"))
 
-([ontologia_v1_ProjectKB_Class15] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [ontologia_v1_ProjectKB_Class16])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormsTab"))
-
-([ontologia_v1_ProjectKB_Class16] of  Property_List
-)
-
-([ontologia_v1_ProjectKB_Class17] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [ontologia_v1_ProjectKB_Class18])
-	(widget_class_name "org.protege.owl.mm.portability.protege3.MappingMasterTab"))
-
-([ontologia_v1_ProjectKB_Class18] of  Property_List
-)
-
-([ontologia_v1_ProjectKB_Class19] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [ontologia_v1_ProjectKB_Class20])
-	(widget_class_name "edu.stanford.smi.protege.widget.ProtegePropertiesTab"))
-
-([ontologia_v1_ProjectKB_Class20] of  Property_List
-)
-
-([ontologia_v1_ProjectKB_Class20185] of  String
-
-	(name "Dansa")
-	(string_value "Nom+exercici"))
-
-([ontologia_v1_ProjectKB_Class20186] of  String
-
-	(name "Aixecar-se de cadira")
-	(string_value "Nom+exercici"))
-
-([ontologia_v1_ProjectKB_Class20187] of  String
-
-	(name "Pedalejar")
-	(string_value "Nom+exercici"))
-
-([ontologia_v1_ProjectKB_Class20188] of  String
-
-	(name "Estirament dels tendons cuixa")
-	(string_value "Nom+exercici"))
-
-([ontologia_v1_ProjectKB_Class20189] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([ontologia_v1_ProjectKB_Class20190] of  String
-
-	(name "Flexio plantar")
-	(string_value "Nom+exercici"))
-
-([ontologia_v1_ProjectKB_Class20191] of  String
+([ontologia_v1_ProjectKB_Class10100] of  String
 
 	(name "Aixecament lateral de la cama")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20192] of  String
+([ontologia_v1_ProjectKB_Class10101] of  String
 
 	(name "Pujar escales")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20193] of  String
+([ontologia_v1_ProjectKB_Class10102] of  String
 
 	(name "Rotacio espatlles")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20194] of  String
+([ontologia_v1_ProjectKB_Class10103] of  String
 
 	(name "Caminar")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20195] of  String
+([ontologia_v1_ProjectKB_Class10104] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([ontologia_v1_ProjectKB_Class20196] of  String
+([ontologia_v1_ProjectKB_Class10105] of  String
 
 	(name "Aixecar bracos")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20197] of  String
+([ontologia_v1_ProjectKB_Class10106] of  String
 
 	(name "Rutina")
 	(string_value "exercicis"))
 
-([ontologia_v1_ProjectKB_Class20198] of  String
+([ontologia_v1_ProjectKB_Class10107] of  String
 
 	(name "Flexio espatlles")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20199] of  String
+([ontologia_v1_ProjectKB_Class10108] of  String
 
 	(name "Flexio del genoll")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20200] of  String
+([ontologia_v1_ProjectKB_Class10109] of  String
 
 	(name "Extensio triceps")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20201] of  String
+([ontologia_v1_ProjectKB_Class10110] of  String
 
 	(name "Estiraments del canell")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20202] of  String
+([ontologia_v1_ProjectKB_Class10111] of  String
 
 	(name "Estirament dels triceps")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20203] of  String
+([ontologia_v1_ProjectKB_Class10112] of  String
 
 	(name "Flexio i extensio maluc")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20204] of  String
+([ontologia_v1_ProjectKB_Class10113] of  String
 
 	(name "Exercicis biceps")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20205] of  String
+([ontologia_v1_ProjectKB_Class10114] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([ontologia_v1_ProjectKB_Class20206] of  String
+([ontologia_v1_ProjectKB_Class10115] of  String
 
 	(name "Rotació del maluc")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20207] of  String
+([ontologia_v1_ProjectKB_Class10116] of  String
 
 	(name "Estirament quadriceps")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20208] of  String
+([ontologia_v1_ProjectKB_Class10117] of  String
 
 	(name "Estirament del panxell")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20209] of  String
+([ontologia_v1_ProjectKB_Class10118] of  String
 
 	(name "Estirament dels turmells")
 	(string_value "Nom+exercici"))
 
-([ontologia_v1_ProjectKB_Class20210] of  String
+([ontologia_v1_ProjectKB_Class10119] of  String
 
 	(name "Malaltia")
 	(string_value "Nom"))
 
-([ontologia_v1_ProjectKB_Class20211] of  Map
+([ontologia_v1_ProjectKB_Class10120] of  Map
 
 	(entries
-		[ontologia_v1_ProjectKB_Class20212]
-		[ontologia_v1_ProjectKB_Class20213]
-		[ontologia_v1_ProjectKB_Class20214]
-		[ontologia_v1_ProjectKB_Class20215]
-		[ontologia_v1_ProjectKB_Class20216]
-		[ontologia_v1_ProjectKB_Class20217]
-		[ontologia_v1_ProjectKB_Class20218]
-		[ontologia_v1_ProjectKB_Class20219]
-		[ontologia_v1_ProjectKB_Class20220]
-		[ontologia_v1_ProjectKB_Class20221]
-		[ontologia_v1_ProjectKB_Class20222]
-		[ontologia_v1_ProjectKB_Class20223]))
+		[ontologia_v1_ProjectKB_Class10121]
+		[ontologia_v1_ProjectKB_Class10122]
+		[ontologia_v1_ProjectKB_Class10123]
+		[ontologia_v1_ProjectKB_Class10124]
+		[ontologia_v1_ProjectKB_Class10125]
+		[ontologia_v1_ProjectKB_Class10126]
+		[ontologia_v1_ProjectKB_Class10127]
+		[ontologia_v1_ProjectKB_Class10128]
+		[ontologia_v1_ProjectKB_Class10129]
+		[ontologia_v1_ProjectKB_Class10130]
+		[ontologia_v1_ProjectKB_Class10131]
+		[ontologia_v1_ProjectKB_Class10132]
+		[ontologia_v1_ProjectKB_Class10133]
+		[ontologia_v1_ProjectKB_Class10134]
+		[ontologia_v1_ProjectKB_Class10135]
+		[ontologia_v1_ProjectKB_Class10136]))
 
-([ontologia_v1_ProjectKB_Class20212] of  Map_Entry
-
-	(key "ontologia_v1_Class40022")
-	(key_class "edu.stanford.smi.protege.model.Frame")
-	(value "36 299 210 132")
-	(value_class "java.awt.Rectangle"))
-
-([ontologia_v1_ProjectKB_Class20213] of  Map_Entry
+([ontologia_v1_ProjectKB_Class10121] of  Map_Entry
 
 	(key "ontologia_v1_Class30013")
 	(key_class "edu.stanford.smi.protege.model.Frame")
 	(value "13 294 210 132")
 	(value_class "java.awt.Rectangle"))
 
-([ontologia_v1_ProjectKB_Class20214] of  Map_Entry
-
-	(key "ontologia_v1_Class40024")
-	(key_class "edu.stanford.smi.protege.model.Frame")
-	(value "25 283 210 132")
-	(value_class "java.awt.Rectangle"))
-
-([ontologia_v1_ProjectKB_Class20215] of  Map_Entry
+([ontologia_v1_ProjectKB_Class10122] of  Map_Entry
 
 	(key "ontologia_v1_Class30011")
 	(key_class "edu.stanford.smi.protege.model.Frame")
 	(value "20 317 210 132")
 	(value_class "java.awt.Rectangle"))
 
-([ontologia_v1_ProjectKB_Class20216] of  Map_Entry
+([ontologia_v1_ProjectKB_Class10123] of  Map_Entry
 
-	(key "ontologia_v1_Class40020")
+	(key "ontologia_v1_Class50011")
 	(key_class "edu.stanford.smi.protege.model.Frame")
-	(value "19 305 210 132")
+	(value "9 287 210 132")
 	(value_class "java.awt.Rectangle"))
 
-([ontologia_v1_ProjectKB_Class20217] of  Map_Entry
+([ontologia_v1_ProjectKB_Class10124] of  Map_Entry
 
 	(key "ontologia_v1_Class40018")
 	(key_class "edu.stanford.smi.protege.model.Frame")
 	(value "28 292 210 132")
 	(value_class "java.awt.Rectangle"))
 
-([ontologia_v1_ProjectKB_Class20218] of  Map_Entry
-
-	(key "ontologia_v1_Class30008")
-	(key_class "edu.stanford.smi.protege.model.Frame")
-	(value "22 297 210 132")
-	(value_class "java.awt.Rectangle"))
-
-([ontologia_v1_ProjectKB_Class20219] of  Map_Entry
+([ontologia_v1_ProjectKB_Class10125] of  Map_Entry
 
 	(key "ontologia_v1_Class40026")
 	(key_class "edu.stanford.smi.protege.model.Frame")
 	(value "28 295 210 132")
 	(value_class "java.awt.Rectangle"))
 
-([ontologia_v1_ProjectKB_Class20220] of  Map_Entry
-
-	(key "ontologia_v1_Class30006")
-	(key_class "edu.stanford.smi.protege.model.Frame")
-	(value "37 303 210 132")
-	(value_class "java.awt.Rectangle"))
-
-([ontologia_v1_ProjectKB_Class20221] of  Map_Entry
-
-	(key "ontologia_v1_Class30005")
-	(key_class "edu.stanford.smi.protege.model.Frame")
-	(value "41 313 210 132")
-	(value_class "java.awt.Rectangle"))
-
-([ontologia_v1_ProjectKB_Class20222] of  Map_Entry
+([ontologia_v1_ProjectKB_Class10126] of  Map_Entry
 
 	(key "ontologia_v1_Class40016")
 	(key_class "edu.stanford.smi.protege.model.Frame")
 	(value "36 309 210 132")
 	(value_class "java.awt.Rectangle"))
 
-([ontologia_v1_ProjectKB_Class20223] of  Map_Entry
+([ontologia_v1_ProjectKB_Class10127] of  Map_Entry
+
+	(key "ontologia_v1_Class40022")
+	(key_class "edu.stanford.smi.protege.model.Frame")
+	(value "36 299 210 132")
+	(value_class "java.awt.Rectangle"))
+
+([ontologia_v1_ProjectKB_Class10128] of  Map_Entry
+
+	(key "ontologia_v1_Class40024")
+	(key_class "edu.stanford.smi.protege.model.Frame")
+	(value "25 283 210 132")
+	(value_class "java.awt.Rectangle"))
+
+([ontologia_v1_ProjectKB_Class10129] of  Map_Entry
+
+	(key "ontologia_v1_Class40020")
+	(key_class "edu.stanford.smi.protege.model.Frame")
+	(value "19 305 210 132")
+	(value_class "java.awt.Rectangle"))
+
+([ontologia_v1_ProjectKB_Class10130] of  Map_Entry
+
+	(key "ontologia_v1_Class30008")
+	(key_class "edu.stanford.smi.protege.model.Frame")
+	(value "22 297 210 132")
+	(value_class "java.awt.Rectangle"))
+
+([ontologia_v1_ProjectKB_Class10131] of  Map_Entry
+
+	(key "ontologia_v1_Class50013")
+	(key_class "edu.stanford.smi.protege.model.Frame")
+	(value "13 285 210 132")
+	(value_class "java.awt.Rectangle"))
+
+([ontologia_v1_ProjectKB_Class10132] of  Map_Entry
+
+	(key "ontologia_v1_Class50009")
+	(key_class "edu.stanford.smi.protege.model.Frame")
+	(value "19 285 210 132")
+	(value_class "java.awt.Rectangle"))
+
+([ontologia_v1_ProjectKB_Class10133] of  Map_Entry
+
+	(key "ontologia_v1_Class30006")
+	(key_class "edu.stanford.smi.protege.model.Frame")
+	(value "37 303 210 132")
+	(value_class "java.awt.Rectangle"))
+
+([ontologia_v1_ProjectKB_Class10134] of  Map_Entry
+
+	(key "ontologia_v1_Class30005")
+	(key_class "edu.stanford.smi.protege.model.Frame")
+	(value "41 313 210 132")
+	(value_class "java.awt.Rectangle"))
+
+([ontologia_v1_ProjectKB_Class10135] of  Map_Entry
+
+	(key "ontologia_v1_Class50007")
+	(key_class "edu.stanford.smi.protege.model.Frame")
+	(value "15 288 210 132")
+	(value_class "java.awt.Rectangle"))
+
+([ontologia_v1_ProjectKB_Class10136] of  Map_Entry
 
 	(key "ontologia_v1_Class30004")
 	(key_class "edu.stanford.smi.protege.model.Frame")
 	(value "41 307 210 132")
 	(value_class "java.awt.Rectangle"))
 
-([ontologia_v1_ProjectKB_Class20224] of  Map_Entry
+([ontologia_v1_ProjectKB_Class10137] of  Map_Entry
 
 	(key "InstanceDisplay.yellow_stickies")
 	(key_class "java.lang.String")
-	(value "ontologia_v1_ProjectKB_Class20211")
+	(value "ontologia_v1_ProjectKB_Class10120")
 	(value_class "java.util.Map"))
+
+([ontologia_v1_ProjectKB_Class19] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [ontologia_v1_ProjectKB_Class20])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormsTab"))
+
+([ontologia_v1_ProjectKB_Class20] of  Property_List
+)
 
 ([ontologia_v1_ProjectKB_Class21] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class22])
-	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalQueriesTab"))
+	(widget_class_name "org.protege.owl.mm.portability.protege3.MappingMasterTab"))
 
 ([ontologia_v1_ProjectKB_Class22] of  Property_List
 )
@@ -518,7 +556,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class24])
-	(widget_class_name "dfki.protege.ontoviz_tab.OntovizTab"))
+	(widget_class_name "edu.stanford.smi.protege.widget.ProtegePropertiesTab"))
 
 ([ontologia_v1_ProjectKB_Class24] of  Property_List
 )
@@ -527,7 +565,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class26])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.cls.OWLClassesTab"))
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalQueriesTab"))
 
 ([ontologia_v1_ProjectKB_Class26] of  Property_List
 )
@@ -536,7 +574,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class28])
-	(widget_class_name "edu.stanford.smi.protegex.server_changes.prompt.UsersTab"))
+	(widget_class_name "dfki.protege.ontoviz_tab.OntovizTab"))
 
 ([ontologia_v1_ProjectKB_Class28] of  Property_List
 )
@@ -545,7 +583,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class30])
-	(widget_class_name "edu.stanford.smi.protege.query.LuceneQueryPlugin"))
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.cls.OWLClassesTab"))
 
 ([ontologia_v1_ProjectKB_Class30] of  Property_List
 )
@@ -554,7 +592,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class32])
-	(widget_class_name "edu.stanford.smi.protege.widget.ClsesAndInstancesTab"))
+	(widget_class_name "edu.stanford.smi.protegex.server_changes.prompt.UsersTab"))
 
 ([ontologia_v1_ProjectKB_Class32] of  Property_List
 )
@@ -563,7 +601,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class34])
-	(widget_class_name "edu.stanford.smi.protege.widget.KAToolTab"))
+	(widget_class_name "edu.stanford.smi.protege.query.LuceneQueryPlugin"))
 
 ([ontologia_v1_ProjectKB_Class34] of  Property_List
 )
@@ -572,7 +610,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class36])
-	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.KnowledgeTreeTab"))
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsesAndInstancesTab"))
 
 ([ontologia_v1_ProjectKB_Class36] of  Property_List
 )
@@ -581,7 +619,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class38])
-	(widget_class_name "edu.stanford.smi.protegex.prompt.PromptTab"))
+	(widget_class_name "edu.stanford.smi.protege.widget.KAToolTab"))
 
 ([ontologia_v1_ProjectKB_Class38] of  Property_List
 )
@@ -590,7 +628,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class40])
-	(widget_class_name "edu.stanford.smi.protege.keywordsearch.StringSearch"))
+	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.KnowledgeTreeTab"))
 
 ([ontologia_v1_ProjectKB_Class40] of  Property_List
 )
@@ -599,7 +637,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class42])
-	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalConstraintsTab"))
+	(widget_class_name "edu.stanford.smi.protegex.prompt.PromptTab"))
 
 ([ontologia_v1_ProjectKB_Class42] of  Property_List
 )
@@ -608,7 +646,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class44])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.metadatatab.OWLMetadataTab"))
+	(widget_class_name "edu.stanford.smi.protege.keywordsearch.StringSearch"))
 
 ([ontologia_v1_ProjectKB_Class44] of  Property_List
 )
@@ -617,7 +655,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class46])
-	(widget_class_name "edu.stanford.smi.protegex.owl.swrl.ui.tab.SWRLTab"))
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalConstraintsTab"))
 
 ([ontologia_v1_ProjectKB_Class46] of  Property_List
 )
@@ -626,7 +664,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class48])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.individuals.OWLIndividualsTab"))
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.metadatatab.OWLMetadataTab"))
 
 ([ontologia_v1_ProjectKB_Class48] of  Property_List
 )
@@ -635,7 +673,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class50])
-	(widget_class_name "uk.ac.man.cs.mig.coode.debugger.test.DebuggerTestTab"))
+	(widget_class_name "edu.stanford.smi.protegex.owl.swrl.ui.tab.SWRLTab"))
 
 ([ontologia_v1_ProjectKB_Class50] of  Property_List
 )
@@ -644,7 +682,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class52])
-	(widget_class_name "edu.stanford.smi.protegex.changes.ChangesTab"))
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.individuals.OWLIndividualsTab"))
 
 ([ontologia_v1_ProjectKB_Class52] of  Property_List
 )
@@ -653,7 +691,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class54])
-	(widget_class_name "ca.uvic.csr.shrimp.jambalaya.JambalayaTab"))
+	(widget_class_name "uk.ac.man.cs.mig.coode.debugger.test.DebuggerTestTab"))
 
 ([ontologia_v1_ProjectKB_Class54] of  Property_List
 )
@@ -662,7 +700,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class56])
-	(widget_class_name "org.protege.owl.axiome.ui.AxiomeTab"))
+	(widget_class_name "ca.uvic.csr.shrimp.jambalaya.JambalayaTab"))
 
 ([ontologia_v1_ProjectKB_Class56] of  Property_List
 )
@@ -671,7 +709,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class58])
-	(widget_class_name "TGViztab.TGVizTab"))
+	(widget_class_name "edu.stanford.smi.protegex.changes.ChangesTab"))
 
 ([ontologia_v1_ProjectKB_Class58] of  Property_List
 )
@@ -680,7 +718,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class60])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.properties.OWLPropertiesTab"))
+	(widget_class_name "org.protege.owl.axiome.ui.AxiomeTab"))
 
 ([ontologia_v1_ProjectKB_Class60] of  Property_List
 )
@@ -689,7 +727,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class62])
-	(widget_class_name "uk.ac.man.ac.mig.coode.individuals.ui.OWLDLIndividualsTab"))
+	(widget_class_name "TGViztab.TGVizTab"))
 
 ([ontologia_v1_ProjectKB_Class62] of  Property_List
 )
@@ -698,7 +736,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class64])
-	(widget_class_name "edu.stanford.smi.protegex.evaluation.MetaAnalysis"))
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.properties.OWLPropertiesTab"))
 
 ([ontologia_v1_ProjectKB_Class64] of  Property_List
 )
@@ -707,7 +745,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class66])
-	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.InstanceTreeTab"))
+	(widget_class_name "uk.ac.man.ac.mig.coode.individuals.ui.OWLDLIndividualsTab"))
 
 ([ontologia_v1_ProjectKB_Class66] of  Property_List
 )
@@ -716,7 +754,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class68])
-	(widget_class_name "edu.stanford.smi.protegex.changes.changesKBViewTab.ChangesKBViewTab"))
+	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.InstanceTreeTab"))
 
 ([ontologia_v1_ProjectKB_Class68] of  Property_List
 )
@@ -725,7 +763,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class70])
-	(widget_class_name "se.liu.ida.JessTab.JessTab"))
+	(widget_class_name "edu.stanford.smi.protegex.evaluation.MetaAnalysis"))
 
 ([ontologia_v1_ProjectKB_Class70] of  Property_List
 )
@@ -734,7 +772,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class72])
-	(widget_class_name "edu.stanford.smi.protegex.changeanalysis.ChangeAnalysisTab"))
+	(widget_class_name "se.liu.ida.JessTab.JessTab"))
 
 ([ontologia_v1_ProjectKB_Class72] of  Property_List
 )
@@ -743,7 +781,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class74])
-	(widget_class_name "uk.ac.man.cs.mig.coode.owlviz.ui.OWLVizTab"))
+	(widget_class_name "edu.stanford.smi.protegex.changes.changesKBViewTab.ChangesKBViewTab"))
 
 ([ontologia_v1_ProjectKB_Class74] of  Property_List
 )
@@ -752,7 +790,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class76])
-	(widget_class_name "edu.stanford.smi.protegex.changes.stats.ChangeStatisticsTab"))
+	(widget_class_name "edu.stanford.smi.protegex.changeanalysis.ChangeAnalysisTab"))
 
 ([ontologia_v1_ProjectKB_Class76] of  Property_List
 )
@@ -761,7 +799,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class78])
-	(widget_class_name "script.ProtegeScriptTab"))
+	(widget_class_name "uk.ac.man.cs.mig.coode.owlviz.ui.OWLVizTab"))
 
 ([ontologia_v1_ProjectKB_Class78] of  Property_List
 )
@@ -770,7 +808,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ontologia_v1_ProjectKB_Class10080])
-	(widget_class_name "edu.stanford.smi.protegex.chatPlugin.ChatTab"))
+	(widget_class_name "edu.stanford.smi.protegex.changes.stats.ChangeStatisticsTab"))
 
 ([ontologia_v1_ProjectKB_Class80] of  Property_List
 
