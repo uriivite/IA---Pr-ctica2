@@ -1501,6 +1501,32 @@
   )
 )
 
+;;;Determinem si l'usuari ha tingut problemes cardiovasculars
+(defrule cardiovasculars
+ (declare (salience 10))
+=>
+  (if (si-o-no-p "Te o ha tingut problemes cardiovasculars? (s/n) ")
+    then 
+     (assert (cardiovasculars Si))
+     (if (si-o-no-p "Tenen a veure amb el colesterol? (s/n) ")
+      then
+       (assert (colesterol))
+       (if (si-o-no-p "Te colesterol cronic?(s/n)")
+         then
+          (assert(colesterol-cronic))
+       )
+     )
+     (if (si-o-no-p "Tens hipertensio? (s/n)")
+      then 
+       (assert (hipertensio))
+     )   
+    else
+    (assert (cardiovasculars No))
+  )
+)
+
+
+
 
 
 
