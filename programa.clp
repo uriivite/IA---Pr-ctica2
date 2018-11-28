@@ -55,7 +55,7 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot Instruccions
-;+		(comment "Alguna instrucciÃ³ de com s'ha de realitzar l'exercici.")
+;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
 		(type STRING)
 		(create-accessor read-write))
 	(multislot indicada
@@ -63,7 +63,7 @@
 ;+		(allowed-classes Malaltia)
 		(create-accessor read-write)))
 
-(defclass Exercici "Identifica un exercici concret amb alguna instrucciÃ³/especificaciÃ³."
+(defclass Exercici "Identifica un exercici concret amb alguna instrucció/especificació."
 	(is-a USER)
 	(role concrete)
 	(single-slot repeticions
@@ -84,7 +84,7 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot Instruccions
-;+		(comment "Alguna instrucciÃ³ de com s'ha de realitzar l'exercici.")
+;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
 		(type STRING)
 		(create-accessor read-write))
 	(single-slot part+del+cos
@@ -196,7 +196,7 @@
 	(is-a Equilibri)
 	(role concrete))
 
-(defclass Rutina "Classe genÃ¨rica que contindrÃ  una sÃ¨rie d'exercicis que s'utilitzaran per fer una recomanaciÃ³."
+(defclass Rutina "Classe genèrica que contindrà una sèrie d'exercicis que s'utilitzaran per fer una recomanació."
 	(is-a USER)
 	(role concrete)
 	(multislot contraindicada
@@ -400,10 +400,10 @@
 	(Duracio 3)
 	(es+escalfament FALSE)
 	(Instruccions
-		"1 - \"Pongase de pie, detrÃ¡s de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
+		"1 - \"Pongase de pie, detrás de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
 		"2 - \"Apoyese en la silla para mantener el equilibrio y posteriormente sueltese y permanezca sin agarrarse.\""
 		"3 - \"Levante lentamente la pierna lo mas alto posible de puntillas hasta llegar a 12 o 20 cm del suelo.\""
-		"4 - \"Permanezca en esta posiciÃ³n durante unos tres segundos.\""
+		"4 - \"Permanezca en esta posición durante unos tres segundos.\""
 		"5 - \"Vaya descendiendo lentamente la pierna, hasta llegar sus talones a apoyar nuevamente en el suelo.\""
 		"6 - \"Haga el ejercicio apoyandose primero en una pierna, y luego con la otra de forma rotatoria.\""
 		"7 - \"La espalda y ambas rodillas deben mantenerse rectas durante todo el ejercicio.\"")
@@ -415,7 +415,7 @@
 
 	(Duracio 2)
 	(Instruccions
-		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, despuÃ©s ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
+		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, después ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
 		"2 - \"Doble lentamente la rodilla hacia atras y elevela lo mas alto posible hasta aproximarla al muslo.\" "
 		"3 - \"Aguante en esta posicion.\" "
 		"4 - \"Comience a bajar lentamente la pierna hasta su posicion inicial.\" "
@@ -444,10 +444,10 @@
 
 	(Duracio 3)
 	(Instruccions
-		"1 - \"Pongase de pie, detrÃ¡s de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
+		"1 - \"Pongase de pie, detrás de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
 		"2 - \"Apoyese en la silla para mantener el equilibrio y posteriormente sueltese y permanezca sin agarrarse.\""
 		"3 - \"Levante lentamente la pierna lo mas alto posible de puntillas hasta llegar a 12 o 20 cm del suelo.\""
-		"4 - \"Permanezca en esta posiciÃ³n durante unos tres segundos.\""
+		"4 - \"Permanezca en esta posición durante unos tres segundos.\""
 		"5 - \"Vaya descendiendo lentamente la pierna, hasta llegar sus talones a apoyar nuevamente en el suelo.\""
 		"6 - \"Haga el ejercicio apoyandose primero en una pierna, y luego con la otra de forma rotatoria.\""
 		"7 - \"La espalda y ambas rodillas deben mantenerse rectas durante todo el ejercicio.\"")
@@ -459,7 +459,7 @@
 
 	(Duracio 2)
 	(Instruccions
-		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, despuÃ©s ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
+		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, después ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
 		"2 - \"Doble lentamente la rodilla hacia atras y elevela lo mas alto posible hasta aproximarla al muslo.\" "
 		"3 - \"Aguante en esta posicion.\" "
 		"4 - \"Comience a bajar lentamente la pierna hasta su posicion inicial.\" "
@@ -1375,12 +1375,12 @@
 ([ontologia_v1_Class6] of  Malaltia
 
 	(Cronica TRUE)
-	(Nom "InsuficiÃ¨ncia renal crÃ²nica"))
+	(Nom "Insuficiència renal crònica"))
 
 ([ontologia_v1_Class7] of  Malaltia
 
 	(Cronica FALSE)
-	(Nom "DepressiÃ³"))
+	(Nom "Depressió"))
 
 ([ontologia_v1_Class8] of  Malaltia
 
@@ -1390,7 +1390,7 @@
 ([ontologia_v1_Class9] of  Malaltia
 
 	(Cronica FALSE)
-	(Nom "IncontinÃ¨ncia urinÃ ria"))
+	(Nom "Incontinència urinària"))
 
 )
 
@@ -1525,11 +1525,34 @@
   )
 )
 
+(defrule respiratoris
+ (declare (salience 10))
+=>
+  (if (si-o-no-p "Te voste problemes respiratoris? (s/n)")
+	then
+	  (assert (respiratoris Si))
+	else
+	  (assert (respiratoris No))
+  )
+)
+
+(defrule ossi
+ (declare (salience 10))
+=>
+  (if (si-o-no-p "Te voste algun problema ossi? (s/n)")
+	then
+	  (assert (ossi Si))
+          (if (si-o-no-p "Te artrosis? (s/n) ")
+            then
+       	      (assert (artrosis))
+          )
+          (if (si-o-no-p "Te osteoporosis? (s/n)")
+           then 
+              (assert (osteoporosis))
+        )   
+	else
+	  (assert (ossi No))
+  )
+)
 
 
-
-
-
-
-
-	  
