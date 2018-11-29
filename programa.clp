@@ -1,6 +1,4 @@
-;;CLASES
-
-; Tue Nov 27 14:19:33 CET 2018
+; Thu Nov 29 18:56:28 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -13,36 +11,42 @@
 		(type INSTANCE)
 ;+		(allowed-classes Malaltia)
 		(create-accessor read-write))
-	(multislot escalfament
-		(type INSTANCE)
-;+		(allowed-classes Flexibilitat)
-		(cardinality 1 ?VARIABLE)
+	(single-slot repeticions
+		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot Nom+exercici
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(multislot exercicis
-;+		(comment "Llista d'exercicis")
+	(multislot indicada
 		(type INSTANCE)
-;+		(allowed-classes Exercici)
-		(cardinality 1 ?VARIABLE)
+;+		(allowed-classes Malaltia)
+		(create-accessor read-write))
+	(single-slot Duracio
+		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot Nom
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot repeticions
-		(type INTEGER)
-;+		(cardinality 0 1)
+	(multislot escalfament
+		(type INSTANCE)
+;+		(allowed-classes Flexibilitat)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(multislot Cronica
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot Duracio
-		(type INTEGER)
+	(multislot Instruccions
+;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot Nom+exercici
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot part+del+cos
+		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot es+escalfament
@@ -50,27 +54,21 @@
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot part+del+cos
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(multislot Instruccions
-;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
-		(type STRING)
-		(create-accessor read-write))
-	(multislot indicada
+	(multislot exercicis
+;+		(comment "Llista d'exercicis")
 		(type INSTANCE)
-;+		(allowed-classes Malaltia)
+;+		(allowed-classes Exercici)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write)))
 
 (defclass Exercici "Identifica un exercici concret amb alguna instrucció/especificació."
 	(is-a USER)
 	(role concrete)
-	(single-slot repeticions
+	(single-slot Duracio
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot Duracio
+	(single-slot repeticions
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
@@ -78,6 +76,10 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot part+del+cos
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot es+escalfament
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
@@ -86,10 +88,6 @@
 	(multislot Instruccions
 ;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
 		(type STRING)
-		(create-accessor read-write))
-	(single-slot part+del+cos
-		(type STRING)
-;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Musculatura
@@ -208,37 +206,29 @@
 ;+		(allowed-classes Flexibilitat)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
+	(multislot indicada
+		(type INSTANCE)
+;+		(allowed-classes Malaltia)
+		(create-accessor read-write))
 	(multislot exercicis
 ;+		(comment "Llista d'exercicis")
 		(type INSTANCE)
 ;+		(allowed-classes Exercici)
 		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(multislot indicada
-		(type INSTANCE)
-;+		(allowed-classes Malaltia)
 		(create-accessor read-write)))
 
 (defclass Malaltia
 	(is-a USER)
 	(role concrete)
+	(single-slot Nom
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(multislot Cronica
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(single-slot Nom
-		(type STRING)
-;+		(cardinality 0 1)
 		(create-accessor read-write)))
-
-;;INSTANCES
-
-(definstances mis-instancias
-; Tue Nov 27 14:19:33 CET 2018
-; 
-;+ (version "3.5")
-;+ (build "Build 663")
 
 ([ontologia_v1_Class0] of  Dansa
 
@@ -1392,7 +1382,8 @@
 	(Cronica FALSE)
 	(Nom "Incontinència urinària"))
 
-)
+		
+		
 
 ;;; --- REGLAS
 (defmodule MAIN (export ?ALL))
@@ -1564,7 +1555,7 @@
    (while (<= ?e (length$(send ?rutina get-exercicis)))
    do
     (bind ?Exercici (nth$ ?e (send ?rutina get-exercicis)))
-    (printout t (send ?Exercici get-nom) crlf)
+    (printout t (send ?Exercici get-(Nom exercici )) crlf)
    (bind ?e (+ ?e 1)))
 )
 
