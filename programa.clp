@@ -1555,4 +1555,17 @@
   )
 )
 
+(defrule rutina-res
+ (declare (salience -1))
+ ?rutina <-(object (is-a Rutina))
+=>
+  ;;;(bind ?rutina (find-instance((?inst Rutina))))
+  (bind ?e 1)
+   (while (<= ?e (length$(send ?rutina get-exercicis)))
+   do
+    (bind ?Exercici (nth$ ?e (send ?rutina get-exercicis)))
+    (printout t (send ?Exercici get-nom) crlf)
+   (bind ?e (+ ?e 1)))
+)
+
 
