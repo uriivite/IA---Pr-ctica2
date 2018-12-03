@@ -1,5 +1,5 @@
 ; Fri Nov 30 17:24:44 CET 2018
-; 
+;
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
@@ -38,7 +38,7 @@
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(multislot Instruccions
-;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
+;+		(comment "Alguna instrucciï¿½ de com s'ha de realitzar l'exercici.")
 		(type STRING)
 		(create-accessor read-write))
 	(single-slot ontologia_v1_Class30000
@@ -65,7 +65,7 @@
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write)))
 
-(defclass Exercici "Identifica un exercici concret amb alguna instrucció/especificació."
+(defclass Exercici "Identifica un exercici concret amb alguna instrucciï¿½/especificaciï¿½."
 	(is-a USER)
 	(role concrete)
 	(single-slot Duracio
@@ -90,7 +90,7 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot Instruccions
-;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
+;+		(comment "Alguna instrucciï¿½ de com s'ha de realitzar l'exercici.")
 		(type STRING)
 		(create-accessor read-write)))
 
@@ -198,7 +198,7 @@
 	(is-a Equilibri)
 	(role concrete))
 
-(defclass Rutina "Classe genèrica que contindrà una sèrie d'exercicis que s'utilitzaran per fer una recomanació."
+(defclass Rutina "Classe genï¿½rica que contindrï¿½ una sï¿½rie d'exercicis que s'utilitzaran per fer una recomanaciï¿½."
 	(is-a USER)
 	(role concrete)
 	(multislot contraindicada
@@ -233,7 +233,7 @@
 		(allowed-values FALSE TRUE)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write)))
-		
+
 
 ([ontologia_v1_Class0] of  Dansa
 
@@ -395,10 +395,10 @@
 	(Duracio 3)
 	(es+escalfament FALSE)
 	(Instruccions
-		"1 - \"Pongase de pie, detrás de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
+		"1 - \"Pongase de pie, detrï¿½s de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
 		"2 - \"Apoyese en la silla para mantener el equilibrio y posteriormente sueltese y permanezca sin agarrarse.\""
 		"3 - \"Levante lentamente la pierna lo mas alto posible de puntillas hasta llegar a 12 o 20 cm del suelo.\""
-		"4 - \"Permanezca en esta posición durante unos tres segundos.\""
+		"4 - \"Permanezca en esta posiciï¿½n durante unos tres segundos.\""
 		"5 - \"Vaya descendiendo lentamente la pierna, hasta llegar sus talones a apoyar nuevamente en el suelo.\""
 		"6 - \"Haga el ejercicio apoyandose primero en una pierna, y luego con la otra de forma rotatoria.\""
 		"7 - \"La espalda y ambas rodillas deben mantenerse rectas durante todo el ejercicio.\"")
@@ -410,7 +410,7 @@
 
 	(Duracio 2)
 	(Instruccions
-		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, después ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
+		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, despuï¿½s ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
 		"2 - \"Doble lentamente la rodilla hacia atras y elevela lo mas alto posible hasta aproximarla al muslo.\" "
 		"3 - \"Aguante en esta posicion.\" "
 		"4 - \"Comience a bajar lentamente la pierna hasta su posicion inicial.\" "
@@ -439,10 +439,10 @@
 
 	(Duracio 3)
 	(Instruccions
-		"1 - \"Pongase de pie, detrás de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
+		"1 - \"Pongase de pie, detrï¿½s de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
 		"2 - \"Apoyese en la silla para mantener el equilibrio y posteriormente sueltese y permanezca sin agarrarse.\""
 		"3 - \"Levante lentamente la pierna lo mas alto posible de puntillas hasta llegar a 12 o 20 cm del suelo.\""
-		"4 - \"Permanezca en esta posición durante unos tres segundos.\""
+		"4 - \"Permanezca en esta posiciï¿½n durante unos tres segundos.\""
 		"5 - \"Vaya descendiendo lentamente la pierna, hasta llegar sus talones a apoyar nuevamente en el suelo.\""
 		"6 - \"Haga el ejercicio apoyandose primero en una pierna, y luego con la otra de forma rotatoria.\""
 		"7 - \"La espalda y ambas rodillas deben mantenerse rectas durante todo el ejercicio.\"")
@@ -454,7 +454,7 @@
 
 	(Duracio 2)
 	(Instruccions
-		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, después ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
+		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, despuï¿½s ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
 		"2 - \"Doble lentamente la rodilla hacia atras y elevela lo mas alto posible hasta aproximarla al muslo.\" "
 		"3 - \"Aguante en esta posicion.\" "
 		"4 - \"Comience a bajar lentamente la pierna hasta su posicion inicial.\" "
@@ -1370,12 +1370,12 @@
 ([ontologia_v1_Class6] of  Malaltia
 
 	(Cronica TRUE)
-	(Nom "Insuficiència renal crònica"))
+	(Nom "Insuficiï¿½ncia renal crï¿½nica"))
 
 ([ontologia_v1_Class7] of  Malaltia
 
 	(Cronica FALSE)
-	(Nom "Depressió"))
+	(Nom "Depressiï¿½"))
 
 ([ontologia_v1_Class8] of  Malaltia
 
@@ -1385,7 +1385,7 @@
 ([ontologia_v1_Class9] of  Malaltia
 
 	(Cronica FALSE)
-	(Nom "Incontinència urinària"))
+	(Nom "Incontinï¿½ncia urinï¿½ria"))
 
 ;;; --- REGLAS
 (defmodule MAIN (export ?ALL))
@@ -1395,7 +1395,8 @@
 ;;********************
 
 (defmessage-handler Exercici print primary ()
-	(printout t "--" ?self:nom "--" crlf) 
+	(printout t "--" ?self:nom "--" crlf)
+	(printout t "--" ?self:Instruccions "--" crlf)
 )
 
 ;;****************
@@ -1438,7 +1439,7 @@
    (declare (salience 10))
 	?rutina <- (object (is-a Rutina))
 =>
-   (printout t "Realitza la següent rutina: " crlf) 
+   (printout t "Realitza la seguent rutina: " crlf)
    (bind ?e 1)
    (while (<= ?e (length$(send ?rutina get-exercicis)))
    do
@@ -1454,7 +1455,7 @@
 (defmodule preguntes-inicials "Modul de preguntes inicials"
   (import MAIN ?ALL)
   (export ?ALL))
-  
+
 ;;;Determinem l'edat de l'usuari
 (defrule mes-75
  (declare (salience 10))
@@ -1491,7 +1492,7 @@
   )
 )
 
-;;; Saltamos al modulo de preguntes de malalties
+;;; Saltem al modul de preguntes de malalties
 (defrule a-preguntes-malalties
  (declare (salience -1))
  =>
@@ -1504,6 +1505,17 @@
  (import MAIN ?ALL)
  (export ?ALL))
 
+ (defrule diabetis
+  (declare (salience 10))
+ =>
+   (if (si-o-no-p "Te voste diabetis? (s/n)")
+ 	then
+ 	  (assert (diabetis Si))
+ 	else
+ 	  (assert (diabetis No))
+   )
+ )
+
 ;;;Determinem si l'usuari te obesitat
 (defrule obes
  (declare (salience 10))
@@ -1511,6 +1523,10 @@
   (if (si-o-no-p "Te voste algun problema de sobrepres? (s/n)")
 	then
 	  (assert (obes Si))
+		(if (si-o-no-p "Es cronic? (s/n)")
+		then
+			(assert obesitat-cronica)
+			)
 	else
 	  (assert (obes No))
   )
@@ -1521,7 +1537,7 @@
  (declare (salience 10))
 =>
   (if (si-o-no-p "Te o ha tingut problemes cardiovasculars? (s/n) ")
-    then 
+    then
      (assert (cardiovasculars Si))
      (if (si-o-no-p "Tenen a veure amb el colesterol? (s/n) ")
       then
@@ -1532,9 +1548,9 @@
        )
      )
      (if (si-o-no-p "Tens hipertensio? (s/n)")
-      then 
+      then
        (assert (hipertensio))
-     )   
+     )
     else
     (assert (cardiovasculars No))
   )
@@ -1562,10 +1578,201 @@
        	      (assert (artrosis))
           )
           (if (si-o-no-p "Te osteoporosis? (s/n)")
-           then 
+           then
               (assert (osteoporosis))
-        )   
+        )
 	else
 	  (assert (ossi No))
   )
 )
+
+(defrule depressio
+ (declare (salience 10))
+=>
+  (if (si-o-no-p "Pateix voste depressio? (s/n)")
+	then
+	  (assert (depressio Si))
+	else
+	  (assert (depressio No))
+  )
+)
+
+;;; Saltem al modul de decidir quines rutines son compatibles amb l'usuari
+(defrule a-seleccio-rutines
+ (declare (salience -1))
+ =>
+ (focus seleccio-rutines)
+)
+
+;;; ----- Modul Seleccio Rutines
+;;; Donades totes les caracteristiques de l'usuari, determina quines Rutines
+;;;	se li poden assignar
+(defmodule seleccio-rutines "Modul de preguntes de malalties"
+ (import MAIN ?ALL)
+ (export ?ALL))
+
+ (defrule circulacio-sanguinea1
+	; (declare (salience 10))
+ ((mes-75 Si) & (sedentari Si) & (ossi No))
+ ((colesterol) | (colesterol-cronic) | (obes Si) | (obesitat-cronica) |
+ (cardiovasculars Si) | (depressio Si))
+	 =>
+ (assert circulacio-sanguinea1)
+ )
+
+ (defrule circulacio-sanguinea2
+  ; (declare (salience 10))
+ ((mes-75 Si) & (sedentari No) & (ossi No))
+ ((colesterol) | (colesterol-cronic) | (obes Si) | (obesitat-cronica) |
+ (cardiovasculars Si) | (depressio Si))
+ 	=>
+ (assert circulacio-sanguinea2)
+ )
+
+ (defrule circulacio-sanguinea3
+ ;	(declare (salience 10))
+ ((mes-75 No) & (sedentari Si) & (ossi No))
+ ((colesterol) | (colesterol-cronic) | (obes Si) | (obesitat-cronica) |
+ (cardiovasculars Si) | (depressio Si))
+	 =>
+ (assert circulacio-sanguinea3)
+ )
+
+ (defrule circulacio-sanguinea4
+ ;	(declare (salience 10))
+ ((mes-75 No) & (sedentari No) & (ossi No))
+ ((colesterol) | (colesterol-cronic) | (obes Si) | (obesitat-cronica) |
+ (cardiovasculars Si) | (depressio Si))
+	 =>
+ (assert circulacio-sanguinea4)
+ )
+
+ (defrule depressio1
+ ;	(declare (salience 10))
+ ((mes-75 Si) & (sedentari Si) & (ossi No))
+ ((depressio Si))
+ 	=>
+ (assert depressio1)
+ )
+
+ (defrule depressio2
+ ;	(declare (salience 10))
+ ((mes-75 Si) & (sedentari No) & (ossi No))
+ ((depressio Si))
+	 =>
+ (assert depressio2)
+ )
+
+ (defrule depressio3
+ ;	(declare (salience 10))
+ ((mes-75 No) & (sedentari Si) & (ossi No))
+ ((depressio Si))
+	 =>
+ (assert depressio3)
+ )
+
+ (defrule depressio4
+ ;	(declare (salience 10))
+ ((mes-75 No) & (sedentari No) & (ossi No))
+ ((depressio Si))
+	 =>
+ (assert depressio4)
+ )
+
+ (defrule artrosis1
+ ;	(declare (salience 10))
+ ((mes-75 Si) & (sedentari Si))
+ ((ossi Si) | (diabetis Si))
+	 =>
+ (assert artrosis1)
+ )
+
+ (defrule artrosis2
+ ;	(declare (salience 10))
+ ((mes-75 Si) & (sedentari No))
+ ((ossi Si) | (diabetis Si))
+	=>
+ (assert artrosis2)
+ )
+
+ (defrule artrosis3
+ ;	(declare (salience 10))
+ ((mes-75 No) & (sedentari Si))
+ ((ossi Si) | (diabetis Si))
+	=>
+ (assert artrosis3)
+ )
+
+ (defrule artrosis4
+ ;	(declare (salience 10))
+ ((mes-75 No) & (sedentari No))
+ ((ossi Si) | (diabetis Si))
+	=>
+ (assert artrosis4)
+ )
+
+ (defrule fragilitat1
+ ;	(declare (salience 10))
+ ((mes-75 Si) & (sedentari Si) & (caiguda Si) & (osteoporosis) & (not artrosis))
+	=>
+ (assert fragilitat1)
+ )
+
+ (defrule fragilitat2
+ ;	(declare (salience 10))
+ ((mes-75 Si) & (sedentari No) & (caiguda Si) & (osteoporosis) & (not artrosis))
+ =>
+ (assert fragilitat2)
+ )
+
+ (defrule fragilitat3
+ ;	(declare (salience 10))
+ ((mes-75 No) & (sedentari Si) & (caiguda Si) & (osteoporosis) & (not artrosis))
+ =>
+ (assert fragilitat3)
+ )
+
+ (defrule fragilitat4
+ ;	(declare (salience 10))
+ ((mes-75 No) & (sedentari No) & (caiguda Si) & (osteoporosis) & (not artrosis))
+ =>
+ (assert fragilitat4)
+ )
+
+ (defrule hipertensio1
+ ;	(declare (salience 10))
+ ((mes-75 Si) & (sedentari Si) & (caiguda No) & (ossi No) & (respiratoris No) &
+ (cardiovasculars No))
+ (hipertensio & obes Si)
+ =>
+ (assert hipertensio1)
+ )
+
+ (defrule hipertensio2
+ ;	(declare (salience 10))
+ ((mes-75 Si) & (sedentari No) & (caiguda No) & (ossi No) & (respiratoris No) &
+ (cardiovasculars No))
+ (hipertensio & obes Si)
+ =>
+ (assert hipertensio2)
+ )
+
+ (defrule hipertensio3
+ ;	(declare (salience 10))
+ ((mes-75 No) & (sedentari Si) & (caiguda No) & (ossi No) & (respiratoris No) &
+ (cardiovasculars No))
+ (hipertensio)
+ =>
+ (assert hipertensio3)
+ )
+
+ (defrule hipertensio4
+ ;	(declare (salience 10))
+ ((mes-75 No) & (sedentari No) & (caiguda No) & (ossi No) & (respiratoris No) &
+ (cardiovasculars No))
+ (hipertensio)
+ =>
+ (assert hipertensio4)
+ )
+
+ (defrule respiratoris)
