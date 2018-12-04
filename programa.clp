@@ -229,7 +229,8 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
-
+		
+(definstances holacocacola
 
 ([ontologia_v1_Class0] of  Dansa
 
@@ -774,13 +775,6 @@
 	(Cronica FALSE)
 	(Nom "Osteoporosis"))
 
-([ontologia_v1_Class30000] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40003])
-	(%3AANNOTATION-TEXT "hipertensio nivell 1")
-	(%3ACREATION-TIMESTAMP "2018.12.01 23:26:20.266 CET")
-	(%3ACREATOR "oriolvidal"))
-
 ([ontologia_v1_Class30001] of  Rutina
 
 	(contraindicada [ontologia_v1_Class5])
@@ -809,26 +803,6 @@
 		[ontologia_v1_Class8]
 		[ontologia_v1_Class3]))
 
-([ontologia_v1_Class30004] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30003])
-	(%3AANNOTATION-TEXT "Fragilitat nivell 3")
-	(%3ACREATION-TIMESTAMP "2018.11.22 18:28:46.454 CET")
-	(%3ACREATOR "oriol"))
-
-([ontologia_v1_Class30005] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30001])
-	(%3AANNOTATION-TEXT "Fragilitat Nivell 2")
-	(%3ACREATION-TIMESTAMP "2018.11.22 18:29:25.622 CET")
-	(%3ACREATOR "oriol"))
-
-([ontologia_v1_Class30006] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class20000])
-	(%3AANNOTATION-TEXT "Fragilitat nivell 1")
-	(%3ACREATION-TIMESTAMP "2018.11.22 18:29:38.544 CET")
-	(%3ACREATOR "oriol"))
 
 ([ontologia_v1_Class30007] of  Rutina
 
@@ -845,19 +819,6 @@
 		[ontologia_v1_Class8]
 		[ontologia_v1_Class3]))
 
-([ontologia_v1_Class30008] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30007])
-	(%3AANNOTATION-TEXT "Fragilitat nivell 4")
-	(%3ACREATION-TIMESTAMP "2018.11.22 18:30:41.602 CET")
-	(%3ACREATOR "oriol"))
-
-([ontologia_v1_Class30011] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30041])
-	(%3AANNOTATION-TEXT "Circulacio sanguinea nivell 3")
-	(%3ACREATION-TIMESTAMP "2018.11.22 18:43:41.145 CET")
-	(%3ACREATOR "oriol"))
 
 ([ontologia_v1_Class30012] of  Rutina
 
@@ -885,12 +846,6 @@
 		[ontologia_v1_Class9]
 		[ontologia_v1_Class7]))
 
-([ontologia_v1_Class30013] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30012])
-	(%3AANNOTATION-TEXT "Circulacio sanguinea nivell 1")
-	(%3ACREATION-TIMESTAMP "2018.11.22 18:45:32.965 CET")
-	(%3ACREATOR "oriol"))
 
 ([ontologia_v1_Class30014] of  Rutina
 
@@ -1039,12 +994,6 @@
 	(Cronica FALSE)
 	(Nom "Colesterol"))
 
-([ontologia_v1_Class40000] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40009])
-	(%3AANNOTATION-TEXT "problemes respiratoris nivell 4")
-	(%3ACREATION-TIMESTAMP "2018.12.03 12:13:04.375 CET")
-	(%3ACREATOR "oriolvidal"))
 
 ([ontologia_v1_Class40001] of  Malaltia
 
@@ -1137,12 +1086,6 @@
 		[ontologia_v1_Class10049])
 	(indicada [ontologia_v1_Class1]))
 
-([ontologia_v1_Class40016] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30014])
-	(%3AANNOTATION-TEXT "Circulacio sanguinea nivell 2")
-	(%3ACREATION-TIMESTAMP "2018.11.22 18:47:46.283 CET")
-	(%3ACREATOR "oriol"))
 
 ([ontologia_v1_Class40017] of  Rutina
 
@@ -1171,13 +1114,6 @@
 		[ontologia_v1_Class9]
 		[ontologia_v1_Class7]))
 
-([ontologia_v1_Class40018] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40017])
-	(%3AANNOTATION-TEXT "Circualcio sanguinea nivell 4")
-	(%3ACREATION-TIMESTAMP "2018.11.22 18:48:03.923 CET")
-	(%3ACREATOR "oriol"))
-
 ([ontologia_v1_Class40019] of  Rutina
 
 	(escalfament
@@ -1191,13 +1127,6 @@
 	(indicada
 		[ontologia_v1_Class5]
 		[ontologia_v1_Class18]))
-
-([ontologia_v1_Class40020] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40019])
-	(%3AANNOTATION-TEXT "Artrosis nivell 1")
-	(%3ACREATION-TIMESTAMP "2018.11.22 18:52:46.622 CET")
-	(%3ACREATOR "oriol"))
 
 ([ontologia_v1_Class40021] of  Rutina
 
@@ -1214,13 +1143,6 @@
 		[ontologia_v1_Class5]
 		[ontologia_v1_Class18]))
 
-([ontologia_v1_Class40022] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40021])
-	(%3AANNOTATION-TEXT "Artrosis nivell 2")
-	(%3ACREATION-TIMESTAMP "2018.11.22 18:53:33.670 CET")
-	(%3ACREATOR "oriol"))
-
 ([ontologia_v1_Class40023] of  Rutina
 
 	(escalfament
@@ -1235,13 +1157,6 @@
 	(indicada
 		[ontologia_v1_Class5]
 		[ontologia_v1_Class18]))
-
-([ontologia_v1_Class40024] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40023])
-	(%3AANNOTATION-TEXT "Artrosis nivell 3")
-	(%3ACREATION-TIMESTAMP "2018.11.22 18:54:26.694 CET")
-	(%3ACREATOR "oriol"))
 
 ([ontologia_v1_Class40025] of  Rutina
 
@@ -1259,45 +1174,11 @@
 		[ontologia_v1_Class5]
 		[ontologia_v1_Class18]))
 
-([ontologia_v1_Class40026] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40025])
-	(%3AANNOTATION-TEXT "Artrosis nivell 4")
-	(%3ACREATION-TIMESTAMP "2018.11.22 18:56:04.058 CET")
-	(%3ACREATOR "oriol"))
-
 ([ontologia_v1_Class5] of  Malaltia
 
 	(Cronica FALSE)
 	(Nom "Artrosis"))
 
-([ontologia_v1_Class50000] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30033])
-	(%3AANNOTATION-TEXT "cardiovasculars nivell 4")
-	(%3ACREATION-TIMESTAMP "2018.12.03 12:26:20.753 CET")
-	(%3ACREATOR "oriolvidal"))
-
-([ontologia_v1_Class50001] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40004])
-	(%3AANNOTATION-TEXT "hipertensio nivell 4")
-	(%3ACREATION-TIMESTAMP "2018.12.01 23:27:08.002 CET")
-	(%3ACREATOR "oriolvidal"))
-
-([ontologia_v1_Class50002] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40008])
-	(%3AANNOTATION-TEXT "hipertensio nivell 3")
-	(%3ACREATION-TIMESTAMP "2018.12.01 23:27:53.329 CET")
-	(%3ACREATOR "oriolvidal"))
-
-([ontologia_v1_Class50003] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40007])
-	(%3AANNOTATION-TEXT "hipertensio nivell 2")
-	(%3ACREATION-TIMESTAMP "2018.12.01 23:29:01.274 CET")
-	(%3ACREATOR "oriolvidal"))
 
 ([ontologia_v1_Class50004] of  Padel
 
@@ -1308,13 +1189,6 @@
 
 	(Duracio 60)
 	(nomEx "Padel high"))
-
-([ontologia_v1_Class50007] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class10000])
-	(%3AANNOTATION-TEXT "depressio nivell 1")
-	(%3ACREATION-TIMESTAMP "2018.11.25 13:49:38.652 CET")
-	(%3ACREATOR "oriol"))
 
 ([ontologia_v1_Class50008] of  Rutina
 
@@ -1329,13 +1203,6 @@
 		[ontologia_v1_Class10047]
 		[ontologia_v1_Class20003])
 	(indicada [ontologia_v1_Class7]))
-
-([ontologia_v1_Class50009] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class50008])
-	(%3AANNOTATION-TEXT "Depressio nivell 2")
-	(%3ACREATION-TIMESTAMP "2018.11.25 13:50:40.494 CET")
-	(%3ACREATOR "oriol"))
 
 ([ontologia_v1_Class50010] of  Rutina
 
@@ -1352,12 +1219,6 @@
 		[ontologia_v1_Class10030])
 	(indicada [ontologia_v1_Class7]))
 
-([ontologia_v1_Class50011] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class50010])
-	(%3AANNOTATION-TEXT "Depressio nivell 3")
-	(%3ACREATION-TIMESTAMP "2018.11.25 13:51:17.931 CET")
-	(%3ACREATOR "oriol"))
 
 ([ontologia_v1_Class50012] of  Rutina
 
@@ -1373,13 +1234,6 @@
 		[ontologia_v1_Class50005]
 		[ontologia_v1_Class10033])
 	(indicada [ontologia_v1_Class7]))
-
-([ontologia_v1_Class50013] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class50012])
-	(%3AANNOTATION-TEXT "Depressio nivell 4")
-	(%3ACREATION-TIMESTAMP "2018.11.25 13:52:31.774 CET")
-	(%3ACREATOR "oriol"))
 
 ([ontologia_v1_Class6] of  Malaltia
 
@@ -1422,52 +1276,12 @@
 		[ontologia_v1_Class10048])
 	(indicada [ontologia_v1_Class1]))
 
-([ontologia_v1_Class60004] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class60001])
-	(%3AANNOTATION-TEXT "problemes respiratoris nivell 3")
-	(%3ACREATION-TIMESTAMP "2018.12.03 12:13:40.759 CET")
-	(%3ACREATOR "oriolvidal"))
-
-([ontologia_v1_Class60005] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class60002])
-	(%3AANNOTATION-TEXT "problemes respiratoris nivell 2")
-	(%3ACREATION-TIMESTAMP "2018.12.03 12:13:52.159 CET")
-	(%3ACREATOR "oriolvidal"))
-
-([ontologia_v1_Class60006] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class60003])
-	(%3AANNOTATION-TEXT "problemes respiratoris nivell 1")
-	(%3ACREATION-TIMESTAMP "2018.12.03 12:14:03.039 CET")
-	(%3ACREATOR "oriolvidal"))
 
 ([ontologia_v1_Class7] of  Malaltia
 
 	(Cronica FALSE)
 	(Nom "Depressió"))
 
-([ontologia_v1_Class70001] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30036])
-	(%3AANNOTATION-TEXT "cardiovasculars nivell 1")
-	(%3ACREATION-TIMESTAMP "2018.12.03 12:26:53.488 CET")
-	(%3ACREATOR "oriolvidal"))
-
-([ontologia_v1_Class70002] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30037])
-	(%3AANNOTATION-TEXT "cardiovasculars nivell 2")
-	(%3ACREATION-TIMESTAMP "2018.12.03 12:27:37.520 CET")
-	(%3ACREATOR "oriolvidal"))
-
-([ontologia_v1_Class70003] of  %3AINSTANCE-ANNOTATION
-
-	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30039])
-	(%3AANNOTATION-TEXT "cardiovasculars nivell 3")
-	(%3ACREATION-TIMESTAMP "2018.12.03 12:27:48.208 CET")
-	(%3ACREATOR "oriolvidal"))
 
 ([ontologia_v1_Class8] of  Malaltia
 
@@ -1478,6 +1292,7 @@
 
 	(Cronica FALSE)
 	(Nom "Incontinència urinària"))
+)
 
 ;;; --- REGLAS
 (defmodule MAIN (export ?ALL))
@@ -1486,10 +1301,10 @@
 ;;* MESSAGE HANDLERS *
 ;;********************
 
-(defmessage-handler Exercici print primary ()
-	(printout t "--" ?self:nom "--" crlf)
-	(printout t "--" ?self:Instruccions "--" crlf)
-)
+;;(defmessage-handler Exercici print primary ()
+;;	(printout t "--" ?self:nomEx "--" crlf)
+;;	(printout t "--" ?self:Instruccions "--" crlf)
+;;)
 
 ;;****************
 ;;* DEFFUNCTIONS *
@@ -1524,12 +1339,12 @@
   (printout t "------ rutines per a la gent gran -----" crlf)
   (printout t "------------------------------" crlf)
   (printout t crlf)
-  (focus preguntes-inicials)
+  ;;(focus preguntes-inicials)
 )
 
 (defrule rutina-res "Output"
-   (declare (salience 10))
-	?rutina <- (object (is-a Rutina))
+  (declare (salience 1000))
+   ?rutina <- (object (is-a Rutina))
 =>
    (printout t "Realitza la seguent rutina: " crlf)
    (bind ?e 1)
@@ -1617,8 +1432,8 @@
 	  (assert (obes Si))
 		(if (si-o-no-p "Es cronic? (s/n)")
 		then
-			(assert obesitat-cronica)
-			)
+			(assert (obesitat-cronica))
+		)
 	else
 	  (assert (obes No))
   )
@@ -1689,7 +1504,7 @@
   )
 )
 
-;;; Saltem al modul de decidir quines rutines son compatibles amb l'usuari
+;;; Saltem al modul de preguntes de malalties
 (defrule a-seleccio-rutines
  (declare (salience -1))
  =>
@@ -1701,170 +1516,160 @@
 ;;;	se li poden assignar
 (defmodule seleccio-rutines "Modul de preguntes de malalties"
  (import MAIN ?ALL)
+ (import preguntes-inicials ?ALL)
+ (import preguntes-malalties ?ALL)
  (export ?ALL))
 
  (defrule circulacio-sanguinea1
-	; (declare (salience 10))
- ((mes-75 Si) & (sedentari Si) & (ossi No))
- ((colesterol) | (colesterol-cronic) | (obes Si) | (obesitat-cronica) |
- (cardiovasculars Si) | (depressio Si))
+	;(declare (salience 10))
+	(mes-75 Si)(sedentari Si)(ossi No)
+	(or (colesterol) (colesterol-cronic) (obes Si) (obesitat-cronica) (cardiovasculars Si) (depressio Si))
 	 =>
- (assert circulacio-sanguinea1)
+	(assert (circulacio-sanguinea1))
  )
 
  (defrule circulacio-sanguinea2
-  ; (declare (salience 10))
- ((mes-75 Si) & (sedentari No) & (ossi No))
- ((colesterol) | (colesterol-cronic) | (obes Si) | (obesitat-cronica) |
- (cardiovasculars Si) | (depressio Si))
+    ;(declare (salience 10))
+    (mes-75 Si) (sedentari No) (ossi No)
+	(or (colesterol) (colesterol-cronic)(obes Si) (obesitat-cronica) (cardiovasculars Si) (depressio Si))
  	=>
- (assert circulacio-sanguinea2)
+	(assert (circulacio-sanguinea2))
  )
 
  (defrule circulacio-sanguinea3
- ;	(declare (salience 10))
- ((mes-75 No) & (sedentari Si) & (ossi No))
- ((colesterol) | (colesterol-cronic) | (obes Si) | (obesitat-cronica) |
- (cardiovasculars Si) | (depressio Si))
+ 	;(declare (salience 10))
+    (mes-75 No) (sedentari Si) (ossi No)
+    (or (colesterol)(colesterol-cronic)(obes Si)(obesitat-cronica)(cardiovasculars Si)(depressio Si))
 	 =>
- (assert circulacio-sanguinea3)
+	(assert (circulacio-sanguinea3))
  )
 
  (defrule circulacio-sanguinea4
- ;	(declare (salience 10))
- ((mes-75 No) & (sedentari No) & (ossi No))
- ((colesterol) | (colesterol-cronic) | (obes Si) | (obesitat-cronica) |
- (cardiovasculars Si) | (depressio Si))
+   ;(declare (salience 10))
+   (mes-75 No) (sedentari No)(ossi No)
+   (or (colesterol)(colesterol-cronic)(obes Si) (obesitat-cronica)(cardiovasculars Si)(depressio Si))
 	 =>
- (assert circulacio-sanguinea4)
+	(assert (circulacio-sanguinea4))
  )
 
  (defrule depressio1
- ;	(declare (salience 10))
- ((mes-75 Si) & (sedentari Si) & (ossi No))
- ((depressio Si))
+   ;(declare (salience 10))
+    (mes-75 Si)(sedentari Si)(ossi No)(depressio Si)
  	=>
- (assert depressio1)
+	(assert (depressio1))
  )
 
  (defrule depressio2
  ;	(declare (salience 10))
- ((mes-75 Si) & (sedentari No) & (ossi No))
- ((depressio Si))
+    (mes-75 Si) (sedentari No) (ossi No)(depressio Si)
 	 =>
- (assert depressio2)
+	(assert (depressio2))
  )
 
  (defrule depressio3
  ;	(declare (salience 10))
- ((mes-75 No) & (sedentari Si) & (ossi No))
- ((depressio Si))
+    (mes-75 No) (sedentari Si)(ossi No)(depressio Si)
 	 =>
- (assert depressio3)
+	(assert (depressio3))
  )
 
  (defrule depressio4
  ;	(declare (salience 10))
- ((mes-75 No) & (sedentari No) & (ossi No))
- ((depressio Si))
+    (mes-75 No)(sedentari No) (ossi No)(depressio Si)
 	 =>
- (assert depressio4)
+	(assert (depressio4))
  )
 
  (defrule artrosis1
  ;	(declare (salience 10))
- ((mes-75 Si) & (sedentari Si))
- ((ossi Si) | (diabetis Si))
+ (mes-75 Si) (sedentari Si)
+ (or (ossi Si)(diabetis Si))
 	 =>
- (assert artrosis1)
+	(assert (artrosis1))
  )
 
  (defrule artrosis2
  ;	(declare (salience 10))
- ((mes-75 Si) & (sedentari No))
- ((ossi Si) | (diabetis Si))
+    (mes-75 Si) (sedentari No)
+    (or (ossi Si)(diabetis Si))
 	=>
- (assert artrosis2)
+	(assert (artrosis2))
  )
 
  (defrule artrosis3
  ;	(declare (salience 10))
- ((mes-75 No) & (sedentari Si))
- ((ossi Si) | (diabetis Si))
+ (mes-75 No) (sedentari Si)
+ (or (ossi Si)(diabetis Si))
 	=>
- (assert artrosis3)
+	(assert (artrosis3))
  )
 
  (defrule artrosis4
  ;	(declare (salience 10))
- ((mes-75 No) & (sedentari No))
- ((ossi Si) | (diabetis Si))
+  (mes-75 No) (sedentari No)
+ ( or (ossi Si)(diabetis Si))
 	=>
- (assert artrosis4)
+	(assert (artrosis4))
  )
 
  (defrule fragilitat1
  ;	(declare (salience 10))
- ((mes-75 Si) & (sedentari Si) & (caiguda Si) & (osteoporosis) & (not artrosis))
+    (mes-75 Si) (sedentari Si)(caiguda Si) (osteoporosis) (not (artrosis))
 	=>
- (assert fragilitat1)
+	(assert (fragilitat1))
  )
 
  (defrule fragilitat2
  ;	(declare (salience 10))
- ((mes-75 Si) & (sedentari No) & (caiguda Si) & (osteoporosis) & (not artrosis))
+    (mes-75 Si) (sedentari No) (caiguda Si) (osteoporosis) (not (artrosis))
  =>
- (assert fragilitat2)
+	(assert (fragilitat2))
  )
 
  (defrule fragilitat3
  ;	(declare (salience 10))
- ((mes-75 No) & (sedentari Si) & (caiguda Si) & (osteoporosis) & (not artrosis))
+ (mes-75 No) (sedentari Si) (caiguda Si)(osteoporosis)(not (artrosis))
  =>
- (assert fragilitat3)
+	(assert (fragilitat3))
  )
 
  (defrule fragilitat4
  ;	(declare (salience 10))
- ((mes-75 No) & (sedentari No) & (caiguda Si) & (osteoporosis) & (not artrosis))
+ (mes-75 No)(sedentari No)(caiguda Si)(osteoporosis)(not (artrosis))
  =>
- (assert fragilitat4)
+	(assert (fragilitat4))
  )
 
  (defrule hipertensio1
  ;	(declare (salience 10))
- ((mes-75 Si) & (sedentari Si) & (caiguda No) & (ossi No) & (respiratoris No) &
- (cardiovasculars No))
- (hipertensio & obes Si)
+ (mes-75 Si) (sedentari Si)(caiguda No) (ossi No)(respiratoris No)(cardiovasculars No)
+ (hipertensio)(obes Si)
  =>
- (assert hipertensio1)
+	(assert (hipertensio1))
  )
 
  (defrule hipertensio2
  ;	(declare (salience 10))
- ((mes-75 Si) & (sedentari No) & (caiguda No) & (ossi No) & (respiratoris No) &
- (cardiovasculars No))
- (hipertensio & obes Si)
+ (mes-75 Si)(sedentari No) (caiguda No)(ossi No)(respiratoris No)(cardiovasculars No)
+ (hipertensio)(obes Si)
  =>
- (assert hipertensio2)
+	(assert (hipertensio2))
  )
 
  (defrule hipertensio3
  ;	(declare (salience 10))
- ((mes-75 No) & (sedentari Si) & (caiguda No) & (ossi No) & (respiratoris No) &
- (cardiovasculars No))
+ (mes-75 No)(sedentari Si) (caiguda No)(ossi No)(respiratoris No)(cardiovasculars No)
  (hipertensio)
  =>
- (assert hipertensio3)
+	(assert (hipertensio3))
  )
 
  (defrule hipertensio4
  ;	(declare (salience 10))
- ((mes-75 No) & (sedentari No) & (caiguda No) & (ossi No) & (respiratoris No) &
- (cardiovasculars No))
+ (mes-75 No) (sedentari No) (caiguda No)(ossi No) (respiratoris No)(cardiovasculars No)
  (hipertensio)
  =>
- (assert hipertensio4)
+	(assert (hipertensio4))
  )
 
- (defrule respiratoris)
+ ;(defrule respiratoris)
