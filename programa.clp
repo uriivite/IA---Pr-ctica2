@@ -1,5 +1,5 @@
-; Fri Nov 30 17:24:44 CET 2018
-;
+; Tue Dec 04 13:42:13 CET 2018
+; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
@@ -11,77 +11,65 @@
 		(type INSTANCE)
 ;+		(allowed-classes Malaltia)
 		(create-accessor read-write))
-	(single-slot repeticions
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(multislot indicada
-		(type INSTANCE)
-;+		(allowed-classes Malaltia)
-		(create-accessor read-write))
-	(single-slot Duracio
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot Nom
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(multislot escalfament
 		(type INSTANCE)
 ;+		(allowed-classes Flexibilitat)
 		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(multislot Cronica
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(multislot Instruccions
-;+		(comment "Alguna instrucci� de com s'ha de realitzar l'exercici.")
-		(type STRING)
-		(create-accessor read-write))
-	(single-slot ontologia_v1_Class30000
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot part+del+cos
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot nom
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot es+escalfament
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot exercicis
 ;+		(comment "Llista d'exercicis")
 		(type INSTANCE)
 ;+		(allowed-classes Exercici)
 		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write)))
-
-(defclass Exercici "Identifica un exercici concret amb alguna instrucci�/especificaci�."
-	(is-a USER)
-	(role concrete)
-	(single-slot Duracio
-		(type INTEGER)
+		(create-accessor read-write))
+	(single-slot Nom
+		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot repeticions
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot nom
-		(type STRING)
-;+		(cardinality 1 1)
+	(multislot Cronica
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Duracio
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot es+escalfament
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot part+del+cos
 		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nomEx
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Instruccions
+;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
+		(type STRING)
+		(create-accessor read-write))
+	(multislot indicada
+		(type INSTANCE)
+;+		(allowed-classes Malaltia)
+		(create-accessor read-write)))
+
+(defclass Exercici "Identifica un exercici concret amb alguna instrucció/especificació."
+	(is-a USER)
+	(role concrete)
+	(single-slot repeticions
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Duracio
+		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot es+escalfament
@@ -90,8 +78,16 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot Instruccions
-;+		(comment "Alguna instrucci� de com s'ha de realitzar l'exercici.")
+;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
 		(type STRING)
+		(create-accessor read-write))
+	(single-slot part+del+cos
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nomEx
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
 (defclass Musculatura
@@ -198,7 +194,7 @@
 	(is-a Equilibri)
 	(role concrete))
 
-(defclass Rutina "Classe gen�rica que contindr� una s�rie d'exercicis que s'utilitzaran per fer una recomanaci�."
+(defclass Rutina "Classe genèrica que contindrà una sèrie d'exercicis que s'utilitzaran per fer una recomanació."
 	(is-a USER)
 	(role concrete)
 	(multislot contraindicada
@@ -210,35 +206,35 @@
 ;+		(allowed-classes Flexibilitat)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(multislot indicada
-		(type INSTANCE)
-;+		(allowed-classes Malaltia)
-		(create-accessor read-write))
 	(multislot exercicis
 ;+		(comment "Llista d'exercicis")
 		(type INSTANCE)
 ;+		(allowed-classes Exercici)
 		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot indicada
+		(type INSTANCE)
+;+		(allowed-classes Malaltia)
 		(create-accessor read-write)))
 
 (defclass Malaltia
 	(is-a USER)
 	(role concrete)
-	(single-slot Nom
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(multislot Cronica
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Nom
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 
 ([ontologia_v1_Class0] of  Dansa
 
 	(Duracio 20)
-	(nom "Dansa low"))
+	(nomEx "Dansa low"))
 
 ([ontologia_v1_Class1] of  Malaltia
 
@@ -263,14 +259,14 @@
 
 	(Duracio 30)
 	(es+escalfament TRUE)
-	(nom "caminar low"))
+	(nomEx "caminar low"))
 
 ([ontologia_v1_Class10002] of  Caminar
 
 	(Duracio 45)
 	(es+escalfament TRUE)
 	(Instruccions "Afegeix alguna pujada a la teva ruta habitual")
-	(nom "caminar high"))
+	(nomEx "caminar high"))
 
 ([ontologia_v1_Class10005] of  Malaltia
 
@@ -292,7 +288,7 @@
 		"3 - \"Comience a inclinarse hacia adelante flexionando las caderas, hasta que sienta un tiron por el estiramiento en la pierna.\""
 		"4 - \"Aguante en esta posicion.\""
 		"5 - \"Realice este ejercicio con la otra pierna.\"")
-	(nom "Estirament tendons maluc low")
+	(nomEx "Estirament tendons maluc low")
 	(part+del+cos "Maluc")
 	(repeticions 3))
 
@@ -306,7 +302,7 @@
 		"3 - \"Comience a inclinarse hacia adelante flexionando las caderas, hasta que sienta un tiron por el estiramiento en la pierna.\""
 		"4 - \"Aguante en esta posicion.\""
 		"5 - \"Realice este ejercicio con la otra pierna.\"")
-	(nom "Estirament tendons maluc high")
+	(nomEx "Estirament tendons maluc high")
 	(part+del+cos "Maluc")
 	(repeticions 5))
 
@@ -321,7 +317,7 @@
 		"4 - \"Doble la rodilla de la pierna que esta detras, manteniendo el pie sobre el suelo.\""
 		"5 - \"Permanezca en esta posicion otros 10-30 segundos.\""
 		"6 - \"Realice este ejercicio cambiando las posiciones de cada pierna.\"")
-	(nom "Estirament panxell low")
+	(nomEx "Estirament panxell low")
 	(part+del+cos "Panxell")
 	(repeticions 3))
 
@@ -336,7 +332,7 @@
 		"4 - \"Doble la rodilla de la pierna que esta detras, manteniendo el pie sobre el suelo.\""
 		"5 - \"Permanezca en esta posicion otros 10-30 segundos.\""
 		"6 - \"Realice este ejercicio cambiando las posiciones de cada pierna.\"")
-	(nom "Estirament panxell high")
+	(nomEx "Estirament panxell high")
 	(part+del+cos "Panxell")
 	(repeticions 5))
 
@@ -349,7 +345,7 @@
 		"2 - \"Extienda las piernas hacia el frente lo maximo que pueda.\""
 		"3 - \"Doble los dedos de los pies mirando hacia usted.\""
 		"4 - \"Doble los tobillos de forma que los pies se alejen de usted.\"")
-	(nom "Estirament turmells low")
+	(nomEx "Estirament turmells low")
 	(part+del+cos "Turmells")
 	(repeticions 3))
 
@@ -362,7 +358,7 @@
 		"2 - \"Extienda las piernas hacia el frente lo maximo que pueda.\""
 		"3 - \"Doble los dedos de los pies mirando hacia usted.\" "
 		"4 - \"Doble los tobillos de forma que los pies se alejen de usted.\"")
-	(nom "Estirament turmells high")
+	(nomEx "Estirament turmells high")
 	(part+del+cos "Turmells")
 	(repeticions 5))
 
@@ -375,7 +371,7 @@
 		"3 - \"Vaya ascendiendo progresivamente esta mano en la toalla, lo que tambien hara que el otro brazo tienda hacia abajo.\""
 		"4 - \"Continuen con estos movimientos hasta que las manos lleguen a estar proximas.\""
 		"5 - \"Intercambie las posiciones de los brazos y repita el ejercicio.\"")
-	(nom "Estirament triceps")
+	(nomEx "Estirament triceps")
 	(part+del+cos "Triceps")
 	(repeticions 5))
 
@@ -386,7 +382,7 @@
 	(Instruccions
 		"1 - \"Coloque las manos juntas como si estuviera rezando.\""
 		"2 - \"Vaya elevando lentamente los codos hacia ambos lados, hasta que los brazos queden paralelos al suelo, presionando las manos una con la otra.\"")
-	(nom "Estirament canell low")
+	(nomEx "Estirament canell low")
 	(part+del+cos "Canell")
 	(repeticions 3))
 
@@ -395,14 +391,14 @@
 	(Duracio 3)
 	(es+escalfament FALSE)
 	(Instruccions
-		"1 - \"Pongase de pie, detr�s de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
+		"1 - \"Pongase de pie, detrás de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
 		"2 - \"Apoyese en la silla para mantener el equilibrio y posteriormente sueltese y permanezca sin agarrarse.\""
 		"3 - \"Levante lentamente la pierna lo mas alto posible de puntillas hasta llegar a 12 o 20 cm del suelo.\""
-		"4 - \"Permanezca en esta posici�n durante unos tres segundos.\""
+		"4 - \"Permanezca en esta posición durante unos tres segundos.\""
 		"5 - \"Vaya descendiendo lentamente la pierna, hasta llegar sus talones a apoyar nuevamente en el suelo.\""
 		"6 - \"Haga el ejercicio apoyandose primero en una pierna, y luego con la otra de forma rotatoria.\""
 		"7 - \"La espalda y ambas rodillas deben mantenerse rectas durante todo el ejercicio.\"")
-	(nom "Flexio plantar low")
+	(nomEx "Flexio plantar low")
 	(part+del+cos "Peu")
 	(repeticions 8))
 
@@ -410,13 +406,13 @@
 
 	(Duracio 2)
 	(Instruccions
-		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, despu�s ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
+		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, después ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
 		"2 - \"Doble lentamente la rodilla hacia atras y elevela lo mas alto posible hasta aproximarla al muslo.\" "
 		"3 - \"Aguante en esta posicion.\" "
 		"4 - \"Comience a bajar lentamente la pierna hasta su posicion inicial.\" "
 		"5 - \"Repita lo mismo con la otra pierna.\" "
 		"6 - \"A medida que progrese puede ir anadiendo modificaciones (pesas de tobillo, etc.).\" ")
-	(nom "Flexio del genoll low")
+	(nomEx "Flexio del genoll low")
 	(part+del+cos "Genoll")
 	(repeticions 8))
 
@@ -431,7 +427,7 @@
 		"5 - \"Vaya doblando su cintura, e inclinese hacia la silla.\""
 		"6 - \"Eleve la pierna hacia atras, estirada, lentamente.\""
 		"7 - \"Vuelva lentamente hacia su posicion inicial.\"")
-	(nom "Flexio i extensio maluc low")
+	(nomEx "Flexio i extensio maluc low")
 	(part+del+cos "Maluc")
 	(repeticions 8))
 
@@ -439,14 +435,14 @@
 
 	(Duracio 3)
 	(Instruccions
-		"1 - \"Pongase de pie, detr�s de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
+		"1 - \"Pongase de pie, detrás de una mesa o respaldo de una silla, con los pies ligeramente separados.\""
 		"2 - \"Apoyese en la silla para mantener el equilibrio y posteriormente sueltese y permanezca sin agarrarse.\""
 		"3 - \"Levante lentamente la pierna lo mas alto posible de puntillas hasta llegar a 12 o 20 cm del suelo.\""
-		"4 - \"Permanezca en esta posici�n durante unos tres segundos.\""
+		"4 - \"Permanezca en esta posición durante unos tres segundos.\""
 		"5 - \"Vaya descendiendo lentamente la pierna, hasta llegar sus talones a apoyar nuevamente en el suelo.\""
 		"6 - \"Haga el ejercicio apoyandose primero en una pierna, y luego con la otra de forma rotatoria.\""
 		"7 - \"La espalda y ambas rodillas deben mantenerse rectas durante todo el ejercicio.\"")
-	(nom "Flexio plantar high")
+	(nomEx "Flexio plantar high")
 	(part+del+cos "Peu")
 	(repeticions 15))
 
@@ -454,13 +450,13 @@
 
 	(Duracio 2)
 	(Instruccions
-		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, despu�s ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
+		"1 - \"Pongase de pie, ante una mesa o respaldo de una silla. Inicialmente agarrese para mantener el equilibrio, después ira soltandose e incluso podra hacerlo con los ojos cerrados.\" "
 		"2 - \"Doble lentamente la rodilla hacia atras y elevela lo mas alto posible hasta aproximarla al muslo.\" "
 		"3 - \"Aguante en esta posicion.\" "
 		"4 - \"Comience a bajar lentamente la pierna hasta su posicion inicial.\" "
 		"5 - \"Repita lo mismo con la otra pierna.\""
 		"6 - \"A medida que progrese puede ir anadiendo modificaciones (pesas de tobillo, etc.).\" ")
-	(nom "Flexio del genoll high")
+	(nomEx "Flexio del genoll high")
 	(part+del+cos "Genoll")
 	(repeticions 15))
 
@@ -475,7 +471,7 @@
 		"5 - \"Vaya doblando su cintura, e inclinese hacia la silla.\" "
 		"6 - \"Eleve la pierna hacia atras, estirada, lentamente.\""
 		"7 - \"Vuelva lentamente hacia su posicion inicial.\"")
-	(nom "Flexio i extensio maluc high")
+	(nomEx "Flexio i extensio maluc high")
 	(part+del+cos "Maluc")
 	(repeticions 15))
 
@@ -488,7 +484,7 @@
 		"3 - \"Aguante en esta postura.\""
 		"4 - \"Baje lentamente la pierna hasta su posicion inicial.\""
 		"5 - \"Repitelo con la otra pierna.\"")
-	(nom "Aixecament lateral de la cama low")
+	(nomEx "Aixecament lateral de la cama low")
 	(part+del+cos "Cama")
 	(repeticions 8))
 
@@ -501,7 +497,7 @@
 		"3 - \"Aguante en esta postura.\""
 		"4 - \"Baje lentamente la pierna hasta su posicion inicial.\""
 		"5 - \"Repitelo con la otra pierna.\"")
-	(nom "Aixecament lateral de la cama high")
+	(nomEx "Aixecament lateral de la cama high")
 	(part+del+cos "Cama")
 	(repeticions 15))
 
@@ -514,7 +510,7 @@
 		"3 - \"Levante poco a poco los brazos hasta llegar a la altura de los hombros.\""
 		"4 - \"Mantenga esta posicion.\""
 		"5 - \"Baje lentamente los brazos.\"")
-	(nom "Aixecar bracos high")
+	(nomEx "Aixecar bracos high")
 	(part+del+cos "Bracos")
 	(repeticions 8))
 
@@ -527,7 +523,7 @@
 		"3 - \"Levante poco a poco los brazos hasta llegar a la altura de los hombros.\""
 		"4 - \"Mantenga esta posicion.\""
 		"5 - \"Baje lentamente los brazos.\"")
-	(nom "Aixecar bracos low")
+	(nomEx "Aixecar bracos low")
 	(part+del+cos "Bracos")
 	(repeticions 15))
 
@@ -538,7 +534,7 @@
 		"1 - \"Sientese en una silla con la esplda derecha y apoyada y sostenga las pesas con las palmas de la mano y mirando hacia el suelo.\""
 		"2 - \"Suba los brazos al frente, gire las palmas de las manos hacia arriba, y termine de subir los brazos hasta la altura de los hombros.\""
 		"3 - \"Mantenga esa posicion durante un breve momento y baje lentamente.\"")
-	(nom "Flexio espatlles low")
+	(nomEx "Flexio espatlles low")
 	(part+del+cos "Espatlles")
 	(repeticions 8))
 
@@ -549,7 +545,7 @@
 		"1 - \"Sientese en una silla con la esplda derecha y apoyada y sostenga las pesas con las palmas de la mano y mirando hacia el suelo.\""
 		"2 - \"Suba los brazos al frente, gire las palmas de las manos hacia arriba, y termine de subir los brazos hasta la altura de los hombros.\""
 		"3 - \"Mantenga esa posicion durante un breve momento y baje lentamente.\"")
-	(nom "Flexio espatlles high")
+	(nomEx "Flexio espatlles high")
 	(part+del+cos "Espatlles")
 	(repeticions 15))
 
@@ -561,7 +557,7 @@
 		"2 - \"Suba lentamente un brazo doblando el codo y con la palma que sostiene la pesa mirando hacia arriba.\""
 		"3 - \"Baje lentamente.\""
 		"4 - \"Alterne los dos brazos.\"")
-	(nom "Exercicis biceps low")
+	(nomEx "Exercicis biceps low")
 	(part+del+cos "Biceps")
 	(repeticions 8))
 
@@ -573,7 +569,7 @@
 		"2 - \"Suba lentamente un brazo doblando el codo y con la palma que sostiene la pesa mirando hacia arriba.\""
 		"3 - \"Baje lentamente.\""
 		"4 - \"Alterne los dos brazos.\"")
-	(nom "Exercici biceps high")
+	(nomEx "Exercici biceps high")
 	(part+del+cos "Biceps")
 	(repeticions 15))
 
@@ -587,7 +583,7 @@
 		"4 - \"Enderece lentamente el brazo hacia el techo.\""
 		"5 - \"Mantenga la posicion.\""
 		"6 - \"Doble lentamente el brazo hacia el hombro otra vez.\"")
-	(nom "Extensio triceps low")
+	(nomEx "Extensio triceps low")
 	(part+del+cos "Triceps")
 	(repeticions 8))
 
@@ -601,21 +597,21 @@
 		"4 - \"Enderece lentamente el brazo hacia el techo.\""
 		"5 - \"Mantenga la posicion.\""
 		"6 - \"Doble lentamente el brazo hacia el hombro otra vez.\"")
-	(nom "Extensio triceps high")
+	(nomEx "Extensio triceps high")
 	(part+del+cos "Triceps")
 	(repeticions 15))
 
 ([ontologia_v1_Class10054] of  Aixecar-se+de+cadira
 
 	(Duracio 3)
-	(nom "Aixecar-se de cadira low")
+	(nomEx "Aixecar-se de cadira low")
 	(part+del+cos "Abdomen")
 	(repeticions 8))
 
 ([ontologia_v1_Class10055] of  Aixecar-se+de+cadira
 
 	(Duracio 3)
-	(nom "Aixecar-se de cadira high")
+	(nomEx "Aixecar-se de cadira high")
 	(part+del+cos "Abdomen")
 	(repeticions 15))
 
@@ -651,27 +647,27 @@
 ([ontologia_v1_Class20001] of  Dansa
 
 	(Duracio 30)
-	(nom "Dansa high"))
+	(nomEx "Dansa high"))
 
 ([ontologia_v1_Class20002] of  Pedalejar
 
 	(Duracio 20)
-	(nom "Pedalejar low"))
+	(nomEx "Pedalejar low"))
 
 ([ontologia_v1_Class20003] of  Pedalejar
 
 	(Duracio 30)
-	(nom "Pedalejar high"))
+	(nomEx "Pedalejar high"))
 
 ([ontologia_v1_Class20004] of  Pujar+escales
 
 	(Duracio 20)
-	(nom "Pujar Escales low"))
+	(nomEx "Pujar Escales low"))
 
 ([ontologia_v1_Class20005] of  Pujar+escales
 
 	(Duracio 30)
-	(nom "Pujar Escales high"))
+	(nomEx "Pujar Escales high"))
 
 ([ontologia_v1_Class20008] of  Malaltia
 
@@ -685,7 +681,7 @@
 	(Instruccions
 		"1 - \"Coloque las manos juntas como si estuviera rezando.\""
 		"2 - \"Vaya elevando lentamente los codos hacia ambos lados, hasta que los brazos queden paralelos al suelo, presionando las manos una con la otra.\"")
-	(nom "Estirament canell high")
+	(nomEx "Estirament canell high")
 	(part+del+cos "Canell")
 	(repeticions 5))
 
@@ -699,7 +695,7 @@
 		"3 - \"Doble los codos y que las manos miren hacia el techo formando un angulo recto hacia arriba.\""
 		"4 - \"Gire los brazos lentamente hacia atras desde el codo.\""
 		"5 - \"Pare cuando sienta un tiron y permanezca en esta posicion.\"")
-	(nom "Rotacio espatlles high")
+	(nomEx "Rotacio espatlles high")
 	(part+del+cos "Espatlles")
 	(repeticions 5))
 
@@ -713,7 +709,7 @@
 		"3 - \"Doble los codos y que las manos miren hacia el techo formando un angulo recto hacia arriba.\""
 		"4 - \"Gire los brazos lentamente hacia atras desde el codo.\""
 		"5 - \"Pare cuando sienta un tiron y permanezca en esta posicion.\"")
-	(nom "Rotacio espatlles low")
+	(nomEx "Rotacio espatlles low")
 	(part+del+cos "Espatlles")
 	(repeticions 3))
 
@@ -727,7 +723,7 @@
 		"3 - \"Cojase el tobillo de esa pierna con la mano del mismo lado.\""
 		"4 - \"Vaya tirando suavemente de esa pierna hacia atras hasta que note un tiron en el muslo y permanezca en esta postura 10-30 segundos.\""
 		"5 - \"Cambie de posicion y repitelo con la otra pierna.\"")
-	(nom "Estirament quadriceps high")
+	(nomEx "Estirament quadriceps high")
 	(part+del+cos "Quadriceps")
 	(repeticions 5))
 
@@ -741,7 +737,7 @@
 		"3 - \"Cojase el tobillo de esa pierna con la mano del mismo lado.\""
 		"4 - \"Vaya tirando suavemente de esa pierna hacia atras hasta que note un tiron en el muslo y permanezca en esta postura 10-30 segundos.\""
 		"5 - \"Cambie de posicion y repitelo con la otra pierna.\"")
-	(nom "Estirament quadriceps low")
+	(nomEx "Estirament quadriceps low")
 	(part+del+cos "Quadriceps")
 	(repeticions 3))
 
@@ -755,7 +751,7 @@
 		"3 - \"Permanezca en esta postura.\""
 		"4 - \"Regrese a su posicion inicial.\""
 		"5 - \"Haga el mismo ejercicio hacia el otro lado.\"")
-	(nom "Rotacio maluc high")
+	(nomEx "Rotacio maluc high")
 	(part+del+cos "Maluc")
 	(repeticions 5))
 
@@ -769,7 +765,7 @@
 		"3 - \"Permanezca en esta postura.\""
 		"4 - \"Regrese a su posicion inicial.\""
 		"5 - \"Haga el mismo ejercicio hacia el otro lado.\"")
-	(nom "Rotacio maluc low")
+	(nomEx "Rotacio maluc low")
 	(part+del+cos "Maluc")
 	(repeticions 3))
 
@@ -777,6 +773,13 @@
 
 	(Cronica FALSE)
 	(Nom "Osteoporosis"))
+
+([ontologia_v1_Class30000] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40003])
+	(%3AANNOTATION-TEXT "hipertensio nivell 1")
+	(%3ACREATION-TIMESTAMP "2018.12.01 23:26:20.266 CET")
+	(%3ACREATOR "oriolvidal"))
 
 ([ontologia_v1_Class30001] of  Rutina
 
@@ -1031,34 +1034,17 @@
 		[ontologia_v1_Class9]
 		[ontologia_v1_Class7]))
 
-([ontologia_v1_Class30043] of  Rutina
-
-	(contraindicada
-		[ontologia_v1_Class5]
-		[ontologia_v1_Class3]
-		[ontologia_v1_Class8])
-	(escalfament
-		[ontologia_v1_Class20020]
-		[ontologia_v1_Class10013])
-	(exercicis
-		[ontologia_v1_Class10001]
-		[ontologia_v1_Class0]
-		[ontologia_v1_Class20002]
-		[ontologia_v1_Class20004])
-	(indicada
-		[ontologia_v1_Class10005]
-		[ontologia_v1_Class2]
-		[ontologia_v1_Class18]
-		[ontologia_v1_Class4]
-		[ontologia_v1_Class20008]
-		[ontologia_v1_Class7]
-		[ontologia_v1_Class6]
-		[ontologia_v1_Class9]))
-
 ([ontologia_v1_Class4] of  Malaltia
 
 	(Cronica FALSE)
 	(Nom "Colesterol"))
+
+([ontologia_v1_Class40000] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40009])
+	(%3AANNOTATION-TEXT "problemes respiratoris nivell 4")
+	(%3ACREATION-TIMESTAMP "2018.12.03 12:13:04.375 CET")
+	(%3ACREATOR "oriolvidal"))
 
 ([ontologia_v1_Class40001] of  Malaltia
 
@@ -1285,15 +1271,43 @@
 	(Cronica FALSE)
 	(Nom "Artrosis"))
 
+([ontologia_v1_Class50000] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30033])
+	(%3AANNOTATION-TEXT "cardiovasculars nivell 4")
+	(%3ACREATION-TIMESTAMP "2018.12.03 12:26:20.753 CET")
+	(%3ACREATOR "oriolvidal"))
+
+([ontologia_v1_Class50001] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40004])
+	(%3AANNOTATION-TEXT "hipertensio nivell 4")
+	(%3ACREATION-TIMESTAMP "2018.12.01 23:27:08.002 CET")
+	(%3ACREATOR "oriolvidal"))
+
+([ontologia_v1_Class50002] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40008])
+	(%3AANNOTATION-TEXT "hipertensio nivell 3")
+	(%3ACREATION-TIMESTAMP "2018.12.01 23:27:53.329 CET")
+	(%3ACREATOR "oriolvidal"))
+
+([ontologia_v1_Class50003] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class40007])
+	(%3AANNOTATION-TEXT "hipertensio nivell 2")
+	(%3ACREATION-TIMESTAMP "2018.12.01 23:29:01.274 CET")
+	(%3ACREATOR "oriolvidal"))
+
 ([ontologia_v1_Class50004] of  Padel
 
 	(Duracio 30)
-	(nom "Padel low"))
+	(nomEx "Padel low"))
 
 ([ontologia_v1_Class50005] of  Padel
 
 	(Duracio 60)
-	(nom "Padel high"))
+	(nomEx "Padel high"))
 
 ([ontologia_v1_Class50007] of  %3AINSTANCE-ANNOTATION
 
@@ -1370,12 +1384,90 @@
 ([ontologia_v1_Class6] of  Malaltia
 
 	(Cronica TRUE)
-	(Nom "Insufici�ncia renal cr�nica"))
+	(Nom "Insuficiència renal crònica"))
+
+([ontologia_v1_Class60001] of  Rutina
+
+	(escalfament
+		[ontologia_v1_Class10008]
+		[ontologia_v1_Class20020]
+		[ontologia_v1_Class20022])
+	(exercicis
+		[ontologia_v1_Class20002]
+		[ontologia_v1_Class10046]
+		[ontologia_v1_Class10048])
+	(indicada [ontologia_v1_Class1]))
+
+([ontologia_v1_Class60002] of  Rutina
+
+	(escalfament
+		[ontologia_v1_Class10008]
+		[ontologia_v1_Class20021]
+		[ontologia_v1_Class20022])
+	(exercicis
+		[ontologia_v1_Class20002]
+		[ontologia_v1_Class10048]
+		[ontologia_v1_Class10046])
+	(indicada [ontologia_v1_Class1]))
+
+([ontologia_v1_Class60003] of  Rutina
+
+	(escalfament
+		[ontologia_v1_Class10008]
+		[ontologia_v1_Class20023]
+		[ontologia_v1_Class20021])
+	(exercicis
+		[ontologia_v1_Class20002]
+		[ontologia_v1_Class10047]
+		[ontologia_v1_Class10048])
+	(indicada [ontologia_v1_Class1]))
+
+([ontologia_v1_Class60004] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class60001])
+	(%3AANNOTATION-TEXT "problemes respiratoris nivell 3")
+	(%3ACREATION-TIMESTAMP "2018.12.03 12:13:40.759 CET")
+	(%3ACREATOR "oriolvidal"))
+
+([ontologia_v1_Class60005] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class60002])
+	(%3AANNOTATION-TEXT "problemes respiratoris nivell 2")
+	(%3ACREATION-TIMESTAMP "2018.12.03 12:13:52.159 CET")
+	(%3ACREATOR "oriolvidal"))
+
+([ontologia_v1_Class60006] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class60003])
+	(%3AANNOTATION-TEXT "problemes respiratoris nivell 1")
+	(%3ACREATION-TIMESTAMP "2018.12.03 12:14:03.039 CET")
+	(%3ACREATOR "oriolvidal"))
 
 ([ontologia_v1_Class7] of  Malaltia
 
 	(Cronica FALSE)
-	(Nom "Depressi�"))
+	(Nom "Depressió"))
+
+([ontologia_v1_Class70001] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30036])
+	(%3AANNOTATION-TEXT "cardiovasculars nivell 1")
+	(%3ACREATION-TIMESTAMP "2018.12.03 12:26:53.488 CET")
+	(%3ACREATOR "oriolvidal"))
+
+([ontologia_v1_Class70002] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30037])
+	(%3AANNOTATION-TEXT "cardiovasculars nivell 2")
+	(%3ACREATION-TIMESTAMP "2018.12.03 12:27:37.520 CET")
+	(%3ACREATOR "oriolvidal"))
+
+([ontologia_v1_Class70003] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATED-INSTANCE [ontologia_v1_Class30039])
+	(%3AANNOTATION-TEXT "cardiovasculars nivell 3")
+	(%3ACREATION-TIMESTAMP "2018.12.03 12:27:48.208 CET")
+	(%3ACREATOR "oriolvidal"))
 
 ([ontologia_v1_Class8] of  Malaltia
 
@@ -1385,7 +1477,7 @@
 ([ontologia_v1_Class9] of  Malaltia
 
 	(Cronica FALSE)
-	(Nom "Incontin�ncia urin�ria"))
+	(Nom "Incontinència urinària"))
 
 ;;; --- REGLAS
 (defmodule MAIN (export ?ALL))
