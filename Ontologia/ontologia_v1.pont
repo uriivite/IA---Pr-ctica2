@@ -1,4 +1,4 @@
-; Mon Dec 03 12:29:12 CET 2018
+; Tue Dec 04 13:42:15 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -11,73 +11,65 @@
 		(type INSTANCE)
 ;+		(allowed-classes Malaltia)
 		(create-accessor read-write))
-	(single-slot repeticions
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(multislot indicada
-		(type INSTANCE)
-;+		(allowed-classes Malaltia)
-		(create-accessor read-write))
-	(single-slot Duracio
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot Nom
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(multislot escalfament
 		(type INSTANCE)
 ;+		(allowed-classes Flexibilitat)
 		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(multislot Cronica
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(multislot Instruccions
-;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
-		(type STRING)
-		(create-accessor read-write))
-	(single-slot Nom+exercici
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot part+del+cos
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot es+escalfament
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot exercicis
 ;+		(comment "Llista d'exercicis")
 		(type INSTANCE)
 ;+		(allowed-classes Exercici)
 		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write)))
-
-(defclass Exercici "Identifica un exercici concret amb alguna instrucció/especificació."
-	(is-a USER)
-	(role concrete)
-	(single-slot Duracio
-		(type INTEGER)
+		(create-accessor read-write))
+	(single-slot Nom
+		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot repeticions
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot Nom+exercici
-		(type STRING)
-;+		(cardinality 1 1)
+	(multislot Cronica
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Duracio
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot es+escalfament
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot part+del+cos
 		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nomEx
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Instruccions
+;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
+		(type STRING)
+		(create-accessor read-write))
+	(multislot indicada
+		(type INSTANCE)
+;+		(allowed-classes Malaltia)
+		(create-accessor read-write)))
+
+(defclass Exercici "Identifica un exercici concret amb alguna instrucció/especificació."
+	(is-a USER)
+	(role concrete)
+	(single-slot repeticions
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Duracio
+		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot es+escalfament
@@ -88,6 +80,14 @@
 	(multislot Instruccions
 ;+		(comment "Alguna instrucció de com s'ha de realitzar l'exercici.")
 		(type STRING)
+		(create-accessor read-write))
+	(single-slot part+del+cos
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nomEx
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
 (defclass Musculatura
@@ -206,26 +206,26 @@
 ;+		(allowed-classes Flexibilitat)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(multislot indicada
-		(type INSTANCE)
-;+		(allowed-classes Malaltia)
-		(create-accessor read-write))
 	(multislot exercicis
 ;+		(comment "Llista d'exercicis")
 		(type INSTANCE)
 ;+		(allowed-classes Exercici)
 		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot indicada
+		(type INSTANCE)
+;+		(allowed-classes Malaltia)
 		(create-accessor read-write)))
 
 (defclass Malaltia
 	(is-a USER)
 	(role concrete)
-	(single-slot Nom
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(multislot Cronica
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Nom
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
