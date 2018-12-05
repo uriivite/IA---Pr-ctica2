@@ -1297,6 +1297,11 @@
 ;;; --- REGLAS
 (defmodule MAIN (export ?ALL))
 
+
+(deftemplate rutina-res
+	(slot Rutina)
+)
+
 ;;********************
 ;;* MESSAGE HANDLERS *
 ;;********************
@@ -1339,12 +1344,12 @@
   (printout t "------ rutines per a la gent gran -----" crlf)
   (printout t "------------------------------" crlf)
   (printout t crlf)
-  ;;(focus preguntes-inicials)
+  (focus preguntes-inicials)
 )
 
 (defrule rutina-res "Output"
-  (declare (salience 1000))
-   ?rutina <- (object (is-a Rutina))
+  (declare (salience 9))
+   (rutina-res (Rutina ?rutina))
 =>
    (printout t "Realitza la seguent rutina: " crlf)
    (bind ?e 1)
@@ -1525,7 +1530,9 @@
 	(mes-75 Si)(sedentari Si)(ossi No)
 	(or (colesterol) (colesterol-cronic) (obes Si) (obesitat-cronica) (cardiovasculars Si) (depressio Si))
 	 =>
-	(assert (circulacio-sanguinea1))
+	;(assert (circulacio-sanguinea1))
+	(bind ?rutina (send[ontologia_v1_Class30012]))
+	(assert(rutina-res(Rutina(?rutina))))
  )
 
  (defrule circulacio-sanguinea2
@@ -1533,7 +1540,9 @@
     (mes-75 Si) (sedentari No) (ossi No)
 	(or (colesterol) (colesterol-cronic)(obes Si) (obesitat-cronica) (cardiovasculars Si) (depressio Si))
  	=>
-	(assert (circulacio-sanguinea2))
+	;(assert (circulacio-sanguinea2))
+	(bind ?rutina (send[ontologia_v1_Class30014]))
+	(assert(rutina-res(Rutina(?rutina))))
  )
 
  (defrule circulacio-sanguinea3
@@ -1541,7 +1550,9 @@
     (mes-75 No) (sedentari Si) (ossi No)
     (or (colesterol)(colesterol-cronic)(obes Si)(obesitat-cronica)(cardiovasculars Si)(depressio Si))
 	 =>
-	(assert (circulacio-sanguinea3))
+	;(assert (circulacio-sanguinea3))
+	(bind ?rutina (send[ontologia_v1_Class30041]))
+	(assert(rutina-res(Rutina(?rutina))))
  )
 
  (defrule circulacio-sanguinea4
@@ -1549,7 +1560,9 @@
    (mes-75 No) (sedentari No)(ossi No)
    (or (colesterol)(colesterol-cronic)(obes Si) (obesitat-cronica)(cardiovasculars Si)(depressio Si))
 	 =>
-	(assert (circulacio-sanguinea4))
+	;(assert (circulacio-sanguinea4))
+	(bind ?rutina (send[ontologia_v1_Class40017]))
+	(assert(rutina-res(Rutina(?rutina))))
  )
 
  (defrule depressio1
@@ -1673,3 +1686,4 @@
  )
 
  ;(defrule respiratoris)
+ 
