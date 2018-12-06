@@ -1,5 +1,5 @@
 ; Tue Dec 04 13:42:13 CET 2018
-; 
+;
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
@@ -229,7 +229,7 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
-		
+
 (definstances holacocacola
 
 ([ontologia_v1_Class0] of  Dansa
@@ -1294,12 +1294,19 @@
 	(Nom "Incontinència urinària"))
 )
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;;; --- REGLAS
 (defmodule MAIN (export ?ALL))
 
-
-(deftemplate rutina-res
-	(slot Rutina)
+;; Fet que decidirà, d'entre les rutines compatibles amb les característiques
+;; de l'usuari, quina se li presentarà.
+(deftemplate rutines_compatibles
+  	(multislot rutines)
 )
 
 ;;********************
@@ -1528,11 +1535,10 @@
  (defrule circulacio-sanguinea1
 	;(declare (salience 10))
 	(mes-75 Si)(sedentari Si)(ossi No)
-	(or (colesterol) (colesterol-cronic) (obes Si) (obesitat-cronica) (cardiovasculars Si) (depressio Si))
-	 =>
-	;(assert (circulacio-sanguinea1))
-	(bind ?rutina (send[ontologia_v1_Class30012]))
-	(assert(rutina-res(Rutina(?rutina))))
+  (or (colesterol) (colesterol-cronic) (obes Si) (obesitat-cronica) (cardiovasculars Si) (depressio Si))
+  ?rutines_compatibles <- (rutines_compatibles (rutines ?rutines))
+   =>
+	(assert (circulacio-sanguinea1))
  )
 
  (defrule circulacio-sanguinea2
@@ -1686,4 +1692,13 @@
  )
 
  ;(defrule respiratoris)
- 
+
+ (defrule afegir-circulacio-sanguinea1
+   (?rutina-compatible <- circulacio-sanguinea1)
+   (?rutines_compatibles <- rutines_compatibles (rutines $rutines))
+   =>
+   (retract ?rutina-compatible)
+   (modify ?rutines_compatibles
+     (rutines ?rutines_compatibles [ontologia_v1_Class30012] )
+   )
+ )
