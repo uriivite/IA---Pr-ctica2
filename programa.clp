@@ -1303,12 +1303,6 @@
 ;;; --- REGLAS
 (defmodule MAIN (export ?ALL))
 
-;; Fet que decidirà, d'entre les rutines compatibles amb les característiques
-;; de l'usuari, quina se li presentarà.
-(deftemplate rutines_compatibles
-  	(multislot rutines)
-)
-
 ;;********************
 ;;* MESSAGE HANDLERS *
 ;;********************
@@ -1352,19 +1346,6 @@
   (printout t "------------------------------" crlf)
   (printout t crlf)
   (focus preguntes-inicials)
-)
-
-(defrule rutina-res "Output"
-  (declare (salience 9))
-   (rutina-res (Rutina ?rutina))
-=>
-   (printout t "Realitza la seguent rutina: " crlf)
-   (bind ?e 1)
-   (while (<= ?e (length$(send ?rutina get-exercicis)))
-   do
-    (bind ?ex (nth$ ?e (send ?rutina get-exercicis)))
-    (send ?ex print)
-   (bind ?e (+ ?e 1)))
 )
 
 
@@ -1536,7 +1517,6 @@
 	;(declare (salience 10))
 	(mes-75 Si)(sedentari Si)(ossi No)
   (or (colesterol) (colesterol-cronic) (obes Si) (obesitat-cronica) (cardiovasculars Si) (depressio Si))
-  ?rutines_compatibles <- (rutines_compatibles (rutines ?rutines))
    =>
 	(assert (circulacio-sanguinea1))
  )
@@ -1546,9 +1526,9 @@
     (mes-75 Si) (sedentari No) (ossi No)
 	(or (colesterol) (colesterol-cronic)(obes Si) (obesitat-cronica) (cardiovasculars Si) (depressio Si))
  	=>
-	;(assert (circulacio-sanguinea2))
-	(bind ?rutina (send[ontologia_v1_Class30014]))
-	(assert(rutina-res(Rutina(?rutina))))
+	(assert (circulacio-sanguinea2))
+;	(bind ?rutina (send[ontologia_v1_Class30014]))
+;	(assert(rutina-res(Rutina(?rutina))))
  )
 
  (defrule circulacio-sanguinea3
@@ -1556,9 +1536,9 @@
     (mes-75 No) (sedentari Si) (ossi No)
     (or (colesterol)(colesterol-cronic)(obes Si)(obesitat-cronica)(cardiovasculars Si)(depressio Si))
 	 =>
-	;(assert (circulacio-sanguinea3))
-	(bind ?rutina (send[ontologia_v1_Class30041]))
-	(assert(rutina-res(Rutina(?rutina))))
+	 (assert (circulacio-sanguinea3))
+;	(bind ?rutina (send[ontologia_v1_Class30041]))
+;	(assert(rutina-res(Rutina(?rutina))))
  )
 
  (defrule circulacio-sanguinea4
@@ -1566,9 +1546,9 @@
    (mes-75 No) (sedentari No)(ossi No)
    (or (colesterol)(colesterol-cronic)(obes Si) (obesitat-cronica)(cardiovasculars Si)(depressio Si))
 	 =>
-	;(assert (circulacio-sanguinea4))
-	(bind ?rutina (send[ontologia_v1_Class40017]))
-	(assert(rutina-res(Rutina(?rutina))))
+	 (assert (circulacio-sanguinea4))
+;	(bind ?rutina (send[ontologia_v1_Class40017]))
+	;(assert(rutina-res(Rutina(?rutina))))
  )
 
  (defrule depressio1
@@ -1693,12 +1673,35 @@
 
  ;(defrule respiratoris)
 
+ ;;; Saltem al modul de preguntes de malalties
+ (defrule a-seleccio-rutines
+  (declare (salience -1))
+  =>
+  (focus seleccio-rutines)
+ )
+
+ ;;; ----- Modul Seleccio Rutines
+ ;;; Donades totes les caracteristiques de l'usuari, determina quines Rutines
+ ;;;	se li poden assignar
+ (defmodule afegir-rutines_compatibles "Modul de preguntes de malalties"
+  (import MAIN ?ALL)
+  (import preguntes-inicials ?ALL)
+  (import preguntes-malalties ?ALL)
+	(import seleccio-rutines ?ALL)
+  (export ?ALL))
+
+	;; Fet que decidirà, d'entre les rutines compatibles amb les característiques
+	;; de l'usuari, quina se li presentarà.
+	(deftemplate rutines_compatibles
+		 (multislot rutines)
+	)
+
  (defrule afegir-circulacio-sanguinea1
-   (?rutina-compatible <- circulacio-sanguinea1)
-   (?rutines_compatibles <- rutines_compatibles (rutines $rutines))
+	 ?rutina_compatible <- (circulacio-sanguinea1)
+	 ?rutines_compatibles <- (rutines_compatibles (rutines $rutines))
    =>
-   (retract ?rutina-compatible)
+   (retract ?rutina_compatible)
    (modify ?rutines_compatibles
-     (rutines ?rutines_compatibles [ontologia_v1_Class30012] )
+     (rutines $rutines [ontologia_v1_Class30012] )
    )
  )
