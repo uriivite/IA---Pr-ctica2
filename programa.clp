@@ -1,5 +1,5 @@
 ; Tue Dec 04 13:42:13 CET 2018
-;
+; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
@@ -229,7 +229,7 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
-
+		
 (definstances holacocacola
 
 ([ontologia_v1_Class0] of  Dansa
@@ -1294,29 +1294,22 @@
 	(Nom "Incontinència urinària"))
 )
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;;; --- REGLAS
 (defmodule MAIN (export ?ALL))
 
-;; Fet que decidirà, d'entre les rutines compatibles amb les característiques
-;; de l'usuari, quina se li presentarà.
-(deftemplate rutines_compatibles
-  	(multislot rutines)
-)
+ (deftemplate rutina-res
+	(multislot Rutina)
+ ) 
+
 
 ;;********************
 ;;* MESSAGE HANDLERS *
 ;;********************
 
-;;(defmessage-handler Exercici print primary ()
-;;	(printout t "--" ?self:nomEx "--" crlf)
-;;	(printout t "--" ?self:Instruccions "--" crlf)
-;;)
+(defmessage-handler Exercici print primary ()
+	(printout t "--" ?self:nomEx "--" crlf)
+	(printout t "--" ?self:Instruccions "--" crlf)
+)
 
 ;;****************
 ;;* DEFFUNCTIONS *
@@ -1339,6 +1332,7 @@
       then TRUE
       else FALSE))
 
+
 ;;****************
 ;;*    REGLAS    *
 ;;****************
@@ -1356,15 +1350,17 @@
 
 (defrule rutina-res "Output"
   (declare (salience 9))
-   (rutina-res (Rutina ?rutina))
+  (rutina-res (Rutina ?r))
 =>
-   (printout t "Realitza la seguent rutina: " crlf)
-   (bind ?e 1)
-   (while (<= ?e (length$(send ?rutina get-exercicis)))
-   do
-    (bind ?ex (nth$ ?e (send ?rutina get-exercicis)))
-    (send ?ex print)
-   (bind ?e (+ ?e 1)))
+  (printout t "Realitza la seguent rutina: " crlf)
+  (printout t crlf (class ?r) crlf crlf)
+  (bind ?i 1)
+    (while (<= ?i (length$(send ?r get-exercicis)))
+	   do
+	   (bind ?ex (nth$ ?i (send ?r get-exercicis)))
+	   (send ?ex print)
+	   (bind ?i (+ ?i 1))
+    )
 )
 
 
@@ -1531,14 +1527,16 @@
  (import preguntes-inicials ?ALL)
  (import preguntes-malalties ?ALL)
  (export ?ALL))
+ 
 
  (defrule circulacio-sanguinea1
-	;(declare (salience 10))
 	(mes-75 Si)(sedentari Si)(ossi No)
-  (or (colesterol) (colesterol-cronic) (obes Si) (obesitat-cronica) (cardiovasculars Si) (depressio Si))
-  ?rutines_compatibles <- (rutines_compatibles (rutines ?rutines))
-   =>
-	(assert (circulacio-sanguinea1))
+	(or (colesterol) (colesterol-cronic) (obes Si) (obesitat-cronica) (cardiovasculars Si) (depressio Si))
+	 =>
+	(bind ?exs (send [ontologia_v1_Class30012]  get-exercicis))
+	(bind ?rutina (make-instance [r] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule circulacio-sanguinea2
@@ -1546,159 +1544,183 @@
     (mes-75 Si) (sedentari No) (ossi No)
 	(or (colesterol) (colesterol-cronic)(obes Si) (obesitat-cronica) (cardiovasculars Si) (depressio Si))
  	=>
-	;(assert (circulacio-sanguinea2))
-	(bind ?rutina (send[ontologia_v1_Class30014]))
-	(assert(rutina-res(Rutina(?rutina))))
+	(bind ?exs (send [ontologia_v1_Class30014]  get-exercicis))
+	(bind ?rutina (make-instance [r] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))	
  )
 
  (defrule circulacio-sanguinea3
- 	;(declare (salience 10))
     (mes-75 No) (sedentari Si) (ossi No)
     (or (colesterol)(colesterol-cronic)(obes Si)(obesitat-cronica)(cardiovasculars Si)(depressio Si))
 	 =>
-	;(assert (circulacio-sanguinea3))
-	(bind ?rutina (send[ontologia_v1_Class30041]))
-	(assert(rutina-res(Rutina(?rutina))))
+	(bind ?exs (send [ontologia_v1_Class30041]  get-exercicis))
+	(bind ?rutina (make-instance [r] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))	
  )
 
  (defrule circulacio-sanguinea4
-   ;(declare (salience 10))
    (mes-75 No) (sedentari No)(ossi No)
    (or (colesterol)(colesterol-cronic)(obes Si) (obesitat-cronica)(cardiovasculars Si)(depressio Si))
 	 =>
-	;(assert (circulacio-sanguinea4))
-	(bind ?rutina (send[ontologia_v1_Class40017]))
-	(assert(rutina-res(Rutina(?rutina))))
+    (bind ?exs (send [ontologia_v1_Class40017]  get-exercicis))
+	(bind ?rutina (make-instance [r] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule depressio1
-   ;(declare (salience 10))
     (mes-75 Si)(sedentari Si)(ossi No)(depressio Si)
  	=>
-	(assert (depressio1))
+	(bind ?exs (send [ontologia_v1_Class10000]  get-exercicis))
+	(bind ?rutina (make-instance [r1] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule depressio2
- ;	(declare (salience 10))
     (mes-75 Si) (sedentari No) (ossi No)(depressio Si)
 	 =>
-	(assert (depressio2))
+	(bind ?exs (send [ontologia_v1_Class50008]  get-exercicis))
+	(bind ?rutina (make-instance [r1] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule depressio3
- ;	(declare (salience 10))
     (mes-75 No) (sedentari Si)(ossi No)(depressio Si)
 	 =>
-	(assert (depressio3))
+	(bind ?exs (send [ontologia_v1_Class50010]  get-exercicis))
+	(bind ?rutina (make-instance [r1] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule depressio4
- ;	(declare (salience 10))
     (mes-75 No)(sedentari No) (ossi No)(depressio Si)
 	 =>
-	(assert (depressio4))
+	(bind ?exs (send [ontologia_v1_Class50012]  get-exercicis))
+	(bind ?rutina (make-instance [r1] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule artrosis1
- ;	(declare (salience 10))
  (mes-75 Si) (sedentari Si)
  (or (ossi Si)(diabetis Si))
 	 =>
-	(assert (artrosis1))
+	(bind ?exs (send [ontologia_v1_Class40019]  get-exercicis))
+	(bind ?rutina (make-instance [r2] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule artrosis2
- ;	(declare (salience 10))
     (mes-75 Si) (sedentari No)
     (or (ossi Si)(diabetis Si))
 	=>
-	(assert (artrosis2))
+	(bind ?exs (send [ontologia_v1_Class40021]  get-exercicis))
+	(bind ?rutina (make-instance [r2] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule artrosis3
- ;	(declare (salience 10))
  (mes-75 No) (sedentari Si)
  (or (ossi Si)(diabetis Si))
 	=>
-	(assert (artrosis3))
+	(bind ?exs (send [ontologia_v1_Class40023]  get-exercicis))
+	(bind ?rutina (make-instance [r2] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule artrosis4
- ;	(declare (salience 10))
   (mes-75 No) (sedentari No)
- ( or (ossi Si)(diabetis Si))
+  ( or (ossi Si)(diabetis Si))
 	=>
-	(assert (artrosis4))
+	(bind ?exs (send [ontologia_v1_Class40025]  get-exercicis))
+	(bind ?rutina (make-instance [r2] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule fragilitat1
- ;	(declare (salience 10))
     (mes-75 Si) (sedentari Si)(caiguda Si) (osteoporosis) (not (artrosis))
 	=>
-	(assert (fragilitat1))
+	(bind ?exs (send [ontologia_v1_Class20000]  get-exercicis))
+	(bind ?rutina (make-instance [r3] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule fragilitat2
- ;	(declare (salience 10))
     (mes-75 Si) (sedentari No) (caiguda Si) (osteoporosis) (not (artrosis))
  =>
-	(assert (fragilitat2))
+	(bind ?exs (send [ontologia_v1_Class30001]  get-exercicis))
+	(bind ?rutina (make-instance [r3] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))	
  )
 
  (defrule fragilitat3
- ;	(declare (salience 10))
  (mes-75 No) (sedentari Si) (caiguda Si)(osteoporosis)(not (artrosis))
  =>
-	(assert (fragilitat3))
+	(bind ?exs (send [ontologia_v1_Class30003]  get-exercicis))
+	(bind ?rutina (make-instance [r3] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule fragilitat4
- ;	(declare (salience 10))
  (mes-75 No)(sedentari No)(caiguda Si)(osteoporosis)(not (artrosis))
  =>
-	(assert (fragilitat4))
+	(bind ?exs (send [ontologia_v1_Class30007]  get-exercicis))
+	(bind ?rutina (make-instance [r3] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule hipertensio1
- ;	(declare (salience 10))
  (mes-75 Si) (sedentari Si)(caiguda No) (ossi No)(respiratoris No)(cardiovasculars No)
  (hipertensio)(obes Si)
  =>
-	(assert (hipertensio1))
+	(bind ?exs (send [ontologia_v1_Class40003]  get-exercicis))
+	(bind ?rutina (make-instance [r4] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule hipertensio2
- ;	(declare (salience 10))
  (mes-75 Si)(sedentari No) (caiguda No)(ossi No)(respiratoris No)(cardiovasculars No)
  (hipertensio)(obes Si)
  =>
-	(assert (hipertensio2))
+	(bind ?exs (send [ontologia_v1_Class40007]  get-exercicis))
+	(bind ?rutina (make-instance [r4] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule hipertensio3
- ;	(declare (salience 10))
  (mes-75 No)(sedentari Si) (caiguda No)(ossi No)(respiratoris No)(cardiovasculars No)
  (hipertensio)
  =>
-	(assert (hipertensio3))
+ 	(bind ?exs (send [ontologia_v1_Class40008]  get-exercicis))
+	(bind ?rutina (make-instance [r4] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule hipertensio4
- ;	(declare (salience 10))
  (mes-75 No) (sedentari No) (caiguda No)(ossi No) (respiratoris No)(cardiovasculars No)
  (hipertensio)
  =>
-	(assert (hipertensio4))
+	(bind ?exs (send [ontologia_v1_Class40004]  get-exercicis))
+	(bind ?rutina (make-instance [r4] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  ;(defrule respiratoris)
-
- (defrule afegir-circulacio-sanguinea1
-   (?rutina-compatible <- circulacio-sanguinea1)
-   (?rutines_compatibles <- rutines_compatibles (rutines $rutines))
-   =>
-   (retract ?rutina-compatible)
-   (modify ?rutines_compatibles
-     (rutines ?rutines_compatibles [ontologia_v1_Class30012] )
-   )
- )
+ 
