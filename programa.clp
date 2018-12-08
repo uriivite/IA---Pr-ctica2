@@ -1,5 +1,5 @@
 ; Tue Dec 04 13:42:13 CET 2018
-; 
+;
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
@@ -229,7 +229,7 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
-		
+
 (definstances holacocacola
 
 ([ontologia_v1_Class0] of  Dansa
@@ -1299,7 +1299,7 @@
 
  (deftemplate rutina-res
 	(multislot Rutina)
- ) 
+ )
 
 
 ;;********************
@@ -1309,6 +1309,8 @@
 (defmessage-handler Exercici print primary ()
 	(printout t "--" ?self:nomEx "--" crlf)
 	(printout t "--" ?self:Instruccions "--" crlf)
+	(printout t "-- Nombre de repeticions:	" ?self:repeticions "	--" crlf)
+	(printout t "-- Duracio:	" ?self:Duracio " min	--" crlf)
 )
 
 ;;****************
@@ -1527,7 +1529,7 @@
  (import preguntes-inicials ?ALL)
  (import preguntes-malalties ?ALL)
  (export ?ALL))
- 
+
 
  (defrule circulacio-sanguinea1
 	(mes-75 Si)(sedentari Si)(ossi No)
@@ -1547,7 +1549,7 @@
 	(bind ?exs (send [ontologia_v1_Class30014]  get-exercicis))
 	(bind ?rutina (make-instance [r] of Rutina))
 	(send ?rutina put-exercicis ?exs)
-    (assert(rutina-res(Rutina ?rutina)))	
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule circulacio-sanguinea3
@@ -1557,7 +1559,7 @@
 	(bind ?exs (send [ontologia_v1_Class30041]  get-exercicis))
 	(bind ?rutina (make-instance [r] of Rutina))
 	(send ?rutina put-exercicis ?exs)
-    (assert(rutina-res(Rutina ?rutina)))	
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule circulacio-sanguinea4
@@ -1661,7 +1663,7 @@
 	(bind ?exs (send [ontologia_v1_Class30001]  get-exercicis))
 	(bind ?rutina (make-instance [r3] of Rutina))
 	(send ?rutina put-exercicis ?exs)
-    (assert(rutina-res(Rutina ?rutina)))	
+    (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule fragilitat3
@@ -1722,5 +1724,78 @@
     (assert(rutina-res(Rutina ?rutina)))
  )
 
- ;(defrule respiratoris)
- 
+ (defrule respiratoris1
+	 (mes-75 Si) (sedentari Si) (respiratoris Si)
+	 =>
+	 (bind ?exs (send [ontologia_v1_Class60003]  get-exercicis))
+	 (bind ?rutina (make-instance [r5] of Rutina))
+	 (send ?rutina put-exercicis ?exs)
+		 (assert(rutina-res(Rutina ?rutina)))
+ )
+
+ (defrule respiratoris2
+	(mes-75 Si) (sedentari No) (respiratoris Si)
+	=>
+	(bind ?exs (send [ontologia_v1_Class60002]  get-exercicis))
+	(bind ?rutina (make-instance [r5] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+		(assert(rutina-res(Rutina ?rutina)))
+ )
+
+ (defrule respiratoris3
+	(mes-75 No) (sedentari Si) (respiratoris Si)
+	=>
+	(bind ?exs (send [ontologia_v1_Class60001]  get-exercicis))
+	(bind ?rutina (make-instance [r5] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+		(assert(rutina-res(Rutina ?rutina)))
+ )
+
+ (defrule respiratoris4
+	(mes-75 No) (sedentari No) (respiratoris Si)
+	=>
+	(bind ?exs (send [ontologia_v1_Class40009]  get-exercicis))
+	(bind ?rutina (make-instance [r5] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+		(assert(rutina-res(Rutina ?rutina)))
+ )
+
+ (defrule cardiovasculars1
+ 	(mes-75 Si) (sedentari Si) (not (artrosis)) (caiguda No) (not (osteoporosis))
+	(or (cardiovasculars Si) (obes Si) (obesitat-cronica) (diabetis Si) (depressio Si))
+ 	=>
+	(bind ?exs (send [ontologia_v1_Class30036]  get-exercicis))
+	(bind ?rutina (make-instance [r6] of Rutina))
+	(send ?rutina put-exercicis ?exs)
+		(assert(rutina-res(Rutina ?rutina)))
+ )
+
+ (defrule cardiovasculars2
+	 (mes-75 Si) (sedentari No) (not (artrosis)) (caiguda No) (not (osteoporosis))
+ (or (cardiovasculars Si) (obes Si) (obesitat-cronica) (diabetis Si) (depressio Si))
+	 =>
+ (bind ?exs (send [ontologia_v1_Class30037]  get-exercicis))
+ (bind ?rutina (make-instance [r6] of Rutina))
+ (send ?rutina put-exercicis ?exs)
+	 (assert(rutina-res(Rutina ?rutina)))
+ )
+
+ (defrule cardiovasculars3
+	(mes-75 No) (sedentari Si) (not (artrosis)) (caiguda No) (not (osteoporosis))
+ (or (cardiovasculars Si) (obes Si) (obesitat-cronica) (diabetis Si) (depressio Si))
+	=>
+ (bind ?exs (send [ontologia_v1_Class30039]  get-exercicis))
+ (bind ?rutina (make-instance [r6] of Rutina))
+ (send ?rutina put-exercicis ?exs)
+	(assert(rutina-res(Rutina ?rutina)))
+ )
+
+ (defrule cardiovasculars4
+ (mes-75 No) (sedentari No) (not (artrosis)) (caiguda No) (not (osteoporosis))
+ (or (cardiovasculars Si) (obes Si) (obesitat-cronica) (diabetis Si) (depressio Si))
+ =>
+ (bind ?exs (send [ontologia_v1_Class30033]  get-exercicis))
+ (bind ?rutina (make-instance [r6] of Rutina))
+ (send ?rutina put-exercicis ?exs)
+ 	(assert(rutina-res(Rutina ?rutina)))
+ )
