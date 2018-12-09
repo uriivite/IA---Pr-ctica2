@@ -1,5 +1,5 @@
 ; Tue Dec 04 13:42:13 CET 2018
-;
+; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
@@ -229,7 +229,7 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
-
+		
 (definstances holacocacola
 
 ([ontologia_v1_Class0] of  Dansa
@@ -1299,7 +1299,7 @@
 
  (deftemplate rutina-res
 	(multislot Rutina)
- )
+ ) 
 
 
 ;;********************
@@ -1309,8 +1309,6 @@
 (defmessage-handler Exercici print primary ()
 	(printout t "--" ?self:nomEx "--" crlf)
 	(printout t "--" ?self:Instruccions "--" crlf)
-	(printout t "-- Nombre de repeticions:	" ?self:repeticions "	--" crlf)
-	(printout t "-- Duracio:	" ?self:Duracio " min	--" crlf)
 )
 
 ;;****************
@@ -1333,6 +1331,14 @@
   (if (or (eq ?response si) (eq ?response s))
       then TRUE
       else FALSE))
+      
+(deffunction random-slot (?parametre)
+	(bind ?parametre (create$ ?parametre))
+	(bind ?mida(length ?parametre))
+	(bind ?r (random 1 ?mida))
+	(bind ?instancia-seleccionada (nth$ ?r ?parametre))
+	(return ?instancia-seleccionada)
+)
 
 
 ;;****************
@@ -1351,15 +1357,17 @@
 )
 
 (defrule rutina-res "Output"
-  (declare (salience 9))
-  (rutina-res (Rutina ?r))
+  (declare (salience 8))
+  ?rut <-  (rutina-res (Rutina ?r))
+  ?ruti <- (create$ ?rut)
+  (bind ?ru random-slot ?ruti)
 =>
   (printout t "Realitza la seguent rutina: " crlf)
   (printout t crlf (class ?r) crlf crlf)
   (bind ?i 1)
-    (while (<= ?i (length$(send ?r get-exercicis)))
+    (while (<= ?i (length$(send ?ru get-exercicis)))
 	   do
-	   (bind ?ex (nth$ ?i (send ?r get-exercicis)))
+	   (bind ?ex (nth$ ?i (send ?ru get-exercicis)))
 	   (send ?ex print)
 	   (bind ?i (+ ?i 1))
     )
@@ -1529,7 +1537,7 @@
  (import preguntes-inicials ?ALL)
  (import preguntes-malalties ?ALL)
  (export ?ALL))
-
+ 
 
  (defrule circulacio-sanguinea1
 	(mes-75 Si)(sedentari Si)(ossi No)
@@ -1549,7 +1557,7 @@
 	(bind ?exs (send [ontologia_v1_Class30014]  get-exercicis))
 	(bind ?rutina (make-instance [r] of Rutina))
 	(send ?rutina put-exercicis ?exs)
-    (assert(rutina-res(Rutina ?rutina)))
+    (assert(rutina-res(Rutina ?rutina)))	
  )
 
  (defrule circulacio-sanguinea3
@@ -1559,7 +1567,7 @@
 	(bind ?exs (send [ontologia_v1_Class30041]  get-exercicis))
 	(bind ?rutina (make-instance [r] of Rutina))
 	(send ?rutina put-exercicis ?exs)
-    (assert(rutina-res(Rutina ?rutina)))
+    (assert(rutina-res(Rutina ?rutina)))	
  )
 
  (defrule circulacio-sanguinea4
@@ -1663,7 +1671,7 @@
 	(bind ?exs (send [ontologia_v1_Class30001]  get-exercicis))
 	(bind ?rutina (make-instance [r3] of Rutina))
 	(send ?rutina put-exercicis ?exs)
-    (assert(rutina-res(Rutina ?rutina)))
+    (assert(rutina-res(Rutina ?rutina)))	
  )
 
  (defrule fragilitat3
