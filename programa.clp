@@ -1333,15 +1333,6 @@
   (if (or (eq ?response si) (eq ?response s))
       then TRUE
       else FALSE))
-      
-(deffunction random-slot (?parametre)
-	(bind ?parametre (create$ ?parametre))
-	(bind ?mida(length ?parametre))
-	(bind ?r (random 1 ?mida))
-	(bind ?instancia-seleccionada (nth$ ?r ?parametre))
-	(return ?instancia-seleccionada)
-)
-
 
 ;;****************
 ;;*    REGLAS    *
@@ -1375,6 +1366,7 @@
   (declare (salience 8))
   (rutina-res (Rutina ?r))
   =>
+  (assert (no_buida))
   (printout t crlf "RUTINA" crlf crlf)
   (printout t "Escalfament: " crlf)
   (bind ?e 1)
@@ -1392,6 +1384,13 @@
 	   (send ?ex print)
 	   (bind ?i (+ ?i 1))
     )
+)
+
+(defrule rutina-buida
+  (declare (salience 7))
+  (not(no_buida))
+  =>
+  (printout t "No s'han trobat rutines" crlf)
 )
 
 
