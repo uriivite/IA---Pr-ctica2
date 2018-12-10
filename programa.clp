@@ -1307,8 +1307,10 @@
 ;;********************
 
 (defmessage-handler Exercici print primary ()
-	(printout t "--" ?self:nomEx "--" crlf)
-	(printout t "--" ?self:Instruccions "--" crlf)
+	(printout t "--  " ?self:nomEx "." crlf)
+	(printout t "    Duracio: " ?self:Duracio " min" )
+	(printout t " i repeticions: " ?self:repeticions " vegades." crlf)
+	(printout t "   " ?self:Instruccions "." crlf)
 )
 
 ;;****************
@@ -1355,19 +1357,38 @@
   (printout t crlf)
   (focus preguntes-inicials)
 )
+ (defrule imprimir1
+   (declare(salience 9))
+  (mes-75 No)
+  =>
+  (printout t crlf "Realitza les rutina/es seguents:" crlf)
+ )
+
+(defrule imprimir2
+  (declare(salience 9))
+  (mes-75 Si)
+  =>
+  (printout t crlf "Realitza una de les rutina/es seguents:" crlf)
+ )
 
 (defrule rutina-res "Output"
   (declare (salience 8))
-  ?rut <-  (rutina-res (Rutina ?r))
-  ?ruti <- (create$ ?rut)
-  (bind ?ru random-slot ?ruti)
-=>
-  (printout t "Realitza la seguent rutina: " crlf)
-  (printout t crlf (class ?r) crlf crlf)
-  (bind ?i 1)
-    (while (<= ?i (length$(send ?ru get-exercicis)))
+  (rutina-res (Rutina ?r))
+  =>
+  (printout t crlf "RUTINA" crlf crlf)
+  (printout t "Escalfament: " crlf)
+  (bind ?e 1)
+    (while (<= ?e (length$(send ?r get-escalfament)))
 	   do
-	   (bind ?ex (nth$ ?i (send ?ru get-exercicis)))
+	   (bind ?es (nth$ ?e (send ?r get-escalfament)))
+	   (send ?es print)
+	   (bind ?e (+ ?e 1))
+    )
+  (printout t "Exercicis: " crlf)
+  (bind ?i 1)
+    (while (<= ?i (length$(send ?r get-exercicis)))
+	   do
+	   (bind ?ex (nth$ ?i (send ?r get-exercicis)))
 	   (send ?ex print)
 	   (bind ?i (+ ?i 1))
     )
@@ -1545,6 +1566,8 @@
 	 =>
 	(bind ?exs (send [ontologia_v1_Class30012]  get-exercicis))
 	(bind ?rutina (make-instance [r] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class30012]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1556,6 +1579,8 @@
  	=>
 	(bind ?exs (send [ontologia_v1_Class30014]  get-exercicis))
 	(bind ?rutina (make-instance [r] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class30014]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))	
  )
@@ -1566,6 +1591,8 @@
 	 =>
 	(bind ?exs (send [ontologia_v1_Class30041]  get-exercicis))
 	(bind ?rutina (make-instance [r] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class30041]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))	
  )
@@ -1576,6 +1603,8 @@
 	 =>
     (bind ?exs (send [ontologia_v1_Class40017]  get-exercicis))
 	(bind ?rutina (make-instance [r] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class40017]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1585,6 +1614,8 @@
  	=>
 	(bind ?exs (send [ontologia_v1_Class10000]  get-exercicis))
 	(bind ?rutina (make-instance [r1] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class10000]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)	
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1594,6 +1625,8 @@
 	 =>
 	(bind ?exs (send [ontologia_v1_Class50008]  get-exercicis))
 	(bind ?rutina (make-instance [r1] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class50008]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1603,6 +1636,8 @@
 	 =>
 	(bind ?exs (send [ontologia_v1_Class50010]  get-exercicis))
 	(bind ?rutina (make-instance [r1] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class50010]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1612,6 +1647,8 @@
 	 =>
 	(bind ?exs (send [ontologia_v1_Class50012]  get-exercicis))
 	(bind ?rutina (make-instance [r1] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class50012]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1622,6 +1659,8 @@
 	 =>
 	(bind ?exs (send [ontologia_v1_Class40019]  get-exercicis))
 	(bind ?rutina (make-instance [r2] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class40019]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1632,6 +1671,8 @@
 	=>
 	(bind ?exs (send [ontologia_v1_Class40021]  get-exercicis))
 	(bind ?rutina (make-instance [r2] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class40021]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1642,6 +1683,8 @@
 	=>
 	(bind ?exs (send [ontologia_v1_Class40023]  get-exercicis))
 	(bind ?rutina (make-instance [r2] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class40023]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1652,6 +1695,8 @@
 	=>
 	(bind ?exs (send [ontologia_v1_Class40025]  get-exercicis))
 	(bind ?rutina (make-instance [r2] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class40025]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1661,6 +1706,8 @@
 	=>
 	(bind ?exs (send [ontologia_v1_Class20000]  get-exercicis))
 	(bind ?rutina (make-instance [r3] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class20000]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1670,6 +1717,8 @@
  =>
 	(bind ?exs (send [ontologia_v1_Class30001]  get-exercicis))
 	(bind ?rutina (make-instance [r3] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class30001]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))	
  )
@@ -1679,6 +1728,8 @@
  =>
 	(bind ?exs (send [ontologia_v1_Class30003]  get-exercicis))
 	(bind ?rutina (make-instance [r3] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class30003]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1688,6 +1739,8 @@
  =>
 	(bind ?exs (send [ontologia_v1_Class30007]  get-exercicis))
 	(bind ?rutina (make-instance [r3] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class30007]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1698,6 +1751,8 @@
  =>
 	(bind ?exs (send [ontologia_v1_Class40003]  get-exercicis))
 	(bind ?rutina (make-instance [r4] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class40003]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1708,6 +1763,8 @@
  =>
 	(bind ?exs (send [ontologia_v1_Class40007]  get-exercicis))
 	(bind ?rutina (make-instance [r4] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class40007]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1718,6 +1775,8 @@
  =>
  	(bind ?exs (send [ontologia_v1_Class40008]  get-exercicis))
 	(bind ?rutina (make-instance [r4] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class40008]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1728,6 +1787,8 @@
  =>
 	(bind ?exs (send [ontologia_v1_Class40004]  get-exercicis))
 	(bind ?rutina (make-instance [r4] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class40004]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
     (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1737,6 +1798,8 @@
 	 =>
 	 (bind ?exs (send [ontologia_v1_Class60003]  get-exercicis))
 	 (bind ?rutina (make-instance [r5] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class60003]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	 (send ?rutina put-exercicis ?exs)
 		 (assert(rutina-res(Rutina ?rutina)))
  )
@@ -1746,6 +1809,8 @@
 	=>
 	(bind ?exs (send [ontologia_v1_Class60002]  get-exercicis))
 	(bind ?rutina (make-instance [r5] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class60002]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
 		(assert(rutina-res(Rutina ?rutina)))
  )
@@ -1755,6 +1820,8 @@
 	=>
 	(bind ?exs (send [ontologia_v1_Class60001]  get-exercicis))
 	(bind ?rutina (make-instance [r5] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class60001]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
 		(assert(rutina-res(Rutina ?rutina)))
  )
@@ -1764,6 +1831,8 @@
 	=>
 	(bind ?exs (send [ontologia_v1_Class40009]  get-exercicis))
 	(bind ?rutina (make-instance [r5] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class40009]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
 		(assert(rutina-res(Rutina ?rutina)))
  )
@@ -1774,36 +1843,44 @@
  	=>
 	(bind ?exs (send [ontologia_v1_Class30036]  get-exercicis))
 	(bind ?rutina (make-instance [r6] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class30036]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
 	(send ?rutina put-exercicis ?exs)
 		(assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule cardiovasculars2
-	 (mes-75 Si) (sedentari No) (not (artrosis)) (caiguda No) (not (osteoporosis))
- (or (cardiovasculars Si) (obes Si) (obesitat-cronica) (diabetis Si) (depressio Si))
-	 =>
- (bind ?exs (send [ontologia_v1_Class30037]  get-exercicis))
- (bind ?rutina (make-instance [r6] of Rutina))
- (send ?rutina put-exercicis ?exs)
+	(mes-75 Si) (sedentari No) (not (artrosis)) (caiguda No) (not (osteoporosis))
+	(or (cardiovasculars Si) (obes Si) (obesitat-cronica) (diabetis Si) (depressio Si))
+	=>
+	(bind ?exs (send [ontologia_v1_Class30037]  get-exercicis))
+	(bind ?rutina (make-instance [r6] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class30037]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
+	(send ?rutina put-exercicis ?exs)
 	 (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule cardiovasculars3
 	(mes-75 No) (sedentari Si) (not (artrosis)) (caiguda No) (not (osteoporosis))
- (or (cardiovasculars Si) (obes Si) (obesitat-cronica) (diabetis Si) (depressio Si))
+	(or (cardiovasculars Si) (obes Si) (obesitat-cronica) (diabetis Si) (depressio Si))
 	=>
- (bind ?exs (send [ontologia_v1_Class30039]  get-exercicis))
- (bind ?rutina (make-instance [r6] of Rutina))
- (send ?rutina put-exercicis ?exs)
-	(assert(rutina-res(Rutina ?rutina)))
+	(bind ?exs (send [ontologia_v1_Class30039]  get-exercicis))
+	(bind ?rutina (make-instance [r6] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class30039]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
+	(send ?rutina put-exercicis ?exs)
+	 (assert(rutina-res(Rutina ?rutina)))
  )
 
  (defrule cardiovasculars4
- (mes-75 No) (sedentari No) (not (artrosis)) (caiguda No) (not (osteoporosis))
- (or (cardiovasculars Si) (obes Si) (obesitat-cronica) (diabetis Si) (depressio Si))
- =>
- (bind ?exs (send [ontologia_v1_Class30033]  get-exercicis))
- (bind ?rutina (make-instance [r6] of Rutina))
- (send ?rutina put-exercicis ?exs)
- 	(assert(rutina-res(Rutina ?rutina)))
+	(mes-75 No) (sedentari No) (not (artrosis)) (caiguda No) (not (osteoporosis))
+	(or (cardiovasculars Si) (obes Si) (obesitat-cronica) (diabetis Si) (depressio Si))
+   =>
+	(bind ?exs (send [ontologia_v1_Class30033]  get-exercicis))
+	(bind ?rutina (make-instance [r6] of Rutina))
+	(bind ?escalfament (send [ontologia_v1_Class30033]  get-escalfament))
+	(send ?rutina put-escalfament ?escalfament)
+	(send ?rutina put-exercicis ?exs)
+   	 (assert(rutina-res(Rutina ?rutina)))
  )
